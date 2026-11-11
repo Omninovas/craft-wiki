@@ -3,34 +3,97 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Edit Craft Wiki guides with Discord or GitHub. Find the sign-in and review steps for your access level.">
   <title>Edit Craft Wiki</title>
   <style>
-    :root{color-scheme:dark}body{margin:0;background:#111217;color:#f4f3f0;font:16px/1.65 system-ui,sans-serif}main{max-width:44rem;margin:8vh auto;padding:0 1.5rem}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;letter-spacing:-.04em}h2{margin-top:2rem}p,li{color:#c4c5ce}a{color:#b9cbff}code{background:#252630;padding:.15rem .35rem;border-radius:.25rem}.button{display:inline-block;padding:.7rem 1rem;background:#b9cbff;color:#111217;text-decoration:none;font-weight:650;border-radius:.4rem}.note{margin-top:1rem;border:1px solid #343641;padding:1rem 1.25rem;border-radius:.5rem;background:#1a1b22}.note p{margin:.3rem 0}
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #111217; color: #f4f3f0; font: 16px/1.65 system-ui, sans-serif; }
+    main { max-width: 64rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    a { color: #b9cbff; text-underline-offset: .2em; }
+    a:hover { color: #e0e8ff; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid #b9cbff; outline-offset: 5px; }
+    .back { font-size: .9rem; }
+    header { margin: 3.5rem 0 2.5rem; }
+    h1 { margin: 0 0 1rem; font-size: clamp(2.25rem, 6vw, 3.5rem); line-height: 1.1; letter-spacing: -.045em; }
+    header p { max-width: 38rem; margin: 0 0 1.5rem; font-size: 1.1rem; }
+    p, li { color: #c4c5ce; }
+    strong { color: #f4f3f0; }
+    .button { display: inline-block; padding: .75rem 1.2rem; background: #b9cbff; color: #111217; text-decoration: none; font-weight: 650; border-radius: .4rem; }
+    .button:hover { background: #e0e8ff; color: #111217; }
+    .section-title { margin: 0 0 1rem; font-size: 1.15rem; font-weight: 600; }
+    .paths { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1.25rem; align-items: start; }
+    .path { border: 1px solid #343641; border-radius: .75rem; padding: 1.5rem; background: #1a1b22; }
+    .eyebrow { margin: 0 0 .5rem; color: #b9cbff; font-size: .75rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+    h3 { margin: 0 0 .75rem; font-size: 1.4rem; line-height: 1.3; letter-spacing: -.025em; }
+    .path > p { margin: 0 0 1rem; }
+    ol { margin: 0; padding-left: 1.25rem; }
+    li { padding-left: .25rem; margin-bottom: .75rem; }
+    li:last-child { margin-bottom: 0; }
+    code { background: #292b36; padding: .12rem .3rem; border-radius: .25rem; overflow-wrap: anywhere; }
+    details { margin-top: 1.25rem; border-top: 1px solid #343641; padding-top: 1rem; }
+    summary { cursor: pointer; color: #b9cbff; font-weight: 600; }
+    details p { margin: .75rem 0 0; font-size: .9rem; }
+    footer { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid #343641; font-size: .9rem; }
+    footer p { margin: 0 0 .5rem; }
+    @media (max-width: 700px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      header { margin-top: 2.5rem; }
+      .paths { grid-template-columns: 1fr; }
+      .path { padding: 1.25rem; }
+    }
   </style>
 </head>
 <body>
   <main>
-    <p><a href="/">← Craft Wiki</a></p>
-    <h1>Edit Craft Wiki</h1>
-    <p>Use the visual editor to update guides for ArtCraft and the Craft Apps.</p>
-    <div class="note">
-      <p><strong>Senior Contributors</strong></p>
-      <p>Open the visual editor and choose <strong>Sign In Using Discord</strong>. No GitHub account or token is needed, and your edits save directly to the wiki.</p>
-    </div>
-    <div class="note">
-      <p><strong>GitHub token access</strong></p>
-      <p>Maintainers with write access can use a fine-grained token limited to <strong>storytold/craft-wiki</strong>, with <strong>Contents: Read and write</strong>.</p>
-      <p>Community contributors without write access can use a classic token with <strong>public_repo</strong> access. That scope covers all public repositories the account can access, including the contributor's fork; it cannot be restricted to this repository.</p>
-    </div>
-    <h2>Sign in</h2>
-    <ol>
-      <li>Without the Senior Contributor role, open the visual editor and choose <strong>Sign In Using GitHub Access Token</strong>.</li>
-      <li>Use the token instructions above for your access level. Maintainers may need organization approval for a fine-grained token. Contributors can <a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=Craft%20Wiki">create a classic token with public_repo</a>.</li>
-      <li>Paste your token into the editor. If you do not have write access, accept the prompt to create or reuse your fork.</li>
-      <li>Save your changes, then choose <strong>Send for Review</strong> to open a pull request. Maintainers with write access save directly to <code>main</code>.</li>
-    </ol>
-    <p><a class="button" href="/admin/">Open visual editor</a></p>
-    <p>After a maintainer merges a contribution, the update deploys from <code>main</code>. <a href="https://github.com/storytold/craft-wiki">View the repository ↗</a></p>
+    <nav aria-label="Back to wiki"><a class="back" href="/">← Craft Wiki</a></nav>
+    <header>
+      <h1>Edit Craft Wiki</h1>
+      <p>Help improve guides for ArtCraft and the Craft Apps. Open the visual editor, then sign in using the option for your access level.</p>
+      <a class="button" href="/admin/">Open visual editor <span aria-hidden="true">→</span></a>
+    </header>
+
+    <section aria-labelledby="sign-in">
+      <h2 class="section-title" id="sign-in">Choose how to sign in</h2>
+      <div class="paths">
+        <section class="path" aria-labelledby="discord">
+          <p class="eyebrow">Senior Contributors</p>
+          <h3 id="discord">Use Discord</h3>
+          <p>For members with the Senior Contributor role.</p>
+          <ol>
+            <li>Choose <strong>Sign In Using Discord</strong> in the visual editor.</li>
+            <li>Edit a guide and save. Your changes save directly to the wiki.</li>
+          </ol>
+          <p style="margin: 1.25rem 0 0">No GitHub account or token needed.</p>
+        </section>
+
+        <section class="path" aria-labelledby="github">
+          <p class="eyebrow">All other contributors &amp; maintainers</p>
+          <h3 id="github">Use a GitHub token</h3>
+          <ol>
+            <li>Create a token for your access level using the details below.</li>
+            <li>Choose <strong>Sign In Using GitHub Access Token</strong> in the visual editor and paste your token.</li>
+            <li>If you don’t have write access, accept the prompt to create or reuse your fork.</li>
+            <li>Save your changes, then choose <strong>Send for Review</strong> to open a pull request. Maintainers with write access save directly to <code>main</code>.</li>
+          </ol>
+          <details>
+            <summary>Community contributors: token setup</summary>
+            <p>Without repository write access, <a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=Craft%20Wiki">create a classic token with <code>public_repo</code> access</a>.</p>
+            <p><strong>Scope:</strong> this covers all public repositories your account can access, including your fork. It cannot be restricted to this repository.</p>
+          </details>
+          <details>
+            <summary>Maintainers: token setup</summary>
+            <p>With repository write access, use a fine-grained token limited to <strong>storytold/craft-wiki</strong>, with <strong>Contents: Read and write</strong>.</p>
+            <p>You may need organization approval for a fine-grained token.</p>
+          </details>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <p>Contributions sent for review go live after a maintainer merges them. Updates deploy from <code>main</code>.</p>
+      <a href="https://github.com/storytold/craft-wiki">View the repository <span aria-hidden="true">↗</span></a>
+    </footer>
   </main>
 </body>
 </html>
