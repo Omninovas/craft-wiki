@@ -19,8 +19,11 @@
     header p { max-width: 38rem; margin: 0 0 1.5rem; font-size: 1.1rem; }
     p, li { color: #c4c5ce; }
     strong { color: #f4f3f0; }
-    .button { display: inline-block; padding: .75rem 1.2rem; background: #b9cbff; color: #111217; text-decoration: none; font-weight: 650; border-radius: .4rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .button { display: inline-block; padding: .75rem 1.2rem; border: 1px solid transparent; background: #b9cbff; color: #111217; text-decoration: none; font-weight: 650; border-radius: .4rem; }
     .button:hover { background: #e0e8ff; color: #111217; }
+    .button-secondary { border-color: #343641; background: transparent; color: #b9cbff; }
+    .button-secondary:hover { background: #1a1b22; color: #e0e8ff; }
     .section-title { margin: 0 0 1rem; font-size: 1.15rem; font-weight: 600; }
     .paths { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 1.25rem; align-items: start; }
     .path { border: 1px solid #343641; border-radius: .75rem; padding: 1.5rem; background: #1a1b22; }
@@ -50,7 +53,10 @@
     <header>
       <h1>Edit Craft Wiki</h1>
       <p>Help improve guides for ArtCraft and the Craft Apps. Open the visual editor, then sign in using the option for your access level.</p>
-      <a class="button" href="/admin/">Open visual editor <span aria-hidden="true">→</span></a>
+      <div class="actions">
+        <a class="button" href="/admin/">Open visual editor <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="https://github.com/storytold/craft-wiki">View source code <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
     <section aria-labelledby="sign-in">
@@ -92,7 +98,6 @@
 
     <footer>
       <p>Contributions sent for review go live after a maintainer merges them. Updates deploy from <code>main</code>.</p>
-      <a href="https://github.com/storytold/craft-wiki">View the repository <span aria-hidden="true">↗</span></a>
     </footer>
   </main>
 </body>
