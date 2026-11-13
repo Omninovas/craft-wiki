@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Fix graphics-card problems, missing footage, drag and drop on Linux, and lost work in EffectCraft.
+description: Fix graphics-card problems, a slow first load in a browser, missing footage, drag and drop on Linux, and lost work in EffectCraft.
 sidebar:
   order: 6
 ---
@@ -66,6 +66,14 @@ Check these first:
 - The **Audio** page of **Edit › Preferences** is set to the output you expect.
 
 If it still stays silent, add a note to [#3095](https://github.com/storytold/effectcraft/issues/3095) with your system and file type.
+
+## The browser version takes a long time to open
+
+The first time you open the web version, it can take a couple of minutes before the window appears, and the page may look frozen while it loads. EffectCraft is a large app, and the browser has to download and prepare it first.
+
+- Wait, and keep the tab in front. Don't reload the page while it loads.
+- Use a recent Chrome or Edge, which have WebGPU.
+- Your projects and settings are kept in that browser, for that web address. They aren't there if you open EffectCraft from a different address or another browser.
 
 ## Known problems, not fixed yet
 
