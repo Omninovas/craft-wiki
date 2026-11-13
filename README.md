@@ -66,7 +66,7 @@ Every app has at least these five pages:
 - `workflows.md`
 - `troubleshooting.md`
 
-   Many apps add more pages, such as `ai-agents.md` or `automation.md` for AI assistants, or guides to particular features.
+Many apps add more pages, such as `ai-agents.md` or `automation.md` for AI assistants, or guides to particular features.
 
 Pages start with YAML frontmatter for Starlight. The visual editor exposes the title, optional description, sidebar section, sidebar order, and Markdown body. Choosing Workflows in the Sidebar section field sets `parent: workflows`, so the sidebar lists the page under Workflows; a page with the field left empty is listed at the top level. The editor leaves empty optional fields out of the frontmatter:
 
