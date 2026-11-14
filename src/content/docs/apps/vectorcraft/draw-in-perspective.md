@@ -3,6 +3,11 @@ title: Draw in perspective
 description: Show a one-, two- or three-point perspective grid, adjust it, draw shapes on its planes, move flat art and type onto a plane, and save grid presets.
 sidebar:
   order: 18.3
+type: guide
+category: Draw and edit
+subcategory: Drawing aids
+cover: /assets/uploads/vectorcraft/perspective-grid-tool.webp
+summary: Draw shapes and type on one-, two- or three-point perspective grids.
 parent: workflows
 ---
 

@@ -3,6 +3,11 @@ title: Open and save files
 description: Save documents in the VectorCraft format, pick a format for sharing, save pictures for office documents, add file information, open files from other programs, recover work after a crash and bring files into a document with Place.
 sidebar:
   order: 21
+type: guide
+category: Files, export and print
+subcategory: Files
+cover: /assets/uploads/vectorcraft/home-screen.webp
+summary: Save, open and place files, and recover your work after a crash.
 parent: workflows
 ---
 

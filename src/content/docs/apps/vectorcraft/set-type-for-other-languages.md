@@ -3,6 +3,11 @@ title: Set type in other languages
 description: Set the language of type for its letter forms and hyphenation, show the East Asian options, build and share composite fonts, and type characters by their codes on Windows.
 sidebar:
   order: 14.8
+type: guide
+category: Type
+subcategory: Languages and spelling
+cover: /assets/uploads/vectorcraft/type-language.webp
+summary: Set the language of type, the East Asian options and composite fonts.
 parent: workflows
 ---
 

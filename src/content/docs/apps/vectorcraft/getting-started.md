@@ -3,6 +3,11 @@ title: Getting started
 description: Install VectorCraft, make your first document, build a gradient background with a faded logo, draw and color a small badge, add type, group it, save it and export it as PNG and SVG.
 sidebar:
   order: 1
+type: guide
+category: Get started
+subcategory: Basics
+cover: /assets/uploads/vectorcraft/gs-window-tour.webp
+summary: Make a first badge, from a blank artboard to a PNG and an SVG.
 ---
 
 This guide takes you through a first project in about 15 minutes. You make a badge with a rounded gradient background, a faded logo, a circle, a star, a wavy line and a line of type, save it as a VectorCraft file and export it as a PNG and an SVG. The following image shows the badge you make in this guide, as exported to PNG.

@@ -3,6 +3,11 @@ title: Run scripts
 description: Add JavaScript files to the Scripts menu, run them or any other script file, answer a script's questions, stop a run, and read its output in the Script Console.
 sidebar:
   order: 23.3
+type: guide
+category: Automate and extend
+subcategory: Automation
+cover: /assets/uploads/vectorcraft/scripts-menu.webp
+summary: Run JavaScript files from the Scripts menu and read their output.
 parent: workflows
 ---
 

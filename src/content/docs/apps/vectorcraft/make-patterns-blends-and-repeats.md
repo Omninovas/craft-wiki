@@ -3,6 +3,11 @@ title: Make patterns, blends and repeats
 description: Turn artwork into a pattern swatch and edit its tile, repeat art in a circle, a grid or a mirror, weave objects over and under each other, place objects along a path, and blend between shapes.
 sidebar:
   order: 16.5
+type: guide
+category: Color, paint and effects
+subcategory: Effects
+cover: /assets/uploads/vectorcraft/pattern-swatch-banner.webp
+summary: Make pattern swatches, repeat art in circles and grids, and blend between shapes.
 parent: workflows
 ---
 

@@ -3,6 +3,11 @@ title: Check spelling
 description: Underline misspelled words in type with Auto Spell Check, fix them from the context menu, and keep your own words in the custom dictionary.
 sidebar:
   order: 14.7
+type: guide
+category: Type
+subcategory: Languages and spelling
+cover: /assets/uploads/vectorcraft/spelling-underlines.webp
+summary: Find and fix misspelled words, and keep your own words in a dictionary.
 parent: workflows
 ---
 

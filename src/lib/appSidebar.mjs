@@ -1,5 +1,6 @@
 import { getCollection } from 'astro:content';
 import { guides } from '../data/apps.mjs';
+import { compareCategories } from '../data/pageCategories.mjs';
 
 const sharedOrder = Object.fromEntries(guides.map(([slug], index) => [slug, index]));
 
@@ -25,6 +26,7 @@ async function buildSidebars() {
       title: entry.data.sidebar.label ?? entry.data.title,
       order: entry.data.sidebar.order ?? sharedOrder[slug],
       parent: entry.data.parent,
+      category: entry.data.category,
       file: entry.filePath ?? entry.id,
       children: [],
     };
@@ -54,4 +56,30 @@ async function buildSidebars() {
 export async function appSidebar(app) {
   sidebars ??= buildSidebars();
   return (await sidebars).get(app) ?? [];
+}
+
+// The sidebar for one app in sections. The first section has no label and holds the pages without a
+// `category`, nested by `parent` as appSidebar returns them. Each further section is one category,
+// in categoryOrder, and lists its pages flat in sidebar.order, whatever their `parent`. An app whose
+// pages have no category gets the unlabeled section only.
+export async function appSidebarSections(app) {
+  const pages = await appSidebar(app);
+  const plain = pages
+    .filter((page) => !page.category)
+    .map((page) => ({ ...page, children: page.children.filter((child) => !child.category) }));
+  const groups = new Map();
+  for (const page of pages.flatMap((page) => [page, ...page.children])) {
+    if (!page.category) continue;
+    if (!groups.has(page.category)) groups.set(page.category, []);
+    groups.get(page.category).push({ ...page, children: [] });
+  }
+  const categories = [...groups].map(([label, members]) => ({
+    label,
+    order: Math.min(...members.map((page) => page.order ?? Infinity)),
+    pages: members.sort(compare),
+  }));
+  categories.sort(compareCategories);
+  return [{ label: null, pages: plain }, ...categories.map(({ label, pages }) => ({ label, pages }))].filter(
+    (section) => section.label === null || section.pages.length,
+  );
 }

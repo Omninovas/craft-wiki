@@ -3,6 +3,11 @@ title: Paint with brushes and variable widths
 description: Apply calligraphic, scatter, art, pattern and bristle brushes to paths, paint with the Paintbrush and Blob Brush, make and save your own brushes, and change a stroke's width with the Width tool.
 sidebar:
   order: 12.2
+type: guide
+category: Color, paint and effects
+subcategory: Color and paint
+cover: /assets/uploads/vectorcraft/brushes-panel.webp
+summary: Apply brushes to paths and change a stroke's width with the Width tool.
 parent: workflows
 ---
 

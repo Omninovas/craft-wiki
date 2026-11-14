@@ -3,6 +3,11 @@ title: Export for screens and the web
 description: Export artboards and collected assets at several sizes and formats in one pass, and write SVG and PNG files with the options you choose.
 sidebar:
   order: 20
+type: guide
+category: Files, export and print
+subcategory: Export
+cover: /assets/uploads/vectorcraft/export-for-screens.webp
+summary: Export artboards and assets at several sizes and formats in one pass.
 parent: workflows
 ---
 

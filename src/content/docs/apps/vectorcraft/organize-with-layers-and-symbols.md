@@ -3,6 +3,10 @@ title: Organize with layers and symbols
 description: Keep artwork in layers and sublayers, find objects, lock and hide them, trace over template layers, reuse art as symbols, share symbol libraries and spray symbols.
 sidebar:
   order: 18
+type: guide
+category: Organize
+cover: /assets/uploads/vectorcraft/layers-panel.webp
+summary: Keep artwork in layers and sublayers, and reuse it as symbols.
 parent: workflows
 ---
 

@@ -3,6 +3,11 @@ title: Install and manage plug-ins
 description: Install plug-ins from .wasm files, approve what they ask for, load a folder of plug-ins, run filters, effects, exporters and importers, remove plug-ins, and start without plug-ins in Safe Mode.
 sidebar:
   order: 22.95
+type: guide
+category: Automate and extend
+subcategory: Plug-ins and workspace
+cover: /assets/uploads/vectorcraft/safe-mode-dialog.webp
+summary: Install plug-ins, approve what they ask for and start in Safe Mode.
 parent: workflows
 ---
 

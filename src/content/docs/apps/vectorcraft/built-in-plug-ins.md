@@ -3,6 +3,11 @@ title: Use the built-in plug-ins
 description: Find the plug-ins under Object → Plug-ins, and use Arrange Tools, Artwork Cleanup, Color Effects, Compound Shapes, Document Tools and the 3D Box tool.
 sidebar:
   order: 22.9
+type: guide
+category: Automate and extend
+subcategory: Plug-ins and workspace
+cover: /assets/uploads/vectorcraft/health-check.webp
+summary: Arrange, clean up and recolor art with the plug-ins that come with VectorCraft.
 parent: workflows
 ---
 

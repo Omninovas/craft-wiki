@@ -3,6 +3,11 @@ title: Reshape with the warp tools
 description: Push, twist, pucker and roughen paths with the Warp tool and its six companions, pull points with the Reshape tool, bend art around pins with Puppet Warp, and distort art and type with Envelope Distort.
 sidebar:
   order: 12.4
+type: guide
+category: Draw and edit
+subcategory: Paths
+cover: /assets/uploads/vectorcraft/warp-tools.webp
+summary: Push, twist and bend art with the warp tools, Puppet Warp and envelopes.
 parent: workflows
 ---
 

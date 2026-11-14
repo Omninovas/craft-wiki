@@ -3,6 +3,11 @@ title: Draw and transform shapes
 description: Draw rectangles, ellipses, polygons, stars, lines, arcs, spirals, grids and flares, round their corners, and move, copy, rotate, scale, reflect, shear and repeat transforms.
 sidebar:
   order: 11
+type: guide
+category: Draw and edit
+subcategory: Shapes and selection
+cover: /assets/uploads/vectorcraft/shape-tools.webp
+summary: Draw shapes, round their corners, and move, rotate, scale and reflect them.
 parent: workflows
 ---
 

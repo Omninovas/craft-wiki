@@ -1,0 +1,87 @@
+---
+import { getCollection } from 'astro:content';
+import { appVisuals } from '../data/appVisuals.mjs';
+import { categoryId, compareCategories, pageTypes } from '../data/pageCategories.mjs';
+
+interface Props {
+  // The app folder under src/content/docs/apps/.
+  app: string;
+  // Lists only this category when set.
+  category?: string;
+}
+
+const { app, category } = Astro.props;
+const visual = appVisuals[app];
+if (!visual) throw new Error(`WikiCategoryGrid: "${app}" has no entry in src/data/appVisuals.mjs.`);
+const icon = `/assets/apps/${app}.${visual.icon ?? 'webp'}`;
+const style = `--app-color:${visual.color};--app-ink-light:${visual.inkLight ?? visual.color};--app-ink-dark:${visual.inkDark ?? visual.color}`;
+const prefix = `apps/${app}/`;
+const production = import.meta.env.MODE === 'production';
+
+// Every page of the app with a category, except drafts in production, hidden pages and the page
+// that shows the grid.
+const pages = (await getCollection('docs'))
+  .filter((entry) => entry.id.startsWith(prefix) && !entry.id.slice(prefix.length).includes('/'))
+  .filter((entry) => !entry.data.sidebar.hidden && !(entry.data.draft && production))
+  .filter((entry) => entry.data.category && (!category || entry.data.category === category))
+  .map((entry) => {
+    const slug = entry.id.slice(prefix.length);
+    return {
+      href: `/apps/${app}/${slug}/`,
+      title: slug === 'overview' ? 'Overview' : (entry.data.sidebar.label ?? entry.data.title),
+      summary: entry.data.summary ?? entry.data.description ?? '',
+      cover: entry.data.cover,
+      type: entry.data.type,
+      category: entry.data.category,
+      subcategory: entry.data.subcategory ?? '',
+      order: entry.data.sidebar.order ?? Infinity,
+    };
+  })
+  .filter((page) => page.href !== Astro.url.pathname);
+
+const byOrder = (a, b) => a.order - b.order || a.title.localeCompare(b.title);
+const lowest = (list) => Math.min(...list.map((page) => page.order));
+
+const sections = [...Map.groupBy(pages, (page) => page.category)]
+  .map(([label, members]) => {
+    const groups = [...Map.groupBy(members, (page) => page.subcategory)]
+      .map(([name, list]) => ({ name, pages: list.sort(byOrder), order: lowest(list) }))
+      // Pages without a subcategory come first, then each subcategory by its first page.
+      .sort((a, b) => (a.name !== '') - (b.name !== '') || a.order - b.order);
+    return { label, id: categoryId(label), count: members.length, groups, order: lowest(members) };
+  })
+  .sort(compareCategories);
+---
+<div class="wiki-cat not-content" style={style}>
+  {sections.map(({ label, id, count, groups }) => (
+    <section class="wiki-cat-section" aria-labelledby={`cat-${id}`}>
+      <div class="wiki-cat-heading">
+        <h3 id={`cat-${id}`}>{label}</h3>
+        <span class="wiki-cat-count">{count} {count === 1 ? 'page' : 'pages'}</span>
+      </div>
+      {groups.map(({ name, pages: list }) => (
+        <div class="wiki-cat-group">
+          {name && <h4 class="wiki-cat-subheading">{name}</h4>}
+          <ul class="wiki-cat-grid" role="list">
+            {list.map((page) => (
+              <li>
+                <a class="wiki-cat-card" href={page.href}>
+                  <span class="wiki-cat-media">
+                    {page.cover
+                      ? <img src={page.cover} alt="" loading="lazy" decoding="async" width="1600" height="1000" />
+                      : <span class="wiki-cat-fallback"><img src={icon} alt="" loading="lazy" decoding="async" /></span>}
+                  </span>
+                  <span class="wiki-cat-body">
+                    {page.type && <span class="wiki-cat-badge" data-type={page.type}>{pageTypes[page.type]}</span>}
+                    <strong class="wiki-cat-title">{page.title}</strong>
+                    <span class="wiki-cat-summary">{page.summary}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+  ))}
+</div>

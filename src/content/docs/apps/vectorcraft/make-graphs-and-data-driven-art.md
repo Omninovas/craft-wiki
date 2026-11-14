@@ -3,6 +3,11 @@ title: Make graphs and data-driven art
 description: Draw column, bar, line, area, scatter, pie and radar graphs, edit their data, use your own art for columns and markers, and bind objects to variables to make one design per row of data.
 sidebar:
   order: 22.7
+type: guide
+category: Draw and edit
+subcategory: Images and data
+cover: /assets/uploads/vectorcraft/graph-tool-drag.webp
+summary: Draw graphs from data and make one design for each row of a data set.
 parent: workflows
 ---
 

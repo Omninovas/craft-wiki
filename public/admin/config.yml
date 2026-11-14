@@ -50,6 +50,11 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: string, required: false }
+      - { label: Page type, name: type, widget: select, options: [{ label: Overview, value: overview }, { label: Guide, value: guide }, { label: Reference, value: reference }, { label: Troubleshooting, value: troubleshooting }], required: false }
+      - { label: Category, name: category, widget: select, options: ["Get started", "Draw and edit", "Color, paint and effects", "Type", "Organize", "Files, export and print", "Automate and extend", "Reference"], required: false, hint: "The sidebar and the guide cards group pages by category." }
+      - { label: Subcategory, name: subcategory, widget: string, required: false, hint: "A smaller group inside the category on the guide cards." }
+      - { label: Card picture, name: cover, widget: image, required: false, hint: "A screenshot from this page. Cards crop it to 16:10 from the top." }
+      - { label: Card summary, name: summary, widget: string, required: false, hint: "One line for the guide card. The card shows the description when this is empty." }
       - { label: Sidebar section, name: parent, widget: select, options: [{ label: Workflows, value: workflows }], required: false, hint: "Choose Workflows to list this page under Workflows in the sidebar. Leave it empty to list the page at the top level." }
       - { label: Sidebar, name: sidebar, widget: object, required: false, fields: [{ label: Order, name: order, widget: number, value_type: float, required: false, hint: "The sidebar and the previous and next links sort pages by this number. Pick a number between those of the pages before and after this one. A page without a number is listed after the numbered pages." }] }
       - { label: Body, name: body, widget: markdown }

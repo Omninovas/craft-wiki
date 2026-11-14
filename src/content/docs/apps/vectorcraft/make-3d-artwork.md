@@ -3,6 +3,11 @@ title: Make 3D artwork
 description: Give shapes, groups and type depth with the 3D and Materials panel, revolve profiles and type, light the result, use Extrude & Bevel (Classic), and change or remove a 3D effect later.
 sidebar:
   order: 17.5
+type: guide
+category: Color, paint and effects
+subcategory: Effects
+cover: /assets/uploads/vectorcraft/3d-panel.webp
+summary: Extrude, revolve and light shapes and type in 3D.
 parent: workflows
 ---
 

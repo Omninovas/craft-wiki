@@ -1,12 +1,13 @@
 ---
-import { appSidebar } from '../lib/appSidebar.mjs';
+import { appSidebarSections } from '../lib/appSidebar.mjs';
+import { categoryId } from '../data/pageCategories.mjs';
 const { slug } = Astro.props;
 const pathname = Astro.url.pathname;
 const current = (page) => (pathname === `/apps/${slug}/${page}/` ? 'page' : undefined);
-const pages = await appSidebar(slug);
+const [plain, ...categories] = await appSidebarSections(slug);
 ---
 <div class="wiki-guide-links">
-  {pages.map(({ slug: guide, label, children }) => {
+  {plain.pages.map(({ slug: guide, label, children }) => {
     const link = <a href={`/apps/${slug}/${guide}/`} aria-current={current(guide)}><span>{label}</span></a>;
     if (!children.length) return link;
     const open = !!current(guide) || children.some((child) => current(child.slug));
@@ -22,4 +23,12 @@ const pages = await appSidebar(slug);
       </div>
     );
   })}
+  {categories.map(({ label, pages }) => (
+    <details class="wiki-guide-category" data-category={categoryId(label)} open={pages.some((page) => current(page.slug))}>
+      <summary><span class="wiki-guide-category-label">{label}</span><span class="wiki-guide-category-count">{pages.length}</span><span class="wiki-chevron" aria-hidden="true"></span></summary>
+      <div class="wiki-guide-category-pages">
+        {pages.map((page) => <a href={`/apps/${slug}/${page.slug}/`} aria-current={current(page.slug)}><span>{page.label}</span></a>)}
+      </div>
+    </details>
+  ))}
 </div>

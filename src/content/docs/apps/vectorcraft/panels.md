@@ -3,6 +3,9 @@ title: Panels
 description: Every panel, library and bar in VectorCraft's Window menu, with what each one does, its default shortcut and the guide that covers it.
 sidebar:
   order: 31.4
+type: reference
+category: Reference
+summary: Find out what each panel in the Window menu does.
 ---
 
 This page lists every panel, library and bar that the **Window** menu opens, with what each one does, its default shortcut and the guide that covers it.
