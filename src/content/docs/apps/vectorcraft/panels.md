@@ -5,6 +5,8 @@ sidebar:
   order: 31.4
 type: reference
 category: Reference
+subcategory: Reference
+parent: workflows
 summary: Find out what each panel in the Window menu does.
 ---
 

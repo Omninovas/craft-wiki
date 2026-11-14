@@ -5,6 +5,7 @@ sidebar:
   order: 31.6
 type: reference
 category: Reference
+subcategory: Reference
 cover: /assets/uploads/vectorcraft/preferences-dialog-window.webp
 summary: Look up every Preferences setting with its default and range.
 ---

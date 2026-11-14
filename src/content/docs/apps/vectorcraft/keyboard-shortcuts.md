@@ -5,6 +5,8 @@ sidebar:
   order: 31.3
 type: reference
 category: Reference
+subcategory: Reference
+parent: workflows
 cover: /assets/uploads/vectorcraft/keyboard-shortcuts-search-commands.webp
 summary: Look up every default shortcut by menu and tool.
 ---

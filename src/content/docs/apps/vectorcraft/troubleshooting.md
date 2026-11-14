@@ -5,6 +5,7 @@ sidebar:
   order: 32
 type: troubleshooting
 category: Reference
+subcategory: Reference
 cover: /assets/uploads/vectorcraft/prefs-performance.webp
 summary: Fix common problems, recover unsaved work and find the log for a bug report.
 ---

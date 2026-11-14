@@ -6,6 +6,7 @@ sidebar:
 type: guide
 category: Print and color management
 subcategory: Print
+parent: workflows
 cover: /assets/uploads/vectorcraft/print-tiling.webp
 summary: Print a poster or a sign across several sheets of paper.
 ---
