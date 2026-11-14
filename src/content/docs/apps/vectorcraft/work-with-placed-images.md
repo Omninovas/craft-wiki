@@ -1,17 +1,17 @@
 ---
 title: Work with placed images
-description: Track linked and embedded images in the Links panel, relink, update and embed them, fix missing links, crop images and turn art into pixels, tiles or halftone dots.
+description: Track linked and embedded images in the Links panel, relink, update and embed them, fix missing links, crop or mask images and turn art into pixels, tiles or halftone dots.
 sidebar:
   order: 19.5
 type: guide
 category: Images and data
 subcategory: Images
 cover: /assets/uploads/vectorcraft/links-panel.webp
-summary: Track, relink, embed and crop placed images in the Links panel.
+summary: Track, relink, embed, crop and mask placed images.
 parent: workflows
 ---
 
-This guide covers the images in a document after you place them: the Links panel, relinking and embedding, missing links when a document opens, editing an image in its own app, cropping, rasterizing, and turning an image into tiles or halftone dots. To bring an image into a document, see [Open and save files](/apps/vectorcraft/open-and-save-files/).
+This guide covers the images in a document after you place them: the Links panel, relinking and embedding, missing links when a document opens, editing an image in its own app, cropping and masking, rasterizing, and turning an image into tiles or halftone dots. To bring an image into a document, see [Open and save files](/apps/vectorcraft/open-and-save-files/).
 
 ## See every image in the Links panel
 
@@ -125,6 +125,20 @@ Edit Original opens the file in the app your system uses for its file type. It o
 
 ![The dusk-bay-postcard document with Crop Image active on the harbor image. The crop box's right edge is dragged left to just past the sailboat, between the boat and the sun's reflection, the part of the image outside the box is dimmed, and a readout beside the dragged right edge shows W 698.54 px and H 620.00 px. The Control bar shows the box's X, Y, W and H fields with Apply and Cancel](/assets/uploads/vectorcraft/crop-image.webp)
 
+## Mask an image instead of cropping it
+
+**Crop Image** removes the pixels outside the crop box from the image. **Mask** hides them behind a clipping path and keeps the whole image.
+
+1. Select the image.
+2. Click **Mask** in the Properties panel's Quick Actions, or on the Control bar next to **Crop Image**. VectorCraft puts the image in a clip group with a rectangle on the image's outline, rotated with the image, and selects that rectangle. This is one undo step.
+3. With the Selection tool, drag a handle of the rectangle. The part of the image outside the rectangle is hidden, and a readout next to the pointer shows the rectangle's width and height. The image itself keeps its size.
+
+![The dusk-bay-postcard document after Mask on the harbor image, with the Selection tool dragging the clipping path's right edge handle to the left so the harbor is hidden right of the sailboat and a readout shows W 712.00 px and H 620.00 px. The Properties panel shows the selected Path at W 712 px and H 620 px, and the status bar shows the Selection tool hints](/assets/uploads/vectorcraft/work-with-placed-images-mask.webp)
+
+To change the hidden part later, select the clip group and choose **Object → Clipping Mask → Edit Clipping Path**, then drag the rectangle's handles again.
+
+To remove the mask, click the image with the Selection tool to select the clip group, then choose **Object → Clipping Mask → Release** (**Ctrl+Alt+7**, or **Cmd+Option+7** on macOS), or right-click and choose **Release Clipping Mask**. The whole image shows again. The rectangle stays in the group, with no fill or stroke unless you painted it after you made the mask. With only the rectangle selected, Release leaves the clip group as it is. [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/#clip-art-with-a-clipping-mask) covers the other clipping mask commands.
+
 ## Rasterize vector art
 
 **Object → Rasterize…** turns the selected objects into one embedded image, in one undo step.
@@ -190,6 +204,8 @@ To trace an image into editable paths instead, select it and click **Image Trace
 ## Related
 
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)
+- [Check image resolution and color mode](/apps/vectorcraft/check-image-resolution-and-color/)
+- [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/)
 - [Trace an image](/apps/vectorcraft/trace-an-image/)
 - [Manage color and proof for print](/apps/vectorcraft/manage-color-and-proof/)
 - [Make graphs and data-driven art](/apps/vectorcraft/make-graphs-and-data-driven-art/)
