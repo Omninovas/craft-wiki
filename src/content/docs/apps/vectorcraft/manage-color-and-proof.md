@@ -235,6 +235,8 @@ Trim marks from **Object → Create Trim Marks** are part of the artwork. To add
 ## Related
 
 - [Print your artwork](/apps/vectorcraft/print-your-artwork/)
+- [Prepare artwork for CMYK printing](/apps/vectorcraft/prepare-artwork-for-cmyk-print/)
+- [Trap colors where inks meet](/apps/vectorcraft/trap-colors-between-inks/)
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)

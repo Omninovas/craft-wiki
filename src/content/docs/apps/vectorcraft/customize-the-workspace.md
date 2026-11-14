@@ -319,6 +319,7 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**. The full l
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Panels](/apps/vectorcraft/panels/)
 - [Preferences](/apps/vectorcraft/preferences/)
+- [Change the look and language of VectorCraft](/apps/vectorcraft/change-the-look-and-language/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)
 - [Cut, join and refine paths](/apps/vectorcraft/cut-join-and-refine-paths/)

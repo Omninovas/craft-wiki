@@ -226,6 +226,8 @@ Press **V** for the Selection tool.
 - Ctrl-click (Cmd-click on macOS) an object to select the object behind it.
 - Double-click a group or an object to enter isolation mode, where you edit it without touching the rest of the artwork. To leave, right-click the canvas and choose **Exit Isolation Mode**.
 
+[Select and move objects](/apps/vectorcraft/select-and-move-objects/) covers the marquee rules, selecting objects behind others and the bounding box in more detail.
+
 ## Move and copy
 
 1. Drag a selected object to move it. Hold **Shift** while dragging to constrain the direction of the move.
@@ -234,6 +236,8 @@ Press **V** for the Selection tool.
    - **Shift+Arrow** moves the selection 10 times as far.
    - **Alt+Arrow** (**Option+Arrow** on macOS) moves a copy.
 4. To move by an exact distance, press **Enter** with the Selection tool active, or choose **Object → Transform → Move…**. Type the distances and click **OK**. Select **Copy (make a transformed copy)** first to move a copy instead. The **Move** dialog opens with the distance of your last move, so pressing **Enter** twice repeats a move at the same spacing.
+
+[Select and move objects](/apps/vectorcraft/select-and-move-objects/) has more on dragging with distance guides, nudging with the arrow keys, the **Move** dialog and evenly spaced copies.
 
 ### Copy and paste
 
@@ -285,6 +289,8 @@ The panel menu holds these commands:
 - **Flip Horizontal**, **Flip Vertical** and **Scale Strokes & Effects** do the same as the panel's buttons and checkbox.
 - **Transform Object Only**, **Transform Pattern Only** and **Transform Both** choose whether the panel transforms the objects, their pattern fills and strokes, or both. Until you choose one, the panel follows the **Transform Pattern Tiles** preference: Transform Both when it is on, Transform Object Only when it is off.
 - **Use Registration Point for Symbol** makes **X** and **Y** of a selected symbol instance show its registration point. Off by default.
+
+[Transform strokes, corners and patterns](/apps/vectorcraft/transform-strokes-corners-and-patterns/) explains **Scale Strokes & Effects**, **Scale Corners** and the pattern commands in the panel menu.
 
 ## Rotate, reflect, scale and shear
 
@@ -387,6 +393,8 @@ Transform Again repeats the last transform on whatever is selected now. If you c
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)
 - [Draw in perspective](/apps/vectorcraft/draw-in-perspective/)
 - [Select artwork](/apps/vectorcraft/select-artwork/)
+- [Select and move objects](/apps/vectorcraft/select-and-move-objects/)
+- [Transform strokes, corners and patterns](/apps/vectorcraft/transform-strokes-corners-and-patterns/)
 - [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/)
 - [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/)
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)

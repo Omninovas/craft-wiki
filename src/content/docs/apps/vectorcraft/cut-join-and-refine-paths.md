@@ -256,5 +256,6 @@ While the tool is active, a Contour bar above the selection shows the distance, 
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
 - [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/)
+- [Sketch and ink a drawing](/apps/vectorcraft/sketch-and-ink-a-drawing/)
 - [Built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
 - [Customize the workspace](/apps/vectorcraft/customize-the-workspace/)

@@ -211,6 +211,8 @@ Double-click a row to make that artboard active and fit it in the window. The di
 
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)
 - [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/)
+- [Select and move objects](/apps/vectorcraft/select-and-move-objects/)
+- [Transform strokes, corners and patterns](/apps/vectorcraft/transform-strokes-corners-and-patterns/)
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
 - [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)

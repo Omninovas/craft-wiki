@@ -1,6 +1,6 @@
 ---
 title: Print your artwork
-description: Print artboards at the right size, add printer's marks and bleed, set graphics, color management and advanced options, scale or tile large art, and save your print settings as presets.
+description: Print artboards at the right size, add printer's marks and bleed, set graphics, color management and advanced options, scale or tile large art, and save, manage and share your print settings as presets.
 sidebar:
   order: 22
 type: guide
@@ -11,7 +11,7 @@ summary: Print artboards with marks and bleed, and save your settings as presets
 parent: workflows
 ---
 
-This guide covers the Print dialog. It shows how to choose which artboards print and on what paper, add printer's marks and bleed, set the graphics, color management and advanced options, scale or tile art that is larger than the paper, and save the settings as a preset for the next job.
+This guide covers the Print dialog. It shows how to choose which artboards print and on what paper, add printer's marks and bleed, set the graphics, color management and advanced options, scale or tile art that is larger than the paper, and save, manage and share the settings as presets for the next job.
 
 ## Open the Print dialog
 
@@ -172,20 +172,62 @@ When you drag with the **Print Tiling Tool**, the pointer sets the top-left corn
 
 ## Save print presets
 
-1. In the Print dialog, press **Save Preset…** next to **Print Preset**.
-2. Type a name and press **Save**.
+A print preset stores the Print dialog's settings, except the printer, under a name. VectorCraft keeps your presets with its preferences, so you can use them in every document. Resetting the preferences does not remove them.
 
-To manage presets without opening the Print dialog, choose **Edit → Print Presets…**. The list shows **[Default]** and your saved presets, with the differences from [Default] for the one you select.
+### Save the settings from the Print dialog
+
+1. Choose **File → Print…** and set up the job.
+2. In the Print dialog, press **Save Preset…** next to **Print Preset**. A **Save as preset** row appears with a suggested name such as "Print Preset 1".
+3. Type a name and press **Save**. The **Print Preset** list now shows the new preset.
+
+If you type the name of a saved preset, the new settings replace that preset's settings. You cannot save a preset under the name [Default].
+
+After you pick a preset and change a setting, the **Print Preset** list shows **[Custom]**. Pick the preset again to restore its settings.
+
+### Manage presets
+
+To manage presets without opening the Print dialog, use **Edit → Print Presets…**.
+
+1. Choose **Edit → Print Presets…**.
+2. Select a preset in the **Presets** list. **[Default]** comes first, followed by your saved presets.
+3. Check the **Differences from [Default]** list next to the **Presets** list. Each row names a section, an option and the preset's value, for example "General › Media: tabloid". For [Default] the list reads "None."
+4. Press one of the buttons under the list, described in the following table.
+5. Press **Close** when you are done.
+
+![The Print Presets dialog with [Default], Night Market Tabloid and Proof Letter in the Presets list and Night Market Tabloid selected. Next to the list, Differences from [Default] shows Media set to tabloid, a bleed of 9.0 on every side with Use Document off, and Color Bars, Page Info, Registration and Trim marks on, with the New…, Edit…, Delete, Import… and Export… buttons under the list](/assets/uploads/vectorcraft/print-your-artwork-print-presets.webp)
 
 | Button | What it does |
 |---|---|
-| **New…** | Starts a new preset from the selected one |
-| **Edit…** | Changes a saved preset |
-| **Delete** | Removes a saved preset |
-| **Import…** | Loads presets from a file |
-| **Export…** | Saves the selected preset to a file |
+| **New…** | Starts a new preset from the selected one, and opens a copy of its settings in the **New Print Preset** editor |
+| **Edit…** | Changes a saved preset, and opens it in the **Edit Print Preset** editor |
+| **Delete** | Removes a saved preset and selects the preset above it |
+| **Import…** | Loads presets from a `.vcprintpresets` file and selects the first one it adds |
+| **Export…** | Saves the selected preset to a `.vcprintpresets` file |
 
-[Default] cannot be edited or deleted. Press **New…** to start an editable copy.
+[Default] cannot be edited or deleted. **Edit…** and **Delete** are unavailable while it is selected. Press **New…** to start an editable copy.
+
+### Make or change a preset in the editor
+
+1. In **Edit → Print Presets…**, select the preset to start from and press **New…**, or select a saved preset and press **Edit…**.
+2. Type a name in **Preset name**. A new preset starts with the first free name, such as "Print Preset 2". When you edit a saved preset, a new name renames it.
+3. Set the options. The editor has the same sections and preview as the Print dialog, from **General** to **Summary**, without the **Print Preset** and **Printer** rows.
+4. Press **Save Preset**. The Print Presets dialog opens again with the preset selected.
+
+You cannot give a new preset the name of a preset that exists, and you cannot rename a saved preset to the name of another preset. In both cases VectorCraft does not save the preset and reports that a preset with that name exists.
+
+### Share presets as files
+
+A `.vcprintpresets` file holds print presets as text, so you can use the same presets on another computer.
+
+1. In **Edit → Print Presets…**, select a preset and press **Export…**. You can export [Default] too.
+2. Choose a folder and a file name, and save the file.
+3. On the other computer, choose **Edit → Print Presets…**, press **Import…** and pick the file. You can also open the file with **File → Open…** or drop it on the VectorCraft window. VectorCraft then adds its presets instead of opening a document, and the status bar lists them after "Imported print presets:".
+
+When an imported preset has the name of a saved one, VectorCraft adds a number to the name: "Night Market Tabloid 2", then "Night Market Tabloid 3". A [Default] preset in the file is added as a saved preset named "Default 2", then "Default 3" and so on, and the built-in [Default] does not change.
+
+:::note
+VectorCraft does not import a file that is not a print presets file, a file with settings that the Print dialog does not accept, or a file with more than 1000 presets.
+:::
 
 ## Check before you print
 
@@ -214,6 +256,8 @@ To keep the job as a file instead, choose **PDF File** under **Printer**. The br
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Manage color and proof for print](/apps/vectorcraft/manage-color-and-proof/)
+- [Prepare artwork for CMYK printing](/apps/vectorcraft/prepare-artwork-for-cmyk-print/)
+- [Trap colors where inks meet](/apps/vectorcraft/trap-colors-between-inks/)
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)
 - [Print a large poster](/apps/vectorcraft/print-tiling/)
 - [All VectorCraft workflows](/apps/vectorcraft/workflows/)

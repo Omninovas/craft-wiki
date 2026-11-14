@@ -1,6 +1,6 @@
 ---
 title: Combine and cut shapes
-description: Build new shapes from overlapping ones with the Pathfinder panel and the Shape Builder tool, set their options, and use compound shapes, compound paths, clipping masks and Live Paint.
+description: Build new shapes from overlapping ones with the Pathfinder panel and the Shape Builder tool, set their options, and use compound shapes, compound paths and their fill rules, clipping masks and Live Paint.
 sidebar:
   order: 16
 type: guide
@@ -11,7 +11,7 @@ summary: Build shapes with Pathfinder and Shape Builder, and use masks and Live 
 parent: workflows
 ---
 
-This page shows how to make new shapes from shapes that overlap. You combine and cut them with the Pathfinder panel or the Shape Builder tool, punch holes with compound paths, show art only inside a shape with a clipping mask, and color the regions of overlapping paths with Live Paint.
+This page shows how to make new shapes from shapes that overlap. You combine and cut them with the Pathfinder panel or the Shape Builder tool, punch holes with compound paths and choose how they fill, show art only inside a shape with a clipping mask, and color the regions of overlapping paths with Live Paint.
 
 ## Use the Pathfinder panel
 
@@ -124,6 +124,34 @@ A compound path joins several paths into one object with one paint. Where a path
 
 The compound path takes the paint of the back-most path. To split it into separate paths again, choose **Object → Compound Path → Release** (**Ctrl+Alt+Shift+8**, or **Cmd+Option+Shift+8** on macOS). Each released path keeps the compound path's paint. Release also splits a single path that is made of several separate parts into one path for each part.
 
+## Choose how a compound path fills its holes
+
+A fill rule sets which areas inside a compound path, or inside a path that crosses itself, are filled. You set it in the Attributes panel, which **Window → Attributes** (**Ctrl+F11**, or **Cmd+F11** on macOS) opens. [Panels](/apps/vectorcraft/panels/) lists the panel's other settings.
+
+| Fill rule | An area is filled when | Path direction |
+|---|---|---|
+| **Use Non-Zero Winding Fill Rule** | The paths around it do not cancel out. Each path that runs around the area clockwise counts +1, each one that runs counter-clockwise counts -1, and the total is not zero. | An inner path that runs the opposite way to the outer path is a hole, and one that runs the same way is filled. |
+| **Use Even-Odd Fill Rule** | A line from the area to the outside crosses the paths an odd number of times. | Direction has no effect. The first nested area is a hole, an area nested inside that hole is filled, and so on. |
+
+A new compound path, and a new path, use the non-zero rule. When you make a compound path, VectorCraft reverses each path in front that runs the same way as the back-most path, so the paths in front cut holes under the non-zero rule.
+
+1. Select the compound path, or the path that crosses itself, with the Selection tool.
+2. Open the Attributes panel. If the panel shows only the overprint options and the note, choose **Show Options** from the panel menu.
+3. Click **Use Even-Odd Fill Rule** or **Use Non-Zero Winding Fill Rule**. The button of the rule the selection uses is highlighted. The change is one step in the undo history.
+
+![A compass badge on a dusk background: a violet-to-coral sky disc with a sun and teal hills inside an amber rim, and in the middle an amber disc with an eight-point star cut out of it, so the sky and hills show through the star. The disc and star are one selected compound path. The Attributes panel is docked below Properties with Reverse Path Direction Off and Use Even-Odd Fill Rule highlighted, and the Use Even-Odd Fill Rule button shows its tooltip](/assets/uploads/vectorcraft/combine-and-cut-shapes-fill-rule.webp)
+
+The two buttons to the left of the fill rules, **Reverse Path Direction Off** and **Reverse Path Direction On**, set the direction of the selected paths. Off makes every selected path run clockwise on screen, and On makes every one run counter-clockwise. A button is highlighted only when all the selected paths run that way. Right after **Make**, neither is highlighted, because the paths in front run against the back-most one.
+
+With the non-zero rule, the direction buttons set which inner paths are holes:
+
+1. To fill every inner path, select the compound path and click **Reverse Path Direction Off**. All its paths now run the same way, so none of them cuts a hole.
+2. To make one inner path a hole again, select only that path with the Direct Selection tool and click **Reverse Path Direction On**.
+
+With the even-odd rule, the direction buttons change the direction but not which areas are filled. When you select one path of a compound path with the Direct Selection tool, the fill rule buttons set the rule of the whole compound path.
+
+**Object → Path → Reverse Path Direction** reverses the direction of every selected path. On a whole compound path it reverses all its paths together, so its holes stay holes. To reverse one inner path, select it with the Direct Selection tool first. [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/) shows how to select and edit the paths and anchor points of a shape.
+
 ## Clip art with a clipping mask
 
 A clipping mask shows the objects under it only where they fall inside its shape.
@@ -233,6 +261,7 @@ Each Live Paint group keeps its own gap options. A new group starts with Gap Det
 | Delete regions with the Shape Builder tool | Alt-click or Alt-drag | Option-click or Option-drag |
 | Make Compound Path | Ctrl+8 | Cmd+8 |
 | Release Compound Path | Ctrl+Alt+Shift+8 | Cmd+Option+Shift+8 |
+| Attributes panel | Ctrl+F11 | Cmd+F11 |
 | Make Clipping Mask | Ctrl+7 | Cmd+7 |
 | Release Clipping Mask | Ctrl+Alt+7 | Cmd+Option+7 |
 | Make Live Paint | Ctrl+Alt+X | Cmd+Option+X |
@@ -254,4 +283,5 @@ Each Live Paint group keeps its own gap options. A new group starts with Gap Det
 - [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/)
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
+- [Panels](/apps/vectorcraft/panels/)
 - [VectorCraft workflows](/apps/vectorcraft/workflows/)

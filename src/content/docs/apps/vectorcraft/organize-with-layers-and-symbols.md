@@ -19,6 +19,21 @@ Open the panel with **Window → Layers** (F7). The panel lists layers at the to
 
 ![A harbor poster at sunset with the Layers panel listing three layers named Type, Artwork and Background. The Artwork layer is expanded to show its lighthouse, sea and sun, the lighthouse is selected, and the Background layer is locked](/assets/uploads/vectorcraft/layers-panel.webp)
 
+Each row in the panel has these parts, from left to right:
+
+| Part | What it does |
+|---|---|
+| **Eye** | Click it to hide or show the row. A template layer shows a template mark here instead of the eye, and a layer in outline view shows a hollow eye with a ring around it. |
+| **Lock** | Click it to lock or unlock the row. A locked row shows a lock. |
+| **Color bar** | Shows the color of the layer that holds the row. Set the color in **Layer Options**. |
+| **Disclosure triangle** | Opens or closes the row to show what it holds. Alt-click (Option-click on macOS) the triangle to open or close every row inside it as well. |
+| **Thumbnail** | Shows a small picture of the row's art. Double-click it to open the row's options. |
+| **Name** | Double-click the name to rename the row. The name of a clipping path is underlined, and the name of a masked object has a dashed underline. |
+| **Target circle** | Click it to target the layer, group or object. A double ring marks the targeted item, or the rows of the selected art when nothing is targeted, and a filled circle marks an item that has an appearance or a transparency of its own. See [Apply an appearance to a whole layer](#apply-an-appearance-to-a-whole-layer). |
+| **Selection square** | Click the column at the right end of the row to select the row's art, and Shift-click it to add the art to the selection or take it out. A square in the layer's color shows on a row whose art is selected, and a smaller square shows on a row with selected art inside it. |
+
+A small triangle in the top-right corner of a layer's row marks the current layer.
+
 1. Click **Create New Layer** at the bottom of the panel, or press **Ctrl+L** (**Cmd+L** on macOS). The new layer goes directly above the current layer. Ctrl-click (Cmd-click on macOS) the button to put the new layer above every other layer, or Alt-click (Option-click on macOS) it to set the layer's options first.
 2. Click a layer's row to make it the current layer. New art you draw goes into the current layer.
 3. To add a layer inside another one, click **Create New Sublayer**.
@@ -26,7 +41,7 @@ Open the panel with **Window → Layers** (F7). The panel lists layers at the to
 5. Click the eye column of a row to hide or show it, and click the lock column next to it to lock or unlock it.
 6. To find a selected object in the list, click **Locate Object**. The panel opens the layers around the object and scrolls to its row.
 
-The other buttons at the bottom of the panel are **Delete Selection**, which deletes the highlighted rows with everything in them, and **Make/Release Clipping Mask**. **Make/Release Clipping Mask** makes the top object of the layer clip the rest of the layer, and a second click releases it.
+The other buttons at the bottom of the panel are **Delete Selection**, which deletes the highlighted rows with everything in them, and **Make/Release Clipping Mask**. **Make/Release Clipping Mask** makes the top object of the layer clip the rest of the layer, and a second click releases it. [Clip a whole layer](#clip-a-whole-layer) gives the steps.
 
 :::tip
 Alt-click (Option-click on macOS) a layer's eye to hide every other layer, and Alt-click (Option-click on macOS) its lock to lock every other layer. Ctrl-click (Cmd-click on macOS) the eye to switch that one layer between preview and outline view.
@@ -45,6 +60,63 @@ Each ruler guide belongs to a layer or sublayer. A guide you drag out of a ruler
 - Guides show on the screen only. They are left out of exports.
 
 To make and move guides, see [Use rulers, guides and grids](/apps/vectorcraft/set-up-documents-and-artboards/#use-rulers-guides-and-grids).
+
+## Show, hide and lock several rows with one drag
+
+You can show, hide, lock or unlock many rows with one drag.
+
+1. Press the mouse button on the eye of the first row you want to change. That row switches between shown and hidden.
+2. Keep the button down and drag down the eye column over the other rows. Each row the pointer passes takes the same state as the first row.
+3. Release the button. The whole drag is one undo step.
+
+Drag down the lock column in the same way to lock or unlock several rows.
+
+Modifier keys change what a click on the eye or the lock does. Each of these clicks is one undo step.
+
+| Click | On the eye | On the lock |
+|---|---|---|
+| Click | Hides or shows the row. | Locks or unlocks the row. |
+| Alt-click (Option-click on macOS) | **Hide Others**: hides every other top-level layer. When every other layer is already hidden, **Show All Layers** shows every layer. | **Lock Others**: locks every other top-level layer. When every other layer is already locked, **Unlock All Layers** unlocks every layer. |
+| Ctrl-click (Cmd-click on macOS) | Switches the layer between preview and outline view. | |
+| Ctrl+Alt-click (Cmd+Option-click on macOS) | **Outline Others**: puts every other top-level layer in outline view and this row's layer in preview. When every other layer is already in outline view, **Preview All Layers** puts every layer in preview. | |
+
+## Apply an appearance to a whole layer
+
+When you target a layer, the appearance, effect and transparency commands change the layer itself instead of each object in it. An effect on the layer then applies to all the art in the layer together.
+
+1. Click the target circle at the right of the layer's row. The circle shows a double ring, the layer becomes the current layer, and the layer's visible, unlocked art is selected, including the art in its sublayers.
+2. Open the Appearance panel with **Window → Appearance** (**Shift+F6**). The panel lists **Layer** at the top.
+3. Choose an effect from the **Effect** menu, such as **Effect → Stylize → Feather…**, or set an opacity or a blend mode in the Transparency panel. The change goes onto the layer, and the target circle fills to show that the layer has an appearance of its own.
+4. To stop targeting the layer, select something else. Any other change to the selection ends the targeting.
+
+![The harbor-at-dusk poster with four coral and peach clouds over the violet sky. The Clouds layer is targeted in the Layers panel, with a filled target circle and a selection square, every cloud shows its selection outline, and the Appearance panel above the Layers panel lists Layer, Contents, Feather and Opacity: Default.](/assets/uploads/vectorcraft/organize-with-layers-and-symbols-target-layer.webp)
+
+You can also target a group or an object with its target circle. Shift-click a target circle to add that item to the selection, or to take it out when all of it is already selected. A Shift-click does not target anything.
+
+To move or copy an appearance from one row to another:
+
+- Drag a target circle onto the target circle of another row. That row gets the fills, strokes, effects, opacity and blend mode of the first row, and the first row's appearance is cleared.
+- Alt-drag (Option-drag on macOS) the target circle to copy the appearance instead. The first row keeps its appearance.
+- Drag a target circle onto **Delete Selection** at the bottom of the panel to clear that row's appearance. An object keeps one empty fill and stroke, a group keeps no fill or stroke of its own, and the opacity and blend mode are reset.
+
+Opacity masks stay where they are when you move or copy an appearance. For more on building an appearance, see [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/).
+
+## Clip a whole layer
+
+A clipping layer shows its art only inside one shape, its clipping path. The steps below turn the top object of a layer into that shape.
+
+1. Put the shape you want to clip with at the top of the layer. It must be a path, a compound path or a text object.
+2. Click the layer's row to highlight it.
+3. Click **Make/Release Clipping Mask** at the bottom of the Layers panel, or choose **Make/Release Clipping Mask** from the panel menu. The top object becomes the clipping path: it loses its fill and stroke, moves to the bottom of the layer, and its name is underlined. The rest of the layer shows only inside it.
+4. To release the clipping mask, highlight the layer and click **Make/Release Clipping Mask** again. The layer stops clipping, and the clipping path stays in the layer without a fill or stroke.
+
+![A porthole view: a navy porthole frame with amber bolts on a teal hull, and inside the round window a dusk seascape with a violet sky, a coral sun, teal waves and a navy boat with an amber sail. The Layers panel shows the View layer open with Window, the underlined clipping path, at the bottom of the layer, and the tooltip Make/Release Clipping Mask shows over the button at the bottom of the panel.](/assets/uploads/vectorcraft/organize-with-layers-and-symbols-clip-layer.webp)
+
+The command acts on the one highlighted layer or group row. When no single layer or group row is highlighted, it acts on the one selected group, and otherwise on the current layer. Art you add to a clipping layer later is clipped too.
+
+When the top object is not a path, a compound path or a text object, VectorCraft shows "the top object must be a path, compound path or text object to use as a clipping mask" and does not change the layer. A layer with no objects shows "the layer has no objects to clip by".
+
+To clip selected objects with a shape instead of a whole layer, see [Clip art with a clipping mask](/apps/vectorcraft/combine-and-cut-shapes/#clip-art-with-a-clipping-mask).
 
 ## Find a layer or object
 
@@ -108,6 +180,8 @@ The panel menu holds commands that work on whole layers. Most of them act on the
 - **Reverse Order** reverses the stacking order of the highlighted rows.
 - **Template** turns the highlighted layers into template layers, or back into ordinary layers.
 - **Hide Others**, **Outline Others** and **Lock Others** act on every top-level layer except the ones that hold the highlighted rows, or the current layer when no row is highlighted. When every other layer is already hidden, in outline or locked, the menu shows **Show All Layers**, **Preview All Layers** or **Unlock All Layers** in that item's place, and the command shows, previews or unlocks every layer.
+
+**Enter Isolation Mode** in the same menu is described in [Edit a group in isolation mode](/apps/vectorcraft/arrange-group-and-align/#edit-a-group-in-isolation-mode).
 
 :::caution
 **Flatten Artwork** deletes hidden layers and the art in them. Show any layer you want to keep before you flatten. Template layers are kept.
@@ -263,6 +337,7 @@ While a symbolism tool is active, press **[** or **]** to make the brush smaller
 |---|---|---|
 | Layers panel | F7 | F7 |
 | Create a new layer | Ctrl+L | Cmd+L |
+| Appearance panel | Shift+F6 | Shift+F6 |
 | Symbols panel | Ctrl+Shift+F11 | Cmd+Shift+F11 |
 | New symbol from the selection | F8 | F8 |
 | Place a file | Ctrl+Shift+P | Cmd+Shift+P |
@@ -276,6 +351,7 @@ While a symbolism tool is active, press **[** or **]** to make the brush smaller
 ## Related
 
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)
+- [Align anchor points and guides](/apps/vectorcraft/align-anchor-points-and-guides/)
 - [Select artwork](/apps/vectorcraft/select-artwork/)
 - [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/)
 - [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/)
