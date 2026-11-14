@@ -27,6 +27,7 @@ async function buildSidebars() {
       order: entry.data.sidebar.order ?? sharedOrder[slug],
       parent: entry.data.parent,
       category: entry.data.category,
+      subcategory: entry.data.subcategory,
       file: entry.filePath ?? entry.id,
       children: [],
     };
@@ -45,41 +46,47 @@ async function buildSidebars() {
       }
       parent.children.push(page);
     }
-    for (const page of topLevel) page.children.sort(compare);
+    for (const page of topLevel) {
+      page.items = groupChildren(page.children.sort(compare));
+      page.children = itemPages(page.items);
+    }
     result.set(app, topLevel.sort(compare));
   }
   return result;
 }
 
 // The sidebar entries for one app: its pages without a parent, each with the pages that name it as
-// their parent in `children`.
+// their parent in `children`, in the order the sidebar lists them, and in `items` as the sidebar
+// groups them (see groupChildren).
 export async function appSidebar(app) {
   sidebars ??= buildSidebars();
   return (await sidebars).get(app) ?? [];
 }
 
-// The sidebar for one app in sections. The first section has no label and holds the pages without a
-// `category`, nested by `parent` as appSidebar returns them. Each further section is one category,
-// in categoryOrder, and lists its pages flat in sidebar.order, whatever their `parent`. An app whose
-// pages have no category gets the unlabeled section only.
-export async function appSidebarSections(app) {
-  const pages = await appSidebar(app);
-  const plain = pages
-    .filter((page) => !page.category)
-    .map((page) => ({ ...page, children: page.children.filter((child) => !child.category) }));
-  const groups = new Map();
-  for (const page of pages.flatMap((page) => [page, ...page.children])) {
-    if (!page.category) continue;
-    if (!groups.has(page.category)) groups.set(page.category, []);
-    groups.get(page.category).push({ ...page, children: [] });
+const lowest = (pages) => Math.min(...pages.map((page) => page.order ?? Infinity));
+
+// Groups a page's children for the sidebar. Each item is `{ page }` or `{ label, items }`. Children
+// without a `category` come first, in sidebar.order. Each category follows as a group, in
+// categoryOrder. Inside a category, pages without a `subcategory` come first, then one group per
+// subcategory, ordered by its lowest sidebar.order. When every page of a category has the same
+// subcategory, the category lists the pages without a subcategory group.
+function groupChildren(children) {
+  const items = children.filter((page) => !page.category).map((page) => ({ page }));
+  const categories = [...Map.groupBy(children.filter((page) => page.category), (page) => page.category)]
+    .map(([label, members]) => ({ label, order: lowest(members), members }))
+    .sort(compareCategories);
+  for (const { label, members } of categories) {
+    const plain = members.filter((page) => !page.subcategory).map((page) => ({ page }));
+    const subcategories = [...Map.groupBy(members.filter((page) => page.subcategory), (page) => page.subcategory)]
+      .map(([name, list]) => ({ label: name, order: lowest(list), items: list.map((page) => ({ page })) }))
+      .sort((a, b) => a.order - b.order || a.label.localeCompare(b.label));
+    const inner = !plain.length && subcategories.length === 1
+      ? subcategories[0].items
+      : [...plain, ...subcategories.map(({ label: name, items: list }) => ({ label: name, items: list }))];
+    items.push({ label, items: inner });
   }
-  const categories = [...groups].map(([label, members]) => ({
-    label,
-    order: Math.min(...members.map((page) => page.order ?? Infinity)),
-    pages: members.sort(compare),
-  }));
-  categories.sort(compareCategories);
-  return [{ label: null, pages: plain }, ...categories.map(({ label, pages }) => ({ label, pages }))].filter(
-    (section) => section.label === null || section.pages.length,
-  );
+  return items;
 }
+
+// The pages in a list of sidebar items, in the order the sidebar shows them.
+export const itemPages = (items) => items.flatMap((item) => (item.page ? [item.page] : itemPages(item.items)));
