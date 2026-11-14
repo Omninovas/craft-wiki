@@ -3,6 +3,11 @@ title: Arrange, group and align
 description: Change which object sits in front, group, lock and hide objects, select objects that share an attribute, and line objects up with the Align panel and the Object menu.
 sidebar:
   order: 15
+type: guide
+category: Organize
+subcategory: Arrange and align
+cover: /assets/uploads/vectorcraft/stacking-order.webp
+summary: Change the stacking order, and group, lock, hide and align objects.
 parent: workflows
 ---
 

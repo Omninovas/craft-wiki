@@ -3,6 +3,11 @@ title: Set up a document and artboards
 description: Start a document at the size you need, add and arrange its artboards, set units, bleed and color mode, and move around the canvas.
 sidebar:
   order: 10
+type: guide
+category: Documents and artboards
+subcategory: Documents
+cover: /assets/uploads/vectorcraft/new-document-dialog.webp
+summary: Start a document at the size you need, with its units, bleed and color mode.
 parent: workflows
 ---
 

@@ -3,6 +3,11 @@ title: Apply effects and appearance
 description: Stack fills, strokes and live effects on one object, change them later in the Appearance panel, and save the look as a graphic style.
 sidebar:
   order: 17
+type: guide
+category: Effects and appearance
+subcategory: Effects
+cover: /assets/uploads/vectorcraft/appearance-panel.webp
+summary: Stack fills, strokes and live effects, and save the look as a graphic style.
 parent: workflows
 ---
 

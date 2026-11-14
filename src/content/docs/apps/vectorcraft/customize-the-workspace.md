@@ -3,6 +3,11 @@ title: Customize the workspace
 description: Switch between the built-in workspaces, arrange and save panel layouts, show or hide the bars, edges and on-canvas widgets, build your own toolbars, switch tools for a moment, open more windows on a document, save views, rotate the canvas, present your artwork and step back through the History panel.
 sidebar:
   order: 22.8
+type: guide
+category: Customize and extend
+subcategory: Workspace
+cover: /assets/uploads/vectorcraft/workspace-switcher.webp
+summary: Arrange panels, save workspaces and build your own toolbars.
 parent: workflows
 ---
 

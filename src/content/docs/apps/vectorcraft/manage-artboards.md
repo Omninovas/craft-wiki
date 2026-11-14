@@ -3,6 +3,11 @@ title: Manage artboards
 description: Copy, paste, rename, lock, delete and turn artboards from the Artboard tool's canvas menu, fade the canvas outside them, and paste art onto several artboards at once.
 sidebar:
   order: 10.5
+type: guide
+category: Documents and artboards
+subcategory: Artboards
+cover: /assets/uploads/vectorcraft/artboards-canvas-menu.webp
+summary: Copy, rename, lock and turn artboards, and paste art onto several at once.
 parent: workflows
 ---
 

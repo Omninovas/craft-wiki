@@ -3,6 +3,11 @@ title: Combine and cut shapes
 description: Build new shapes from overlapping ones with the Pathfinder panel and the Shape Builder tool, set their options, and use compound shapes, compound paths, clipping masks and Live Paint.
 sidebar:
   order: 16
+type: guide
+category: Organize
+subcategory: Arrange and align
+cover: /assets/uploads/vectorcraft/pathfinder-grid.webp
+summary: Build shapes with Pathfinder and Shape Builder, and use masks and Live Paint.
 parent: workflows
 ---
 

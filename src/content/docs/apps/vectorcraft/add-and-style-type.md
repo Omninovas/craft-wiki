@@ -3,6 +3,11 @@ title: Add and style type
 description: Make point type, area type and type on a path, flow text between frames, and set fonts, sizes and alignment.
 sidebar:
   order: 14
+type: guide
+category: Type
+subcategory: Setting type
+cover: /assets/uploads/vectorcraft/type-kinds.webp
+summary: Make point, area and path type, and set fonts, sizes and alignment.
 parent: workflows
 ---
 

@@ -3,6 +3,11 @@ title: Measure and dimension
 description: Measure distances with the Measure tool, read positions and sizes in the Info panel, add linked length, angle and radius dimensions, inspect paths and anchor points, and list what a document holds.
 sidebar:
   order: 18.6
+type: guide
+category: Draw and edit
+subcategory: Drawing aids
+cover: /assets/uploads/vectorcraft/measure-tool.webp
+summary: Measure distances and add dimensions that follow the art when it changes.
 parent: workflows
 ---
 

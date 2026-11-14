@@ -3,6 +3,11 @@ title: Install and update
 description: Download VectorCraft for Windows, macOS, Linux or FreeBSD, use it in a browser, check your version, keep it up to date, start it with options, and find or remove its settings.
 sidebar:
   order: 2
+type: guide
+category: Get started
+subcategory: Basics
+cover: /assets/uploads/vectorcraft/install-first-start.webp
+summary: Download VectorCraft for your platform, check your version and keep it up to date.
 ---
 
 This page shows how to install VectorCraft on each system, what opens the first time you start it, how to check your version and update, which options VectorCraft takes when you start it from a terminal, where it keeps its settings, and how to uninstall it.

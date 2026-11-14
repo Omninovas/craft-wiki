@@ -3,6 +3,11 @@ title: VectorCraft
 description: An open-source vector illustration app with a familiar layout, for posters, logos, icons and print work.
 sidebar:
   order: 0
+type: overview
+category: Get started
+subcategory: Basics
+cover: /assets/uploads/vectorcraft/hero.webp
+summary: Learn what VectorCraft does, what it opens and saves, and where to start.
 ---
 
 VectorCraft is a vector illustration app. If you have used a professional vector editor before, it will feel familiar: the Pen, Direct Selection, Pathfinder, Smart Guides, and the Appearance, Swatches and Layers panels are all there, in the places and on the shortcuts you'd expect. It runs on Windows, macOS, Linux and FreeBSD, and in a web browser. It is free and open source (MIT or Apache-2.0), and made by the ArtCraft team.

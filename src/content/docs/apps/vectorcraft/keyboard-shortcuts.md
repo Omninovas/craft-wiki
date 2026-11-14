@@ -3,6 +3,12 @@ title: Keyboard shortcuts
 description: Every default keyboard shortcut in VectorCraft, for tools, menus, panels and drawing, and how to change them or find a command by name.
 sidebar:
   order: 31.3
+type: reference
+category: Reference
+subcategory: Reference
+parent: workflows
+cover: /assets/uploads/vectorcraft/keyboard-shortcuts-search-commands.webp
+summary: Look up every default shortcut by menu and tool.
 ---
 
 This page lists every keyboard shortcut VectorCraft has by default, for Windows and Linux and for macOS. Where Windows and Linux use Ctrl, macOS uses Cmd, and where they use Alt, macOS uses Option.

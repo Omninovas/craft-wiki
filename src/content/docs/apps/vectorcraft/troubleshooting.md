@@ -3,6 +3,11 @@ title: Troubleshooting
 description: Fix common problems with VectorCraft, recover unsaved work, reset your settings, and find the version and log for a bug report.
 sidebar:
   order: 32
+type: troubleshooting
+category: Reference
+subcategory: Reference
+cover: /assets/uploads/vectorcraft/prefs-performance.webp
+summary: Fix common problems, recover unsaved work and find the log for a bug report.
 ---
 
 This page lists common problems with VectorCraft and how to fix them. It also shows how to recover unsaved work, go back to the default settings, and find the version and the log to attach to a bug report.

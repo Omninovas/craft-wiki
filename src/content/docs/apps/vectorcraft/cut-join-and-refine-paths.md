@@ -3,6 +3,11 @@ title: Cut, join and refine paths
 description: Erase, cut, join and sketch paths with the Eraser, Join, cutting and Shaper tools, then refine anchor points, corners, crossings and dashes with the path plug-ins.
 sidebar:
   order: 12.6
+type: guide
+category: Draw and edit
+subcategory: Paths
+cover: /assets/uploads/vectorcraft/eraser-tool.webp
+summary: Erase, cut and join paths, then clean up anchor points and corners.
 parent: workflows
 ---
 

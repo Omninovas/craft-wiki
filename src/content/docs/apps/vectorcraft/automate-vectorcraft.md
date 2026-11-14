@@ -3,6 +3,11 @@ title: Automate VectorCraft
 description: Find and run any command by name, change keyboard shortcuts, record and replay actions with stops, run an action on a folder of files, check a script before you run it, and run VectorCraft from the command line or an MCP client.
 sidebar:
   order: 23
+type: guide
+category: Automate
+subcategory: Automation
+cover: /assets/uploads/vectorcraft/search-commands.webp
+summary: Run commands by name, record actions and drive VectorCraft from the command line.
 parent: workflows
 ---
 

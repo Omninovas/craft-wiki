@@ -3,6 +3,11 @@ title: Manage color and proof for print
 description: Choose color settings and profiles, soft-proof colors on screen, check overprints and ink plates, use spot colors, flatten transparency and add trim marks before a print job.
 sidebar:
   order: 22.5
+type: guide
+category: Print and color management
+subcategory: Color management
+cover: /assets/uploads/vectorcraft/color-settings-intent.webp
+summary: Choose color settings, soft-proof on screen and check separations before printing.
 parent: workflows
 ---
 

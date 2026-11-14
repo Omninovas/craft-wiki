@@ -3,6 +3,11 @@ title: Make lists and fit type to its frame
 description: Turn paragraphs into bulleted or numbered lists, set list levels and indents in the Bullets and Numbering dialog, and size type to its frame with Dynamic Text and Fit Headline.
 sidebar:
   order: 14.6
+type: guide
+category: Type
+subcategory: Type layout
+cover: /assets/uploads/vectorcraft/lists-numbered.webp
+summary: Make bulleted and numbered lists, and fit headlines to their frames.
 parent: workflows
 ---
 

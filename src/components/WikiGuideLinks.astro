@@ -1,12 +1,14 @@
 ---
-import { appSidebar } from '../lib/appSidebar.mjs';
+import { appSidebar, itemPages } from '../lib/appSidebar.mjs';
+import { categoryId } from '../data/pageCategories.mjs';
 const { slug } = Astro.props;
 const pathname = Astro.url.pathname;
 const current = (page) => (pathname === `/apps/${slug}/${page}/` ? 'page' : undefined);
+const holdsCurrent = (items) => itemPages(items).some((page) => current(page.slug));
 const pages = await appSidebar(slug);
 ---
 <div class="wiki-guide-links">
-  {pages.map(({ slug: guide, label, children }) => {
+  {pages.map(({ slug: guide, label, children, items }) => {
     const link = <a href={`/apps/${slug}/${guide}/`} aria-current={current(guide)}><span>{label}</span></a>;
     if (!children.length) return link;
     const open = !!current(guide) || children.some((child) => current(child.slug));
@@ -16,7 +18,39 @@ const pages = await appSidebar(slug);
         <details class="wiki-guide-group" open={open}>
           <summary aria-label={`${label} pages`}><span class="wiki-chevron" aria-hidden="true"></span></summary>
           <div class="wiki-guide-children">
-            {children.map((child) => <a href={`/apps/${slug}/${child.slug}/`} aria-current={current(child.slug)}><span>{child.label}</span></a>)}
+            {items.map((item) => {
+              if (item.page) {
+                return <a href={`/apps/${slug}/${item.page.slug}/`} aria-current={current(item.page.slug)}><span>{item.page.label}</span></a>;
+              }
+              // A category's heading links to its landing page when it has one.
+              const heading = item.landing
+                ? <a class="wiki-guide-category-label" href={`/apps/${slug}/${item.landing.slug}/`} aria-current={current(item.landing.slug)}><span>{item.label}</span></a>
+                : <span class="wiki-guide-category-label">{item.label}</span>;
+              if (!item.items.length) {
+                return (
+                  <div class="wiki-guide-category wiki-guide-category-empty" data-category={categoryId(item.label)}>
+                    <div class="wiki-guide-category-row">{heading}</div>
+                  </div>
+                );
+              }
+              return (
+                <details class="wiki-guide-category" data-category={categoryId(item.label)} open={holdsCurrent([item])}>
+                  <summary>{heading}<span class="wiki-guide-category-count">{itemPages(item.items).length}</span><span class="wiki-chevron" aria-hidden="true"></span></summary>
+                  <div class="wiki-guide-category-pages">
+                    {item.items.map((inner) => inner.page
+                      ? <a href={`/apps/${slug}/${inner.page.slug}/`} aria-current={current(inner.page.slug)}><span>{inner.page.label}</span></a>
+                      : (
+                        <details class="wiki-guide-category wiki-guide-subcategory" open={holdsCurrent(inner.items)}>
+                          <summary><span class="wiki-guide-category-label">{inner.label}</span><span class="wiki-chevron" aria-hidden="true"></span></summary>
+                          <div class="wiki-guide-category-pages">
+                            {itemPages(inner.items).map((page) => <a href={`/apps/${slug}/${page.slug}/`} aria-current={current(page.slug)}><span>{page.label}</span></a>)}
+                          </div>
+                        </details>
+                      ))}
+                  </div>
+                </details>
+              );
+            })}
           </div>
         </details>
       </div>

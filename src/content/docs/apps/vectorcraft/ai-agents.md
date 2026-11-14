@@ -3,6 +3,11 @@ title: AI agents
 description: Let Claude or another AI assistant draw, edit and export in VectorCraft through its MCP server.
 sidebar:
   order: 30
+type: guide
+category: Automate
+subcategory: Automation
+cover: /assets/uploads/vectorcraft/agent-drawing.webp
+summary: Let an AI assistant draw, edit and export through the MCP server.
 ---
 
 VectorCraft comes with a [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server, so an AI assistant such as Claude Code can draw, edit, inspect and export VectorCraft documents. The assistant uses the same commands as VectorCraft's menus, tools and panels.

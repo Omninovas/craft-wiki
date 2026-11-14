@@ -3,6 +3,11 @@ title: Preferences
 description: Every setting in VectorCraft's Preferences dialog, page by page, with its default value and its range or choices, and how to search, export, import and reset them.
 sidebar:
   order: 31.6
+type: reference
+category: Reference
+subcategory: Reference
+cover: /assets/uploads/vectorcraft/preferences-dialog-window.webp
+summary: Look up every Preferences setting with its default and range.
 ---
 
 This page lists every setting in the Preferences dialog, page by page, with its default and its range or choices. It also describes how to search the settings, how to export and import them, and how **Reset Preferences** works.

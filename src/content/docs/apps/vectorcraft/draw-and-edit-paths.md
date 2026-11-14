@@ -3,6 +3,11 @@ title: Draw and edit paths
 description: Draw straight and curved paths with the Pen, Curvature and Pencil tools, then reshape them with Direct Selection and the Object → Path commands.
 sidebar:
   order: 12
+type: guide
+category: Draw and edit
+subcategory: Paths
+cover: /assets/uploads/vectorcraft/path-anatomy.webp
+summary: Draw with the Pen, Curvature and Pencil tools, then edit the anchor points.
 parent: workflows
 ---
 

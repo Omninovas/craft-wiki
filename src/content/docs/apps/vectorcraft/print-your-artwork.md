@@ -3,6 +3,11 @@ title: Print your artwork
 description: Print artboards at the right size, add printer's marks and bleed, set graphics, color management and advanced options, scale or tile large art, and save your print settings as presets.
 sidebar:
   order: 22
+type: guide
+category: Print and color management
+subcategory: Print
+cover: /assets/uploads/vectorcraft/print-general.webp
+summary: Print artboards with marks and bleed, and save your settings as presets.
 parent: workflows
 ---
 

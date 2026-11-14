@@ -3,6 +3,11 @@ title: Work with styles and long text
 description: Save formatting as paragraph and character styles and edit their options, set OpenType features, glyphs and tab stops, wrap text around objects, find and replace words, set vertical type, and fine-tune hyphenation and justification.
 sidebar:
   order: 14.5
+type: guide
+category: Type
+subcategory: Type layout
+cover: /assets/uploads/vectorcraft/paragraph-styles.webp
+summary: Use paragraph and character styles, OpenType features, tabs and text wrap.
 parent: workflows
 ---
 
