@@ -160,14 +160,16 @@ To delete brushes, select them in the panel and click **Delete Brush**. When no 
 
 A brush library is a set of brushes that opens in its own panel. Libraries are read-only: to use a brush, you add it to the document's Brushes panel.
 
-![The Brush Libraries Menu open from its button at the bottom left of the Brushes panel, over the dusk garden scene. It lists Art Ribbons, Calligraphic Nibs, Pattern Borders and Scatter Shapes, then Other Library… and Save Brushes…](/assets/uploads/vectorcraft/brush-libraries-menu.webp)
+![The Brush Libraries Menu open above its button at the bottom left of the Brushes panel, over the dusk garden scene. It lists Art Ribbons, Calligraphic Nibs, Pattern Borders, Scatter Shapes, Game Trails and Energy Beams, with the pointer on Energy Beams, then Other Library… and Save Brushes…](/assets/uploads/vectorcraft/brush-libraries-menu.webp)
 
-1. Choose **Window → Brush Libraries**, click **Brush Libraries Menu** at the bottom left of the Brushes panel, or choose **Open Brush Library** from the panel menu, and choose a library. VectorCraft has four: Art Ribbons, Calligraphic Nibs, Pattern Borders and Scatter Shapes.
+1. Choose **Window → Brush Libraries**, click **Brush Libraries Menu** at the bottom left of the Brushes panel, or choose **Open Brush Library** from the panel menu, and choose a library. VectorCraft has six: Art Ribbons, Calligraphic Nibs, Pattern Borders, Scatter Shapes, Game Trails and Energy Beams.
 2. Click a brush in the library panel. The brush is added to the Brushes panel as the current brush, and it is applied to any selected paths.
 
 ![The Art Ribbons library panel docked below the Brushes panel, after its Striped Ribbon brush was clicked with three swirls selected in the dusk garden sky. The swirls now draw as blue striped ribbons, and the added brush is highlighted in the Brushes panel](/assets/uploads/vectorcraft/brush-library-panel.webp)
 
 You can also drag a library brush onto a path to apply it, or onto the Brushes panel to add it. A brush that the document already has is not added twice, and a brush whose name is taken gets a number.
+
+To see each brush's name next to its preview, choose **Large List View** or **Small List View** from the menu at the top right of the library panel.
 
 To use the brushes of another file, choose **Window → Brush Libraries → Other Library…** and open any document that VectorCraft can open. The library stays in the menu until you quit VectorCraft.
 
@@ -182,6 +184,25 @@ To save the document's brushes as a library:
 
 A library is saved as a `.vectorcraft` file that holds the brushes and everything their art uses, such as patterns, symbols and swatches. Libraries saved to User Defined Libraries are listed under **Window → Brush Libraries → User Defined**.
 
+### Paint beams with the Energy Beams library
+
+Game Trails and Energy Beams hold art brushes for motion lines, streaks and beams. Game Trails has Speed Line, Dash Trail, Burst Ray and Zigzag. Energy Beams has four brushes:
+
+| Brush | What it draws along the path |
+|---|---|
+| **Laser Bolt** | A straight beam that is widest in the middle and narrows toward both ends |
+| **Plasma Arc** | A band that bends in one arch |
+| **Charge Wave** | A band that swings through one full wave |
+| **Spark Trail** | A row of short dashes |
+
+Every brush in both libraries uses the **Tints** colorization method, so it draws in the stroke color. To paint beams in several colors, change the stroke color before each stroke.
+
+1. Choose **Window → Brush Libraries → Energy Beams**.
+2. Press **Ctrl+Shift+A** (**Cmd+Shift+A** on macOS) to deselect, then click a brush in the Energy Beams panel. It is added to the Brushes panel and becomes the current brush.
+3. Set the stroke color and weight, press B to choose the Paintbrush, and drag on the canvas.
+
+![A night harbor with a striped lighthouse on a dark point and three beams spreading from its lantern across the starry sky: a cyan Laser Bolt that is widest in the middle, a magenta Plasma Arc that sags in one arch, and a newly painted amber Charge Wave that dips and rises through one full wave and is still selected, with its path shown as a thin blue line. The Paintbrush is the active tool, Properties shows the path with an 8 pt amber stroke, and the Energy Beams panel below the Brushes panel lists Laser Bolt, Plasma Arc, Charge Wave and Spark Trail with Charge Wave highlighted](/assets/uploads/vectorcraft/brushes-energy-beams.webp)
+
 ## Vary a stroke's width with the Width tool
 
 The Width tool makes a stroke wider or narrower at points along its path. It works on any stroke, with or without a brush.
@@ -192,6 +213,8 @@ The Width tool makes a stroke wider or narrower at points along its path. It wor
 4. Release the mouse button.
 
 ![A blue river stroked across teal and navy hills under a coral sky at 130% zoom, with the Width tool dragging a width point out to W: 24.07 pt between two narrower width points. The status bar shows the Width tool's hints for adding, changing, selecting, editing and deleting width points](/assets/uploads/vectorcraft/width-tool.webp)
+
+Between two width points, the width changes along a smooth curve and stays between the widths of those two points. The stroke has no corner at a width point. At a width point that is wider or narrower than both of its neighbors, the width stops growing or shrinking. Where the widths of several width points change by the same amount per unit of length, the width keeps changing at that even rate between them.
 
 To change one side only, hold **Alt** (**Option** on macOS) as you drag. To move a width point along the path, drag its center. To copy it, Alt-drag (Option-drag on macOS) its center. When you drop a width point onto another one, the width changes in a single step at that place.
 
@@ -258,3 +281,4 @@ An expanded brush stroke no longer follows a path. To change its shape or brush 
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Select artwork](/apps/vectorcraft/select-artwork/)
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/)
+- [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)

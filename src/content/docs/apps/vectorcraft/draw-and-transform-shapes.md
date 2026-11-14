@@ -239,12 +239,16 @@ The **Edit** menu holds the clipboard commands:
 | **Cut** | Ctrl+X | Cmd+X | Removes the selection and puts it on the clipboard |
 | **Copy** | Ctrl+C | Cmd+C | Puts a copy of the selection on the clipboard |
 | **Paste** | Ctrl+V | Cmd+V | Pastes the objects in the middle of the window |
-| **Paste in Front** | Ctrl+F | Cmd+F | Pastes the objects where they were copied, just above the top selected object, or at the top of the current layer when nothing is selected |
-| **Paste in Back** | Ctrl+B | Cmd+B | Pastes the objects where they were copied, just below the bottom selected object, or at the bottom of the current layer when nothing is selected |
-| **Paste in Place** | Ctrl+Shift+V | Cmd+Shift+V | Pastes the objects where they were copied |
+| **Paste in Front** | Ctrl+F | Cmd+F | Pastes the objects on the active artboard, at the place they had on the artboard you copied them from, just above the top selected object, or at the top of the current layer when nothing is selected |
+| **Paste in Back** | Ctrl+B | Cmd+B | Pastes the objects on the active artboard, at the place they had on the artboard you copied them from, just below the bottom selected object, or at the bottom of the current layer when nothing is selected |
+| **Paste in Place** | Ctrl+Shift+V | Cmd+Shift+V | Pastes the objects on the active artboard, at the place they had on the artboard you copied them from |
 | **Paste on All Artboards** | Ctrl+Alt+Shift+V | Cmd+Option+Shift+V | Pastes a copy on every artboard, at the same position relative to each artboard |
 | **Paste without Formatting** | Ctrl+Alt+V | Cmd+Option+V | Pastes as **Paste** does, and pasted text takes the default character style |
 | **Clear** | Delete | Delete | Deletes the selection without putting it on the clipboard |
+
+For example, art you copy from the top-left corner of artboard 1 and paste while artboard 2 is active goes to the top-left corner of artboard 2. Art you copied from outside every artboard keeps its place.
+
+To paste on some artboards but not all of them, first select the art with the **Selection** tool and copy it. Copy the art before you pick the Artboard tool, because with the Artboard tool **Edit → Copy** copies the selected artboards. Then pick the Artboard tool, click the first artboard and Shift-click the others. You can also select the artboards in the Artboards panel: click the first one, then Shift-click or Ctrl-click (Cmd-click on macOS) the others, and VectorCraft switches to the Artboard tool. **Paste in Place**, **Paste in Front** and **Paste in Back** then put a copy on each selected artboard, where the art was on the artboard you copied it from. **Edit → Undo** removes all of the copies in one step. Art you copied from outside every artboard keeps its place on the first selected artboard and the same offset on the others.
 
 The [Clipboard Handling](/apps/vectorcraft/preferences/#clipboard-handling) preferences set the formats VectorCraft copies and how pasted text keeps its formatting. The **Paste Offset** preference on the [General](/apps/vectorcraft/preferences/#general) page sets how far pasted and duplicated objects are offset.
 
@@ -253,6 +257,7 @@ The [Clipboard Handling](/apps/vectorcraft/preferences/#clipboard-handling) pref
 1. Select the objects and choose **Window → Transform** (**Shift+F8**).
 2. Click a point of the reference point locator. **X** and **Y** show the position of that point of the selection, and the transforms in the panel turn or flip the selection about it.
 3. Type a value in a field and press **Enter**. Press **Alt+Enter** (**Option+Return** on macOS) to apply the value to a copy instead. Press **Ctrl+Enter** (**Cmd+Return** on macOS) in **W** or **H** to scale the other side in proportion.
+4. Press **Tab** to move to the next field and **Shift+Tab** to move back, one press for each field. The position and size fields run **X**, **W**, **Y**, **H**, and the **Constrain Width and Height Proportions** link comes after the fields.
 
 ![The Rolling Hills scene: violet and teal hills drawn from closed arcs under a violet-to-coral sky, with the sun selected between the two front hills and its bounding box showing. The Transform panel, docked in its own group below the Properties, Layers and Libraries tabs, shows the sun at X 690 pt, Y 560 pt, W 170 pt and H 170 pt with Rotate and Shear at 0°, Ellipse Properties with Pie Start Angle 0° and Pie End Angle 360°, and Scale Corners and Scale Strokes & Effects cleared](/assets/uploads/vectorcraft/transform-panel.webp)
 

@@ -1,11 +1,11 @@
 ---
 title: Preferences
-description: Every setting in VectorCraft's Preferences dialog, page by page, with its default value and its range or choices, and how to reset them.
+description: Every setting in VectorCraft's Preferences dialog, page by page, with its default value and its range or choices, and how to search, export, import and reset them.
 sidebar:
   order: 31.6
 ---
 
-This page lists every setting in the Preferences dialog, page by page, with its default and its range or choices. It also describes how **Reset Preferences** works.
+This page lists every setting in the Preferences dialog, page by page, with its default and its range or choices. It also describes how to search the settings, how to export and import them, and how **Reset Preferences** works.
 
 ## Open Preferences
 
@@ -20,13 +20,39 @@ The pages are General, Selection & Anchor Display, Type, Units, Guides & Grid, S
 
 ![The Preferences dialog open on the General page over a harbor illustration, with the page list on the left, Keyboard Increment 1 pt, Constrain Angle 0°, Corner Radius 12 pt and Paste Offset 10 pt, and Reset Preferences, Previous, Next, Cancel and OK along the bottom](/assets/uploads/vectorcraft/preferences-dialog-window.webp)
 
+### Search Preferences
+
+The **Search Preferences** field above the page list has the keyboard focus when the dialog opens.
+
+1. Type part of a setting's name, of a heading on a page, or of a page's name. Case does not matter, and English names match in every interface language.
+2. In place of the page list, the dialog lists the settings that match, grouped by page in the order of the page list. Under each setting, the list shows its page, and its heading when it has one. When nothing matches, the list shows "No settings found".
+3. Click a setting in the list. The dialog opens its page, scrolls to it and highlights its row until you show another page. The search field is cleared.
+
+To return to the search field from anywhere in the dialog, press **Ctrl+F** (**Cmd+F** on macOS). While the field has text and the keyboard focus, **Esc** clears the field. Otherwise **Esc** closes the dialog without applying your changes, as **Cancel** does.
+
+![The Preferences dialog over the Harbor Lights poster with "guides" typed in Search Preferences, and the page list replaced by matching settings: Snap to Grid under Guides & Grid, then the guide Color and Style, Lock Guides by Default and Artboard Guides with Cmd/Ctrl + Ruler Drag under Guides & Grid › Guides, then the grid settings. Export Preferences… and Import Preferences… sit above Reset Preferences.](/assets/uploads/vectorcraft/prefs-search.webp)
+
+### Export and import preferences
+
+**Export Preferences…** and **Import Preferences…** are at the bottom left of the dialog, above **Reset Preferences**.
+
+1. Click **Export Preferences…** and choose where to save the file. The suggested name is `VectorCraft Preferences.json`. In the web build, the browser downloads the file.
+2. On another computer, or after a reset, open Preferences, click **Import Preferences…** and choose the file. VectorCraft applies the preferences at once, the dialog shows the imported values, and the status bar shows "Preferences imported."
+
+- The file holds the preferences as they were last applied. Changes you made in the dialog and have not applied with **OK** are not in it.
+- The file holds every setting in the dialog except **Enable Contextual Task Bar**, **Snap to Grid** and **Smart Guides**, plus the Eyedropper Options, the Pathfinder Options, the Snap to Glyph options and the Perspective Grid widget settings. It does not hold the four folder settings (**Additional Fonts Folder**, **Additional Plug-ins Folder**, the Data Recovery **Folder** and **Templates Folder**) or your saved presets.
+- VectorCraft does not import a file larger than 1 MB, a file in another format or from a newer version, or a file with an unknown setting, a value of the wrong type or out of range, or a folder setting. In that case no setting changes, and the status bar shows the reason.
+- Settings that the file leaves out keep their values. An import does not change the open document's units.
+- The web build has no **Import Preferences…** button.
+
 Some settings depend on others or on the platform:
 
+- **Scroll Sideways with Cmd/Ctrl + Wheel** is dimmed while **Zoom with Mouse Wheel** is on.
 - **Numbers Without Units Are Points** is dimmed unless one of the Units settings is Picas.
 - **Animated Zoom** is dimmed while **GPU Performance** is off.
 - **Accent Color** is dimmed while **Color Scheme** is Classic.
-- **System Title Bar** appears on Windows and Linux only, and **Linux Display Server** appears on Linux only.
-- **System Title Bar**, **Graphics Processor** and **Linux Display Server** take effect the next time VectorCraft starts.
+- **System Title Bar** appears on Windows, Linux and the BSDs only, **VectorCraft Title Bar on Every Desktop** appears on Linux and the BSDs only, and **Linux Display Server** appears on Linux only.
+- **System Title Bar**, **VectorCraft Title Bar on Every Desktop**, **Graphics Processor** and **Linux Display Server** take effect the next time VectorCraft starts.
 
 In the tables, a checkbox shows On or Off as its default. Lengths are listed in points, the default unit.
 
@@ -47,6 +73,7 @@ Under **Options**:
 | **Disable Auto Add/Delete** | Off |
 | **Use Precise Cursors** | Off |
 | **Show Tool Tips** | On |
+| **Show External Script Warning** | On |
 | **Anti-aliased Artwork** | On |
 | **Select Same Tint %** | Off |
 | **Show The Home Screen When No Documents Are Open** | On |
@@ -57,8 +84,10 @@ Under **Options**:
 | **Scale Corners** | Off |
 | **Scale Strokes & Effects** | Off |
 | **Zoom with Mouse Wheel** | Off |
+| **Scroll Sideways with Cmd/Ctrl + Wheel** | On |
 | **Scrub Numeric Fields by Dragging** | On |
 | **Trackpad Gesture to Rotate View** | On |
+| **Hold a Tool Shortcut to Use the Tool Temporarily** | On |
 | **Use Japanese Crop Marks** | Off |
 
 Under **Appearance Panel** and **Transform Panel**:
@@ -71,6 +100,13 @@ Under **Appearance Panel** and **Transform Panel**:
 | **Transform** | Default | Default, Transform Object Only, Transform Pattern Only, Transform Both |
 | **Use Registration Point for Symbol** | Off | On or off |
 
+Under **Artboard Options**, the last heading on the page:
+
+| Setting | Default | Range or choices |
+|---|---|---|
+| **Fade Region Outside Artboard** | On | On or off |
+| **Update While Dragging** | On | On or off |
+
 ![The General page scrolled to its last options, with New Art Has Basic Appearance turned on under Appearance Panel, and Single Corner Radius on and Transform set to Default under Transform Panel](/assets/uploads/vectorcraft/preferences-general-panels.webp)
 
 - **Keyboard Increment** is the distance an arrow key moves the selection. With Shift, an arrow key moves it ten times as far. The arrow keys move along the axes that **Constrain Angle** sets.
@@ -80,22 +116,29 @@ Under **Appearance Panel** and **Transform Panel**:
 - While **Disable Auto Add/Delete** is off, the Pen tool adds an anchor when you click a segment of a selected path, and deletes an anchor when you click one.
 - **Use Precise Cursors** shows the drawing tools' pointers as crosshairs. Caps Lock does the same while it is on.
 - When **Show Tool Tips** is off, no button or field shows a tool tip.
+- While **Show External Script Warning** is on, **File → Scripts → Other Script…** shows a warning before it runs the script you chose. Selecting **Do not show this warning again** in that warning turns this setting off. See [Run scripts](/apps/vectorcraft/run-scripts/).
 - **Use Preview Bounds** makes the bounding box measure the visible bounds of the artwork, strokes included.
 - **Double Click To Isolate** lets a double-click on a group with the Selection tool isolate the group.
+- While **Zoom with Mouse Wheel** is off and **Scroll Sideways with Cmd/Ctrl + Wheel** is on, turning the mouse wheel with Ctrl held (Cmd on macOS) scrolls the view sideways instead of zooming.
 - **Scrub Numeric Fields by Dragging** lets you change a numeric field's value by dragging left or right on the field or its label.
 - **Trackpad Gesture to Rotate View** turns the view around the pointer when you rotate two fingers on a Mac trackpad. The view starts to turn once the gesture reaches 5°.
+- While **Hold a Tool Shortcut to Use the Tool Temporarily** is on, holding down a single-key tool shortcut chooses that tool until you release the key, and then the tool you used before comes back. A quick press of the key chooses the tool and keeps it.
 - **Use Japanese Crop Marks** sets the style of the marks that **Object → Create Trim Marks** and **Effect → Crop Marks** draw.
 - While **New Art Has Basic Appearance** is on, new art gets one fill and one stroke. While it is off, new art takes the whole appearance of the last selection.
 - **Constrain Width and Height Proportions** is the link between W and H in the Transform panel, the Properties panel and the Control bar.
 - While **Single Corner Radius** is on, one Corner Radius field sets every corner of a live rectangle. While it is off, each corner has its own field.
 - **Transform** sets what the Transform panel transforms: the object, its pattern, or both. **Default** follows **Transform Pattern Tiles**.
 - **Use Registration Point for Symbol** makes the Transform panel measure and transform a single selected symbol instance from its symbol's registration point instead of the reference point.
+- While **Fade Region Outside Artboard** is on and the Artboard tool is active, the canvas draws everything outside the artboards darker, the pasteboard and the art on it included.
+- While **Update While Dragging** is on, the area outside the artboards stays darker while the Artboard tool moves or resizes an artboard. While it is off, that area is drawn as usual until you release the mouse button.
+- The Artboard Options dialog also sets **Fade Region Outside Artboard** and **Update While Dragging**, under **Global**.
 
 ## Selection & Anchor Display
 
 | Setting | Default | Range or choices |
 |---|---|---|
 | **Tolerance** | 3 px | 1 to 8 px |
+| **Marquee Selection** | Touching | Touching, Fully Enclosed, Drag Direction |
 | **Object Selection by Path Only** | Off | On or off |
 | **Snap to Point** | 2 px | 1 to 8 px |
 | **Command Click to Select Objects Behind** | On | On or off |
@@ -112,6 +155,7 @@ Under **Appearance Panel** and **Transform Panel**:
 ![The Selection & Anchor Display page with Tolerance 3 px, Snap to Point 2 px, the anchor Size slider at 3, Handles set to Solid and the corner widget angle at 177°](/assets/uploads/vectorcraft/preferences-selection-anchors.webp)
 
 - **Tolerance** is how close, in screen pixels, a click must be to a path or an anchor to select it.
+- **Marquee Selection** sets which objects a Selection tool marquee selects. **Touching** selects every object the marquee touches, and **Fully Enclosed** selects only the objects entirely inside it. With **Drag Direction**, a marquee dragged to the right selects the objects entirely inside it, and a marquee dragged to the left selects every object it touches. Press **E** during the drag to reverse the rule for that drag.
 - While **Object Selection by Path Only** is on, a click inside a filled path does not select it. Only a click on the path does.
 - **Snap to Point** is how close, in screen pixels, an anchor or a guide must be to pull the pointer to it while **View → Snap to Point** is on.
 - **Command Click to Select Objects Behind** lets a Ctrl-click (Cmd-click on macOS) with the Selection tool select the object under the selected one. The next click selects the object under that one.
@@ -140,10 +184,12 @@ Under **Appearance Panel** and **Transform Panel**:
 | **Highlight Alternate Glyphs** | Off | On or off |
 | **Highlight Substituted Fonts** | On | On or off |
 | **Fill New Type Objects With Placeholder Text** | On | On or off |
+| **Start Lists From Typed Markers** | On | On or off |
 | **Additional Fonts Folder** | Empty | A folder path |
 | **Override Character Color** (under **Graphic Styles**) | On | On or off |
 | **Point Text** (under **Align to Glyph Bounds**) | Off | On or off |
 | **Area Text** (under **Align to Glyph Bounds**) | Off | On or off |
+| **Measure Type by Glyph Bounds** (under **Glyph Bounds**) | Off | On or off |
 
 ![The Type page with Size/Leading 2 pt, Tracking 20 /1000 em and Baseline Shift 2 pt, both Language Options turned off, Font Preview Size set to Medium and Number of Recent Fonts set to 10](/assets/uploads/vectorcraft/preferences-type-page.webp)
 
@@ -152,9 +198,11 @@ Under **Appearance Panel** and **Transform Panel**:
 - While **Type Object Selection by Path Only** is on, you select type only on its type path: the baseline of point type, the frame of area type, or the path of type on a path.
 - While **Highlight Substituted Fonts** is on, text drawn in a substitute for a missing font is highlighted on screen, in every document.
 - While **Fill New Type Objects With Placeholder Text** is on, new type starts with placeholder text, selected.
+- While **Start Lists From Typed Markers** is on, a list marker and a space typed at the start of a paragraph start a list. While it is off, the marker and the space stay as typed text.
 - VectorCraft lists and uses the fonts in the **Additional Fonts Folder** and its subfolders as if they were installed. When you change the folder, the font menus update.
 - While **Override Character Color** is on, a graphic style applied to type replaces the fill and stroke of its characters with the style's fills and strokes.
 - The **Align to Glyph Bounds** settings make Align and Distribute measure point type, or area type, by the ink of its glyphs. Otherwise they measure point type by its em box and area type by its frame.
+- While **Measure Type by Glyph Bounds** is on, the bounding box and the X, Y, W and H fields of the Transform panel, the Control bar and the Properties panel measure each selected point type object by the ink of its glyphs instead of its em box. Point type inside a selected group is still measured by its em box. The Transform panel menu has the same option.
 
 ## Units
 
@@ -180,6 +228,8 @@ Under **Appearance Panel** and **Transform Panel**:
 | **Snap to Grid** | Off | On or off |
 | **Guides** → **Color** | #4affff | Any color |
 | **Guides** → **Style** | Lines | Lines, Dots |
+| **Guides** → **Lock Guides by Default** | Off | On or off |
+| **Guides** → **Artboard Guides with Cmd/Ctrl + Ruler Drag** | Off | On or off |
 | **Grid** → **Color** | #c8c8c8 | Any color |
 | **Grid** → **Style** | Lines | Lines, Dots |
 | **Gridline every** | 72 pt | 1 to 16383 pt |
@@ -191,6 +241,8 @@ Under **Appearance Panel** and **Transform Panel**:
 ![The Guides & Grid page with the guide color #4affff, the grid color #c8c8c8, both styles set to Lines, Gridline every 72 pt, Subdivisions 8 and the tile edge color #4f80ff under Pattern Editing](/assets/uploads/vectorcraft/preferences-guides-grid-page.webp)
 
 - Each color setting has a color button, with the hex value beside it.
+- While **Lock Guides by Default** is on, VectorCraft starts with **View → Guides → Lock Guides** turned on. When you turn the setting on or off and click **OK**, the guides lock or unlock at once. Clicking **OK** without changing the setting leaves the lock as **View → Guides → Lock Guides** set it.
+- While **Artboard Guides with Cmd/Ctrl + Ruler Drag** is on, a guide that you drag out of a ruler with Ctrl held (Cmd on macOS) becomes a guide of the active artboard. With the Artboard tool, the same drag makes a canvas guide. See [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/).
 - **Gridline every** and **Subdivisions** set the document grid. Open documents update when you click **OK**.
 - **Tile Edge Color** is the color of the tile edge and the swatch bounds in pattern editing mode.
 
@@ -209,6 +261,7 @@ Under **Appearance Panel** and **Transform Panel**:
 | **Measurement Labels** | On | On or off |
 | **Spacing Guides** | On | On or off |
 | **Invoke Distance Guides** | On | On or off |
+| **Snap to Last Location** | Off | On or off |
 | **Snapping Tolerance** | 4 pt | 0 to 40 pt |
 | **Snap to Tangent** | On | On or off |
 | **Snap to Perpendicular** | On | On or off |
@@ -221,6 +274,7 @@ Under **Appearance Panel** and **Transform Panel**:
 - **Anchor/Path Labels** shows labels such as "anchor," "center" and "path." **Measurement Labels** shows size and offset readouts while you draw and move.
 - While **Spacing Guides** is on, a moved selection snaps to the same gap as two other objects in its row or column, or to the middle between its two neighbors, and the equal gaps show.
 - While **Invoke Distance Guides** is on, holding Alt (Option on macOS) with the Selection tool over another object shows how far the selection is from it. Over an empty part of an artboard, it shows the distance to the artboard's edges.
+- While **Snap to Last Location** is on, a selection you move back to within **Snapping Tolerance** of where the move began snaps to its starting place, and a "last location" label shows. It does not apply to a copy made with Alt (Option on macOS), and it does not apply while **Snap to Pixel** is on.
 - **Snapping Tolerance** is how close a smart guide target must be to pull the pointer, a dragged edge or a drawn point to it.
 - **Snap to Tangent** and **Snap to Perpendicular** are under **Geometric Guides**.
 
@@ -270,7 +324,8 @@ Under **Appearance Panel** and **Transform Panel**:
 | **Show Tool Group Labels** | Off | On or off |
 | **Open Documents As Tabs** | On | On or off |
 | **Large Tabs** | Off | On or off |
-| **System Title Bar** | Off | On or off (Windows and Linux) |
+| **System Title Bar** | Off | On or off (Windows, Linux and the BSDs) |
+| **VectorCraft Title Bar on Every Desktop** | Off | On or off (Linux and the BSDs) |
 | **UI Scaling** → **Scale** | 1.0× | 0.75× to 2.0×, on a slider in steps of 0.05 |
 | **Scale Cursor Proportional to UI** | Off | On or off |
 | **Language** | Auto | Auto, English, Bahasa Indonesia, Bosanski, Català, Čeština, Dansk, Deutsch, Español, Français, Italiano, Magyar, Nederlands, Polski, Português (Brasil), Suomi, Svenska, Tiếng Việt, Türkçe, Ελληνικά, Български, Русский, Українська, हिन्दी, ქართული, 日本語, 简体中文, 繁體中文, 한국어 |
@@ -281,6 +336,8 @@ Under **Appearance Panel** and **Transform Panel**:
 - **Canvas Color** is the color of the canvas around the artboards. **Match User Interface Brightness** uses the color that goes with **Brightness**.
 - **Show Tool Group Labels** shows the group names in the toolbar.
 - **System Title Bar** uses the system's title bar and window buttons. macOS always uses the system's title bar.
+- **VectorCraft Title Bar on Every Desktop** draws VectorCraft's own title bar on Linux and BSD desktops that would otherwise draw the window frame themselves. While **System Title Bar** is on, this setting is dimmed and a note under it says that **System Title Bar** takes precedence.
+- On Linux and the BSDs, while the `VECTORCRAFT_TITLEBAR` environment variable is set to `app`, `system` or `desktop`, the variable chooses the title bar for that run. **System Title Bar** and **VectorCraft Title Bar on Every Desktop** are dimmed, and a note says that the variable chooses the title bar while it is set. With `app`, VectorCraft draws its own title bar. With `desktop`, the desktop draws the frame.
 - **Language** set to **Auto** follows the system language. The list shows English first, then the other languages by their own names.
 
 To change the workspace, panels and toolbars, see [Customize the workspace](/apps/vectorcraft/customize-the-workspace/).
@@ -372,12 +429,15 @@ For problems with the window or a drawing tablet, see [Troubleshooting](/apps/ve
 ## Reset Preferences
 
 1. Open Preferences.
-2. Click **Reset Preferences** at the bottom left of the dialog. Every setting on every page returns to its default in the dialog.
-3. Click **OK** to apply the defaults, or **Cancel** to keep your settings.
+2. Click **Reset Preferences** at the bottom left of the dialog. VectorCraft asks "Reset all preferences to their defaults?"
+3. Click **OK** in the question. Every setting on every page returns to its default in the dialog.
+4. Click **OK** in Preferences to apply the defaults, or **Cancel** to keep your settings.
 
 ![The Reset Preferences button at the bottom left of the Preferences dialog, with its tool tip "Restore every preference to its default (applied on OK)"](/assets/uploads/vectorcraft/preferences-reset-button.webp)
 
-Reset Preferences also resets the Eyedropper Options, the Pathfinder Options, the Snap to Glyph options and the Perspective Grid Options. It does not change **Enable Contextual Task Bar**, **Snap to Grid** or **Smart Guides**. Your saved presets and libraries, such as PDF presets, print presets, gradient presets, saved color themes and document presets, are kept. With a document open, the reset sets the document's units to points, because **General** on the Units page returns to Points.
+Reset Preferences also resets the Eyedropper Options, the Pathfinder Options, the Snap to Glyph options and the Perspective Grid Options. It does not change **Enable Contextual Task Bar**, **Snap to Grid** or **Smart Guides**. Your saved presets and libraries, such as PDF presets, print presets, gradient presets, saved color themes and document presets, are kept. **General** on the Units page returns to Points. With a document open, the reset leaves the document's units as they are, unless you choose another unit in **General** after the reset.
+
+To keep your settings before a reset, export them first with **Export Preferences…**.
 
 ## Related
 
@@ -385,3 +445,5 @@ Reset Preferences also resets the Eyedropper Options, the Pathfinder Options, th
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Troubleshooting](/apps/vectorcraft/troubleshooting/)
+- [Run scripts](/apps/vectorcraft/run-scripts/)
+- [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)

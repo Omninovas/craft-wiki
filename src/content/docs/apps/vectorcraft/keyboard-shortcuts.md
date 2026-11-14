@@ -7,7 +7,7 @@ sidebar:
 
 This page lists every keyboard shortcut VectorCraft has by default, for Windows and Linux and for macOS. Where Windows and Linux use Ctrl, macOS uses Cmd, and where they use Alt, macOS uses Option.
 
-Three menu items are grayed out because they do not work yet, but they still show a shortcut: **File → Scripts → Other Script…** (**Ctrl+F12**, or **Cmd+F12** on macOS), **Edit → Spelling → Check Spelling…** (**Ctrl+I**, or **Cmd+I** on macOS) and **Help → VectorCraft Help…** (**F1**). Pressing those keys does not run anything, so the tables below leave them out.
+Two menu items are grayed out because they do not work yet, but they still show a shortcut: **Edit → Spelling → Check Spelling…** (**Ctrl+I**, or **Cmd+I** on macOS) and **Help → VectorCraft Help…** (**F1**). Pressing those keys does not run anything, so the tables below leave them out.
 
 ## Change a shortcut
 
@@ -30,7 +30,7 @@ While you type text with the Type tool, only shortcuts that use Ctrl (Cmd on mac
 
 ## Tools
 
-Press a tool's key to select it. Tools that are not listed here have no default key, and you can give them one.
+Press a tool's key to select it. To use a tool for a moment, hold its key instead (see [Hold a tool's key](#hold-a-tools-key)). Tools that are not listed here have no default key, and you can give them one.
 
 ![The Pen tool is selected in the toolbar, and its tooltip reads Pen Tool (P). A white gull is being drawn in the sky above a lighthouse and a sailboat, and the status bar shows the Pen tool's hints](/assets/uploads/vectorcraft/keyboard-shortcuts-tool-tooltip.webp)
 
@@ -100,10 +100,13 @@ For the Curvature tool, hold Shift and press the key to the left of 1, which typ
 | Package… | Ctrl+Alt+Shift+P | Cmd+Option+Shift+P |
 | Document Setup… | Ctrl+Alt+P | Cmd+Option+P |
 | File Info… | Ctrl+Alt+Shift+I | Cmd+Option+Shift+I |
+| Scripts → Other Script… | Ctrl+F12 | Cmd+F12 |
 | Print… | Ctrl+P | Cmd+P |
 | Exit | Ctrl+Q | Cmd+Q |
 
 On macOS, Exit is **VectorCraft → Quit VectorCraft**.
+
+**Other Script…** asks for a `.js` or `.jsx` file and runs it. Before the script runs, VectorCraft shows a warning, unless you have turned that warning off. [Run scripts](/apps/vectorcraft/run-scripts/) describes the Scripts menu and the warning.
 
 **Ctrl+Alt+N** (**Cmd+Option+N** on macOS) makes a new document without opening the New Document dialog. The document uses the settings the dialog would open with. This shortcut has no menu item.
 
@@ -113,9 +116,9 @@ On macOS, Exit is **VectorCraft → Quit VectorCraft**.
 |---|---|---|
 | Undo | Ctrl+Z | Cmd+Z |
 | Redo | Ctrl+Shift+Z | Cmd+Shift+Z |
-| Cut | Ctrl+X | Cmd+X |
-| Copy | Ctrl+C | Cmd+C |
-| Paste | Ctrl+V | Cmd+V |
+| Cut | Ctrl+X or F2 | Cmd+X |
+| Copy | Ctrl+C or F3 | Cmd+C |
+| Paste | Ctrl+V or F4 | Cmd+V |
 | Paste in Front | Ctrl+F | Cmd+F |
 | Paste in Back | Ctrl+B | Cmd+B |
 | Paste in Place | Ctrl+Shift+V | Cmd+Shift+V |
@@ -125,6 +128,8 @@ On macOS, Exit is **VectorCraft → Quit VectorCraft**.
 | Color Settings… | Ctrl+Shift+K | Cmd+Shift+K |
 | Keyboard Shortcuts… | Ctrl+Alt+Shift+K | Cmd+Option+Shift+K |
 | Preferences… | Ctrl+K | Cmd+K |
+
+On Windows and Linux, F2, F3 and F4 also cut, copy and paste. If you give one of those keys to another command in **Edit → Keyboard Shortcuts…**, Cut, Copy or Paste keeps only its Ctrl shortcut.
 
 Backspace also deletes the selected objects. On macOS, Preferences is **VectorCraft → Settings**, and **Cmd+,** opens it too. See [Preferences](/apps/vectorcraft/preferences/) for every setting.
 
@@ -319,7 +324,7 @@ These shortcuts run panel commands or switch the window layout:
 | Repeat the last Pathfinder operation | Ctrl+4 | Cmd+4 |
 | Symbol Options… (Symbols panel) | F8 | F8 |
 
-With objects selected, F8 opens Symbol Options for a new symbol. [Customize the workspace](/apps/vectorcraft/customize-the-workspace/) covers arranging panels and saving workspaces.
+With objects selected, F8 opens Symbol Options for a new symbol. [Panels](/apps/vectorcraft/panels/) lists every panel in the Window menu, and [Customize the workspace](/apps/vectorcraft/customize-the-workspace/) covers arranging panels and saving workspaces.
 
 ## Keys while you draw
 
@@ -369,6 +374,18 @@ These keys work while you draw a path. [Draw and edit paths](/apps/vectorcraft/d
 
 Before you have chosen a selection tool, Ctrl (Cmd on macOS) switches the Pen, Add Anchor Point, Delete Anchor Point, Anchor Point and Curvature tools to Direct Selection, and the other tools to Selection. With the Direct Selection tool, Ctrl (Cmd on macOS) switches to Selection, and Ctrl+Alt (Cmd+Option on macOS) switches to Group Selection. The Selection and Group Selection tools do not switch.
 
+### Hold a tool's key
+
+To use a tool briefly and then return to the tool you were using:
+
+1. Press and hold a tool's key from the [Tools](#tools) table, for example R for the Rotate tool.
+2. While you hold the key, drag or click with that tool.
+3. Release the key. VectorCraft switches back to the tool you had before.
+
+A quick press selects the tool and keeps it. If you hold the key for a quarter of a second or longer, VectorCraft switches back when you release it, even if you did not use the tool. If you release the key in the middle of a drag, VectorCraft switches back when the drag ends.
+
+This works while **Hold a Tool Shortcut to Use the Tool Temporarily** is on, under **Options** on the General page of [Preferences](/apps/vectorcraft/preferences/). It is on by default. With it off, every press of a tool's key selects the tool and keeps it.
+
 ### Brushes and symbol tools
 
 | Keys | What they do |
@@ -393,6 +410,8 @@ Before you have chosen a selection tool, Ctrl (Cmd on macOS) switches the Pen, A
 ## Related
 
 - [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/)
+- [Run scripts](/apps/vectorcraft/run-scripts/)
+- [Panels](/apps/vectorcraft/panels/)
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
 - [Preferences](/apps/vectorcraft/preferences/)
 - [Customize the workspace](/apps/vectorcraft/customize-the-workspace/)

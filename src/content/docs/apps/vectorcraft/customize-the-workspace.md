@@ -1,12 +1,12 @@
 ---
 title: Customize the workspace
-description: Switch between the built-in workspaces, arrange and save panel layouts, show or hide edges and on-canvas widgets, build your own toolbars, open more windows on a document, save views, rotate the canvas, present your artwork and step back through the History panel.
+description: Switch between the built-in workspaces, arrange and save panel layouts, show or hide the bars, edges and on-canvas widgets, build your own toolbars, switch tools for a moment, open more windows on a document, save views, rotate the canvas, present your artwork and step back through the History panel.
 sidebar:
   order: 22.8
 parent: workflows
 ---
 
-This guide covers how to set up the VectorCraft window: workspaces, panels, bars and toolbars, the edges and widgets drawn over the artwork, document windows, saved views, the Navigator panel, Rotate View, screen modes and Presentation Mode, and the History panel. The theme, accent color and language are set in [Preferences](/apps/vectorcraft/preferences/).
+This guide covers how to set up the VectorCraft window: workspaces, panels, bars and toolbars, the Help Bar, holding a tool's key to use the tool for a moment, the edges and widgets drawn over the artwork, document windows, saved views, the Navigator panel, Rotate View, screen modes and Presentation Mode, and the History panel. The theme, accent color and language are set in [Preferences](/apps/vectorcraft/preferences/).
 
 ## Switch workspaces
 
@@ -37,16 +37,19 @@ To put the current workspace back the way it was saved, choose **Window → Work
 
 ## Arrange panels
 
-The dock runs down the right edge of the window. Its outer column holds the Properties, Layers and Libraries tabs, and the column of icons beside it opens the other panels. Every panel is listed in the **Window** menu. Choose a panel there to show it, and choose it again to hide it.
+The dock runs down the right edge of the window. Its outer column holds the Properties, Layers and Libraries tabs, and the column of icons beside it opens the other panels. Every panel is listed in the **Window** menu. Choose a panel there to show it, and choose it again to hide it. [Panels](/apps/vectorcraft/panels/) lists every panel with what it does and its shortcut.
 
 - To group panels, drag a panel's tab onto another panel group. The panel joins that group as a tab.
 - To dock a panel beside a group, drag its tab to the edge of the group. Drop it on the side edge to place it next to the group, or on the top or bottom edge to place it above or below the group in the column.
 - To float a panel, drag its tab out of the dock. The panel opens in a window of its own that you can move anywhere.
 - To collapse a group to its tabs, double-click a tab or the group's drag bar. In a floating window, the window collapses to its title bar. Double-click again to restore it.
 - To collapse the dock to icons, click the double arrow at the top of the dock. Click it again to expand the outer column.
+- Click an icon in the column of icons to open its panel in a flyout beside the column. To resize the flyout, drag its edge on the canvas side or its bottom edge. The edge beside the icons stays where it is. The workspace keeps the size you set, and the buttons at the foot of the panel stay at the bottom of a taller flyout.
 - Press Tab to hide the panels, the Tools panel and the Control bar, and press Tab again to show them. Press Shift+Tab to hide or show only the panels.
 
 ![The Harbor Lights festival poster on the canvas, with the dock rearranged into three groups: the Layers tab open at the top listing the Type, Lanterns, Harbor and Background layers, the Swatches and Color tabs docked below it with Swatches open, and the Brushes and Symbols group collapsed to its tabs at the bottom](/assets/uploads/vectorcraft/panel-groups.webp)
+
+In the desktop app, the floating panel windows are hidden while a dialog, a menu, a tool flyout or the All Tools drawer is open. A panel that you float during that time is hidden with them, and it shows with the others when the dialog, menu, flyout or drawer closes.
 
 ## Save your own workspace
 
@@ -68,16 +71,40 @@ To rename or delete your workspaces, choose **Window → Workspace → Manage Wo
 
 If you delete the workspace you are using, VectorCraft switches to Essentials. To save the current layout as another workspace from the same dialog, type a name in the field and click **New**. You do not need to select a workspace first.
 
-## Show or hide the Control bar and the Contextual Task Bar
+## Show or hide the Control bar, the Help Bar and the Contextual Task Bar
 
-The Control bar runs across the top of the window under the menu bar. The Contextual Task Bar floats under the selection on the canvas.
+The Control bar runs across the top of the window under the menu bar. The Help Bar runs across the bottom of the window, above the status bar. The Contextual Task Bar floats under the selection on the canvas.
 
 - Choose **Window → Control** to show or hide the Control bar. Essentials hides it, and the other built-in workspaces show it.
+- Choose **Window → Help Bar** to show or hide the Help Bar. It shows by default, and each workspace keeps its own setting. Hiding the Help Bar leaves the status bar in place.
 - Choose **Window → Contextual Task Bar** to show or hide the task bar.
 - To keep the task bar in one place, open its **More Options** menu and choose **Pin Bar Position**. Choose **Reset Bar Position** to put it back under the selection.
 - Choose **Window → Tools** to show or hide the Tools panel.
 
 ![The Lanterns Sold title selected on a night market sales chart, with the Control bar across the top showing the type's fill, stroke, character and paragraph settings. The Contextual Task Bar under the title has its More Options menu open, listing Hide Bar, Pin Bar Position, Reset Bar Position and Show Properties Panel, with Pin Bar Position highlighted](/assets/uploads/vectorcraft/task-bar-options.webp)
+
+### Read the Help Bar
+
+The Help Bar shows what the current tool does with each click, drag and key. The keys and actions are in bold. For the Pen tool, it reads **Click** to add a corner point, **Drag** to add a smooth point, **Click the first point** to close and **Enter** to finish. For a tool without hints, the Help Bar names the shortcut for **Help → Search Commands…**, or the menu path when the command has no shortcut.
+
+When a hint is wider than the window, the Help Bar cuts it off with an ellipsis (…). Hold the pointer over the hint to read it in full in a tooltip.
+
+![The lighthouse scene at dusk in lighthouse.vectorcraft, with the Pen tool drawing a new wave across the sea. Three anchor points are placed, the next segment previews to the pointer with a distance readout beside it, and the Help Bar above the status bar reads Click to add a corner point, Drag to add a smooth point, Click the first point to close, Enter to finish](/assets/uploads/vectorcraft/help-bar.webp)
+
+### Choose what the Control bar shows
+
+The Control bar shows the options for the current tool or selection in groups. To leave a group out of the bar, use the Control bar's panel menu:
+
+1. Click the panel menu button at the right end of the Control bar. The menu lists the groups, with a check mark next to each group that is on.
+2. Click a group to turn it off. Click it again to turn it back on.
+
+The menu lists these groups, in this order: Snapping, Anchor Points, Tool Options, Object Options, Image Options, Fill and Stroke, Opacity, Graphic Style, Character, Paragraph, Vertical Alignment, Align and Distribute, Transform, Artboard Options and Document Options.
+
+Every group starts on. A group that is on shows only when the tool or the selection uses it. A group that is off stays out of the bar even when its tool or object is selected, and it takes no room in the bar. VectorCraft keeps your choice with the preferences and with each workspace.
+
+![The top of the window with the lighthouse group selected and the Control bar showing Snapping, Group, the fill and stroke settings, the Align buttons and the Transform fields. The Control bar's panel menu is open at the right end, with Opacity and Graphic Style unchecked, every other group checked, and Dock to Top checked below them](/assets/uploads/vectorcraft/control-bar-groups.webp)
+
+The same menu has **Dock to Top** and **Dock to Bottom**, which move the Control bar to the top or the bottom of the window. You can also drag the gripper at the left end of the bar to the top or bottom edge of the window.
 
 ## Show or hide edges and widgets on the canvas
 
@@ -120,11 +147,35 @@ To put the Tools panel back the way it ships, open the drawer's menu and choose 
 3. Click the **•••** button at the foot of the new toolbar to open the All Tools drawer beside it.
 4. Drag tools from the drawer onto the toolbar.
 
-![A floating toolbar holding the Paintbrush, Blob Brush, Width and Eyedropper tools, with the All Tools drawer open beside it over a dusk garden with stars, hills, a vine and a picket fence. The Smooth tool is being dragged from the drawer's Draw section, a line under the Eyedropper shows where it will drop, and the status bar shows the Eyedropper tool's hints](/assets/uploads/vectorcraft/custom-toolbar.webp)
+![A floating toolbar holding the Paintbrush, Blob Brush, Width and Eyedropper tools, with the All Tools drawer open beside it over a dusk garden with stars, hills, a vine and a picket fence. The Smooth tool is being dragged from the drawer's Draw section, a line under the Eyedropper shows where it will drop, and the Help Bar shows the Eyedropper tool's hints](/assets/uploads/vectorcraft/custom-toolbar.webp)
+
+You can also fill a new toolbar from a menu instead of dragging:
+
+1. Click the **+** button (**Add Tool…**) above the **•••** button. A menu lists every tool under the same headings as the All Tools drawer. The tools already in the toolbar are dimmed.
+2. Click a tool to add it at the end of the toolbar.
+3. To take a tool out, open the menu again and click the tool under **Remove Tool** at the top of the menu.
+
+The menu scrolls when it is taller than the window. The **+** button also works from the keyboard: when it has the focus, press Enter to open the menu, and press Enter on a tool to add it. Only toolbars made with **New Toolbar…** have the **+** button.
+
+![A floating toolbar over the lighthouse scene with its Pen, Pencil, Paintbrush and Blob Brush tools. Its Add Tool menu is open below the + button and scrolled to the Draw heading, where Pen Tool, Paintbrush Tool, Blob Brush Tool and Pencil Tool are dimmed and Curvature Tool is highlighted](/assets/uploads/vectorcraft/toolbar-plus.webp)
 
 Drag a toolbar by its title bar to move it. Click the double arrow in the title bar to switch between one and two columns, and click the × to hide it. Each toolbar you make is listed under **Window → Toolbars**, where you can show it again. VectorCraft keeps each toolbar with the workspace you made it in. A workspace can have up to 64 toolbars.
 
 To rename, copy or delete toolbars, choose **Window → Toolbars → Manage Toolbars…**. Select a toolbar and type a new name to rename it, click **+** to make a copy, or click the trash can to delete it. With no toolbar selected, **+** makes a blank toolbar.
+
+## Switch tools for a moment
+
+You can hold down a tool's shortcut key to use that tool and go back to the tool you had before. This works for tools whose shortcut is a single key, such as P for the Pen tool or B for the Paintbrush tool. The **Hold a Tool Shortcut to Use the Tool Temporarily** option in the General page of **Edit → Preferences…** turns this on and off. It is on by default.
+
+1. Hold down the tool's key. The tool becomes the current tool.
+2. Use the tool while you hold the key: click, drag, or press Enter to open its dialog.
+3. Let go of the key. VectorCraft goes back to the tool you used before.
+
+A quick press chooses the tool and keeps it. VectorCraft treats the key as held when you let go of it 0.25 seconds or more after you pressed it, or when you used the tool while the key was down. If you let go of the key during a drag, VectorCraft goes back to the previous tool when the drag ends.
+
+You can hold a second tool's key while you hold the first. Letting go of the second key goes back to the first key's tool. Choosing another tool in any other way, or switching to another app, ends the hold, and the current tool stays.
+
+With the preference on, a key that you hold down chooses its tool once. With the preference off, the key chooses its tool for good, and each repeat of the held key chooses it again. Holding Space to use the Hand tool works with either setting. See [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/) for the tool keys.
 
 ## Open more windows on a document
 
@@ -209,7 +260,7 @@ VectorCraft always starts in Normal Screen Mode.
 
 ### Presentation Mode
 
-Presentation Mode shows only the canvas, with no menu bar, tabs, panels, toolbars or status bar.
+Presentation Mode shows only the canvas, with no menu bar, tabs, panels, toolbars, Help Bar or status bar.
 
 1. Choose **View → Presentation Mode**, or press Shift+F.
 2. Press → or click to go to the next artboard. Press ← to go back.
@@ -261,6 +312,7 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**. The full l
 ## Related
 
 - [Workflows](/apps/vectorcraft/workflows/)
+- [Panels](/apps/vectorcraft/panels/)
 - [Preferences](/apps/vectorcraft/preferences/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)

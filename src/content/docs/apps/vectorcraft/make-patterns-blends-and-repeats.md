@@ -134,10 +134,22 @@ The objects go onto the path in their order on the canvas, column by column from
 
 - The round handle beside the first object turns every object of the group. Hold Shift to turn in 15° steps.
 - The square handle past the last object sets the distance between the objects. It shows when the group has two or more objects. Hold **Alt** (**Option** on macOS) to spread them from both ends of the path toward its center.
+- The diamond handle beyond the bottom of the first object moves every object along the path, as the steps below describe.
 
-Press Esc during either drag to cancel it.
+Each drag of a handle is one undo step. Press Esc during any of these drags to cancel it.
 
 ![Seven paper lanterns in yellow, amber and coral attached to a wavy teal string above a night market in lantern-path.vectorcraft, each turned to follow the curve of the string. The Objects on Path group is selected with the Objects on Path tool, with a round handle beside the first lantern and a square handle past the last one, and the Properties panel shows the group's Pivot and Rotate](/assets/uploads/vectorcraft/objects-on-path-lanterns.webp)
+
+To slide all the objects along the path without changing the distances between them:
+
+1. Select the Objects on Path group with the Selection tool or the Objects on Path tool.
+2. On an open path, make sure the objects do not reach from one end of the path to the other. When they do, the diamond handle does not show: drag the square handle toward the first object to bring the objects closer together. On a closed path, the diamond handle always shows.
+3. Drag the diamond handle along the path. Every object moves along the path by the same distance. While you drag, the distance of the first object from the start of the path shows next to the pointer.
+4. Release the mouse button. To put the objects back where they were, press Esc before you release.
+
+On an open path, the objects stop at the ends of the path. On a closed path, they go on around it past its first anchor point.
+
+![Six amber, coral and yellow paper lanterns hanging from a curved teal wire between two dark posts, above a night market in lantern-string.vectorcraft. The Selection tool is dragging the diamond handle below the first lantern, the lanterns have slid to the right along the wire, and 335.37 px shows next to the pointer](/assets/uploads/vectorcraft/objects-on-path-move-all.webp)
 
 To set how the next objects attach, double-click the Objects on Path tool. In **Objects on Path Tool Options**, choose the **Pivot**, the point of each object that sits on the path (the center by default), and the **Rotate** angle, from −360° to 360° (0° by default). Click **Save**. **Reset** puts the center and 0° back. Groups you made earlier keep their settings.
 

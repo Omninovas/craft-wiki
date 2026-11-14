@@ -29,6 +29,18 @@ Alt-click (Option-click on macOS) a layer's eye to hide every other layer, and A
 
 To send selected art to the current layer from the canvas, choose **Object → Arrange → Send to Current Layer**.
 
+### Guides on layers
+
+Each ruler guide belongs to a layer or sublayer. A guide you drag out of a ruler goes onto the current layer, above that layer's art. The Layers panel lists the layer's guides at the top of the layer, as **&lt;Horizontal Guide&gt;** or **&lt;Vertical Guide&gt;** rows.
+
+- Click a guide's row to select the guide. Shift-click or Ctrl-click (Cmd-click on macOS) a row to add the guide to the selected guides or take it out.
+- To move guides to another layer, drag their rows onto that layer's row or onto a row inside that layer. When the row you drag is selected, every selected guide moves.
+- Hiding a layer hides its guides, and locking a layer locks them, so you cannot select or drag them.
+- Deleting a layer deletes its guides. **Merge Selected** keeps the guides in the merged layer.
+- Guides show on the screen only. They are left out of exports.
+
+To make and move guides, see [Use rulers, guides and grids](/apps/vectorcraft/set-up-documents-and-artboards/#use-rulers-guides-and-grids).
+
 ## Find a layer or object
 
 In a document with many layers, the search field and the filter at the top of the Layers panel shorten the list.
@@ -119,9 +131,11 @@ A symbol is art stored once in the document. Each copy of it on the canvas is an
 | **Replace Symbol** | Panel menu, or the **Replace** menu on the Control bar while instances are selected |
 | **Break Link to Symbol** | Symbols panel button or panel menu: turns the selected instances into plain art |
 | **Reset Symbol Instance** | Panel menu: removes the appearance changes made to the selected instances of a dynamic symbol |
+| **Reset Transformation** | Panel menu, or **Reset** on the Control bar while instances are selected: gives the selected instances their symbol's own size again, without rotation, shear or reflection. Each instance keeps the center of its bounding box in place. |
 | **Select All Instances** | Panel menu: selects every instance of the symbol chosen in the panel |
 | **Select All Unused** | Panel menu: selects the symbols that have no instances. **Delete Symbol** then deletes all of them after one question. |
-| **Thumbnail View**, **List View** | Panel menu: shows the symbols as thumbnails or as a list |
+| **Sort by Name** | Panel menu: puts the symbols in alphabetical order. See [Sort and view symbols](#sort-and-view-symbols). |
+| **Thumbnail View**, **Small List View**, **Large List View** | Panel menu: shows the symbols as thumbnails or as a list. See [Sort and view symbols](#sort-and-view-symbols). |
 
 ## Set symbol options
 
@@ -152,14 +166,51 @@ To move the 9-slice guides by hand, open the symbol in symbol editing mode. The 
 To change one instance without changing the others, select it and click **Break Link to Symbol**. The instance becomes ordinary art that you can edit on its own.
 :::
 
+### Change a part of one instance
+
+In an instance of a dynamic symbol, you can change the look of one part of the art for that instance only, and the instance stays linked to the symbol. The symbol's **Symbol Type** must be **Dynamic Symbol**.
+
+1. Select the Direct Selection Tool and click a path, compound path or type object inside the instance. VectorCraft outlines that part. To select the whole instance instead, hold Alt (Option on macOS) or Shift while you click.
+2. Change the part's fill or stroke to a solid color, a gradient or a pattern, or set its opacity and blend mode in the Transparency panel. You can also click another object with the Eyedropper Tool to copy its fill and stroke onto the part.
+3. To change another part, click it and repeat step 2. Each change is one undo step.
+
+Only the fill, stroke, opacity and blend mode of a path, compound path or type part can change this way. When you edit the symbol later, the instance keeps each change whose part is still in the symbol's art. To remove the changes, select the instance and choose **Reset Symbol Instance** from the Symbols panel menu.
+
+## Sort and view symbols
+
+The Symbols panel menu sets the order of the document's symbols and how the panel shows them.
+
+| Command | What it does |
+|---|---|
+| **Sort by Name** | Puts the symbols in alphabetical order, ignoring upper and lower case, as one undo step. It needs at least two symbols. When the symbols are already in order, nothing changes and no undo step is added. |
+| **Thumbnail View** | Shows each symbol as a thumbnail. This is the default view. |
+| **Small List View** | Shows each symbol in a row with a small thumbnail and its name. |
+| **Large List View** | Shows each symbol in a taller row with a larger thumbnail and its name. |
+
+The menu shows a check mark next to the current view. In every view, click a symbol to make it the current symbol, and double-click it to edit it.
+
 ## Load and save symbol libraries
 
-A symbol library is a set of symbols that you can add to any document. VectorCraft includes the **Basic Shapes** library, and you can save your own.
+A symbol library is a set of symbols that you can add to any document. VectorCraft includes five libraries, and you can save your own.
+
+| Library | Symbols |
+|---|---|
+| **Basic Shapes** | Filled shapes with an outline: Circle, Square, Rounded Square, Triangle, Diamond, Hexagon, Star, Burst and Arrow |
+| **UI Frames** | **Panel**, **Button** and **Bar** for interface mock-ups. Each one has 9-slice guides turned on, so an instance keeps the size of its rounded corners when you scale it wider or taller. When you make an instance smaller than its two corners on one axis, the corners shrink as well. |
+| **Map Markers** | Pin, Flag, Crosshair and Checkpoint |
+| **Inventory Icons** | Sword, Shield, Potion, Key and Gem |
+| **Skill Icons** | Attack, Defend, Heal, Buff and Ult |
 
 To use a library:
 
-1. Choose **Window → Symbol Libraries**, then **Basic Shapes** or one of your libraries under **User Defined**. To use the symbols of another VectorCraft document, choose **Other Library…** and pick the file. You can also open a library with **Open Symbol Library** in the Symbols panel menu. The library opens in a panel of its own.
-2. Click a symbol in the library panel to add it to the document's Symbols panel. Or drag the symbol onto the canvas to add it and place an instance where you drop it.
+1. Choose **Window → Symbol Libraries**, then a built-in library such as **UI Frames**, or one of your libraries under **User Defined**. To use the symbols of another VectorCraft document, choose **Other Library…** and pick the file. You can also open a library with **Open Symbol Library** in the Symbols panel menu. The library opens in a panel of its own.
+2. Click a symbol in the library panel to add it to the document's Symbols panel. Or drag the symbol onto the canvas to add it and place an instance where you drop it. A symbol the document already has is not added again, and a symbol whose name another symbol already uses gets a number, such as **Star 2**.
+
+![Two phone screen mock-ups on a night indigo artboard, built from UI Frames symbols: teal, coral and lavender buttons of different widths, a purple top bar, dark tab bars with purple outlines, and a purple dialog card. The card is being dragged wider by its right handle with a W: 226.00 pt readout and keeps its rounded corners. The Symbols panel, docked above the Properties panel, is in Large List View and lists Panel, Button and Bar](/assets/uploads/vectorcraft/symbols-ui-frames.webp)
+
+:::tip
+The symbols in the built-in libraries are static. To give each instance its own colors, as the buttons above have, choose **Symbol Options…** for the symbol, set **Symbol Type** to **Dynamic Symbol**, and change each instance's parts as [Change a part of one instance](#change-a-part-of-one-instance) describes.
+:::
 
 To save the document's symbols as a library:
 
@@ -223,7 +274,10 @@ While a symbolism tool is active, press **[** or **]** to make the brush smaller
 - [Select artwork](/apps/vectorcraft/select-artwork/)
 - [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/)
 - [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/)
+- [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/)
+- [Paint with brushes and variable widths](/apps/vectorcraft/paint-with-brushes/)
+- [Make 3D artwork](/apps/vectorcraft/make-3d-artwork/)
 - [Trace an image](/apps/vectorcraft/trace-an-image/)
 - [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)
 - [Print your artwork](/apps/vectorcraft/print-your-artwork/)

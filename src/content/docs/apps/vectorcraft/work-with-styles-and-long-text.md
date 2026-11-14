@@ -1,12 +1,12 @@
 ---
 title: Work with styles and long text
-description: Save formatting as paragraph and character styles, set OpenType features, glyphs and tab stops, wrap text around objects, find and replace words, set vertical type, and fine-tune hyphenation and justification.
+description: Save formatting as paragraph and character styles and edit their options, set OpenType features, glyphs and tab stops, wrap text around objects, find and replace words, set vertical type, and fine-tune hyphenation and justification.
 sidebar:
   order: 14.5
 parent: workflows
 ---
 
-This guide covers the tools for menus, brochures and other documents with a lot of text: paragraph and character styles, OpenType features and glyphs, tab stops, text wrap, find and replace, special spaces and breaks, vertical type, hyphenation and justification, and the Type Tools plug-in. [Add and style type](/apps/vectorcraft/add-and-style-type/) covers making type and setting its font, size and alignment.
+This guide covers the tools for menus, brochures and other documents with a lot of text: paragraph and character styles, OpenType features and glyphs, tab stops, text wrap, find and replace, special spaces and breaks, vertical type, hyphenation and justification, and the Type Tools plug-in. [Add and style type](/apps/vectorcraft/add-and-style-type/) covers making type and setting its font, size and alignment. [Check spelling](/apps/vectorcraft/check-spelling/) and [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/) cover spelling and type in other languages.
 
 ## Save formatting as paragraph and character styles
 
@@ -26,6 +26,8 @@ To make a paragraph style:
 1. Format one paragraph with the Paragraph panel and the Tabs panel.
 2. Choose the Type tool (T) and click in that paragraph.
 3. In the Paragraph Styles panel, click **Create New Paragraph Style** at the bottom of the panel. The new style is named Paragraph Style 1, Paragraph Style 2 and so on. To name it as you make it, Alt-click the button (Option-click on macOS). **New Paragraph Style…** in the panel menu makes the style with the next default name, the same as a plain click on the button.
+
+Alt-clicking the button opens the **New Paragraph Style** dialog. Besides the name, it has the same sections as **Paragraph Style Options…**, filled in from the paragraph you clicked in. See [Edit a paragraph style's options](#edit-a-paragraph-styles-options).
 
 To make a character style, select the characters with the Type tool, then do the same in the Character Styles panel. A new style takes the attributes of the first selected character. Alt-click **Create New Character Style** (Option-click on macOS) to name it as you make it. **New Character Style…** in the panel menu gives it the next default name, Character Style 1, Character Style 2 and so on.
 
@@ -57,10 +59,35 @@ The panel menu holds these commands:
 | **Select All Unused** | Highlights the styles that no text uses |
 | **Clear Overrides** | Removes the local changes from the selected text |
 | **Redefine Paragraph Style** or **Redefine Character Style** | Takes the selected text's attributes into the style |
-| **Paragraph Style Options…** | Renames the style |
+| **Paragraph Style Options…** | Edits the style's name and its paragraph attributes in five sections: **General**, **Basic Paragraph Formats**, **Composition**, **Hyphenation** and **Justification**. See [Edit a paragraph style's options](#edit-a-paragraph-styles-options) |
 | **Character Style Options…** | Edits the style in five sections: **General**, **Basic Character Formats**, **Advanced Character Formats**, **Character Color** and **OpenType Features** |
+| **Load Paragraph Styles…** or **Load Character Styles…** | Adds the styles of that kind from a document you pick, with the swatches and patterns they use. A style whose name the document already uses for a different style is added under a new numbered name |
+| **Load All Styles…** | Adds both the character and the paragraph styles of a document you pick |
 
 Shift-click a style to highlight a range of styles, or Ctrl-click (Cmd-click on macOS) to add one. Highlighting a style this way does not apply it to the text. You can also drag a style onto the **Create New** button to duplicate it, or onto the trash button to delete it.
+
+## Edit a paragraph style's options
+
+**Paragraph Style Options…** changes a paragraph style, and every paragraph that uses it, in one step.
+
+1. In the Paragraph Styles panel, double-click the style. You can also highlight only that style and choose **Paragraph Style Options…** from the panel menu. The Normal style has no options.
+2. Click a section in the dialog's section list: **General**, **Basic Paragraph Formats**, **Composition**, **Hyphenation** or **Justification**.
+3. Change the fields. With **Preview** on, which is the default, the paragraphs that use the style show the change on the canvas while the dialog is open.
+4. Click **OK**. The change is one undo step. Text that has its own overrides keeps them.
+
+![The Paragraph Style Options dialog on its Basic Paragraph Formats section, over a three-column harbor newsletter with a lighthouse and sailboats at dusk across the top and the coral masthead The Harbor Light partly behind the dialog. Alignment is Justify with last line aligned left, Left Indent 0 pt, First-line Left Indent 12 pt and Space After Paragraph 6 pt, with Right Indent and Space Before Paragraph empty. The Paragraph Styles panel at the top right lists Normal Paragraph Style, Body Text, Masthead and Pull Quote, with Body Text highlighted](/assets/uploads/vectorcraft/paragraph-style-options.webp)
+
+An empty field leaves that attribute out of the style, so each paragraph keeps its own value. A checkbox has three states: click it once to turn it on, again to turn it off, and a third time to leave it empty. In the **Hyphenation** and **Justification** sections, an empty field takes its default value once any other field of the same section is set. **Reset Panel** empties every field of the section that shows. It is not available on **General**.
+
+| Section | Options |
+|---|---|
+| **General** | **Style Name**, and a list of every attribute the style sets |
+| **Basic Paragraph Formats** | **Alignment**: **Auto** aligns each paragraph to the start of its direction (left for left-to-right text, right for right-to-left text), or pick one of the Paragraph panel's seven alignments. **Left Indent**, **Right Indent**, **First-line Left Indent**, **Space Before Paragraph** and **Space After Paragraph**, from -1296 to 1296 pt |
+| **Composition** | **Composition**: **Single-line Composer** or **Every-line Composer**. **Roman Hanging Punctuation** |
+| **Hyphenation** | **Hyphenation** turns hyphenation on or off. **Words Longer Than**, **After First**, **Before Last**, **Hyphen Limit**, **Hyphenation Zone** and **Hyphenate Capitalized Words**, which are available while **Hyphenation** is on. **Hyphenation Zone** also needs **Single-line Composer** in the **Composition** section |
+| **Justification** | **Word Spacing**, **Letter Spacing** and **Glyph Scaling**, each with **Minimum**, **Desired** and **Maximum** in percent. **Auto Leading** in percent. **Single Word Justification**: **Full Justify**, **Align left**, **Align center** or **Align right** |
+
+The **Hyphenation** and **Justification** sections take the same ranges and defaults as the **Hyphenation…** and **Justification…** dialogs. See [Fine-tune justification and hyphenation](#fine-tune-justification-and-hyphenation). When a spacing row is out of order, the dialog shows "Minimum must not exceed Desired, nor Desired Maximum." below the fields, and **OK** leaves the dialog open until you fix the row. A value outside its range shows a message in the same place. The dialog has no tab stops: to change a style's tab stops, set them on a paragraph and choose **Redefine Paragraph Style**.
 
 ## Use OpenType features and glyphs
 
@@ -130,9 +157,11 @@ To stop the wrap, select the object and choose **Object → Text Wrap → Releas
 3. Turn on **Match Case** to match capital and lowercase letters exactly, and **Whole Word** to skip matches inside longer words. With **Whole Word** on, "noodle" does not match "noodles."
 4. Click **OK**.
 
-VectorCraft replaces every match in every type object of the document in one step, which **Edit → Undo** reverses. It skips hidden or locked type, type on hidden or locked layers, and type on locked artboards. A match must lie inside text with one set of character attributes, so a word that changes font or color partway through is not found.
+VectorCraft replaces every match in every type object of the document in one step, which **Edit → Undo** reverses. It skips hidden or locked type, type inside a hidden or locked group, type on hidden or locked layers, and type on locked artboards. A match must lie inside text with one set of character attributes, so a word that changes font or color partway through is not found.
 
-In VectorCraft 0.22.0, **Edit → Find Next** does not search. Choosing it from the menu shows the error "invalid parameters for `edit.findNext`: missing `find`". To find text, use **Edit → Find and Replace…**.
+With **Whole Word** on, a change of font or color inside a word does not split the word. If "noodles" has its last letter in another color, "noodle" still does not match it.
+
+In VectorCraft 0.24.1, **Edit → Find Next** does not search. Choosing it from the menu shows the error "invalid parameters for `edit.findNext`: missing `find`". To find text, use **Edit → Find and Replace…**.
 
 ![The Find and Replace dialog with Find set to noodle, Replace set to ramen, Match Case off and Whole Word on, open over the lanterns of a night market menu card. Below it, with nothing selected, the left column lists Lantern noodle bowl and Sesame noodle salad, and the right column starts with Garlic butter noodles](/assets/uploads/vectorcraft/find-replace.webp)
 
@@ -176,6 +205,8 @@ The tate-chu-yoko commands set a short run, such as a two-digit number, upright 
 ![A lantern festival poster with the vertical banner OPEN 18 TO 24 down its left edge and the number 18 selected with the Type tool. The Character panel menu is open with Tate-chu-yoko checked and Tate-chu-yoko Settings… below it](/assets/uploads/vectorcraft/tate-chu-yoko-menu.webp)
 
 **Standard Vertical Roman Alignment** in the same menu sets Latin letters and digits upright, one below the other, instead of rotated. Tate-chu-yoko and Standard Vertical Roman Alignment do not change horizontal type.
+
+[Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/) covers the other East Asian options, the language of type and composite fonts.
 
 ## Fine-tune justification and hyphenation
 
@@ -282,5 +313,7 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**.
 
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
+- [Check spelling](/apps/vectorcraft/check-spelling/)
+- [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
 - [Preferences](/apps/vectorcraft/preferences/)

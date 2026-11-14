@@ -253,10 +253,10 @@ While the tool is active, the Control bar (**Window → Control**) shows its set
 | Setting | What it does |
 |---|---|
 | Shape buttons | Switch the tool between **3D Box**, **Rectangle**, **Ellipse**, **Polygon**, **Star** and **Spiral** |
-| **X**, **Y** | Rotate the box around its X and Y axes, from −180° to 180°. Both are 30° by default |
+| **X**, **Y** | Rotate the box around its X and Y axes, from −180° to 180°. When you first use the tool, **X** is 30° and **Y** is 35° |
 | **Angle** | Rotates the box in the plane of the page, from −180° to 180°. The default is 0° |
-| **Link** buttons | Project the axis beside each button in parallel instead of in perspective while the button is on. By default only the button beside **Y** is on |
-| **Reset** | Returns the angles and the Link buttons to their defaults |
+| **Link** buttons | Project the axis beside each button in parallel instead of in perspective while the button is on. When you first use the tool, all three buttons are on |
+| **Reset** | Sets **X** and **Y** to 30° and **Angle** to 0°, and turns on only the **Link** button beside **Y** |
 
 With a box selected, the Control bar shows that box's values, and changing them changes the box.
 

@@ -1,6 +1,6 @@
 ---
 title: Automate VectorCraft
-description: Find and run any command by name, change keyboard shortcuts, record and replay actions, run an action on a folder of files, check a script before you run it, and run VectorCraft from the command line or an MCP client.
+description: Find and run any command by name, change keyboard shortcuts, record and replay actions with stops, run an action on a folder of files, check a script before you run it, and run VectorCraft from the command line or an MCP client.
 sidebar:
   order: 23
 parent: workflows
@@ -81,21 +81,45 @@ The panel menu holds these commands:
 | **Delete** | Deletes the selected actions or sets |
 | **Set Options…** | Renames the current set |
 | **Batch…** | Plays the selected action on every file in a folder, or on every data set of the open document |
-| **Play Current Selection** | Plays the selected action |
+| **Play Current Selection** | Plays the selected action, or plays on from a stop the action waits at |
+| **Insert Stop…** | Adds a stop to the recording in progress or to the selected action |
 | **Action Options…** | Changes the selected action's name, function key and color |
 | **Playback Options…** | Sets the playback speed: **Accelerated**, **Step by Step** or **Pause For** |
 | **Save Actions…** | Saves the current set to a `.vcactions` file |
 | **Load Actions…** | Adds a saved set to the panel |
 
+### Add a stop to an action
+
+A stop makes a playing action wait and show a message, so you can check the result or do a step by hand before the action goes on.
+
+1. In the **Actions** panel, expand the action and select the step that the stop should follow. To add the stop after the last step, collapse the action and select it. While you record an action, the stop goes after the steps recorded so far.
+2. Choose **Insert Stop…** from the panel menu.
+3. In **Record Stop**, type the **Message** that the action shows when it reaches the stop.
+4. Select **Allow Continue** to give the message box a **Continue** button.
+5. Click **OK**. In an existing action, the stop appears as **Stop:** followed by the message, and it is selected.
+
+![The Record Stop dialog over a sheet of dusk postcards, with the Message "Check the label before export" and Allow Continue selected. To the right, the docked Actions panel shows the Postcard Prep action in the Postcards set expanded to its four steps, select.all, object.scale, text.create and document.export, with text.create selected.](/assets/uploads/vectorcraft/actions-insert-stop.webp)
+
+An action plays up to a stop whose check box is selected and waits there, at any speed. If you clear a stop's check box, playback skips the stop. A message box opens with the action's name as its heading, the message, and the line "Press Play Current Selection in the Actions panel to go on." With **Accelerated**, the steps between two stops are one step in the undo history.
+
+| Button or command | What it does |
+|---|---|
+| **Continue** | Plays the rest of the action. The message box shows it only when **Allow Continue** is selected. |
+| **Stop** | Closes the message box. The action keeps waiting at the stop. |
+| **Play Current Selection** | Plays on from the stop |
+| **Stop Playing/Recording** | Ends the playback. The steps that already ran stay, and the rest do not run. |
+
+**Batch…** cannot play an action with an included stop. For such an action, it shows "Batch cannot play an action with a stop" in the status bar and does not open.
+
 ## Run an action on a folder of files
 
 **Batch…** plays an action on every file in a folder, or on every data set of the open document, and then saves, exports or closes each result.
 
-1. In the **Actions** panel, select the action. If the action has no steps, or every step is cleared, **Batch…** shows a message in the status bar and does not open.
+1. In the **Actions** panel, select the action. If the action has no steps, every step is cleared, or an included step is a stop, **Batch…** shows a message in the status bar and does not open.
 2. Choose **Batch…** from the panel menu. The dialog shows the action's name at the top.
 3. Set **Play** to **Folder** or **Data Sets**.
-4. For **Folder**, type a **Source Folder** or click **Choose…**, and select **Include All Subdirectories** to include its subfolders. For **Data Sets**, choose how the files are named in **File Name**.
-5. Choose one of the **Destination** options. For **Folder**, type a **Destination Folder** or click **Choose…**.
+4. For **Folder**, type a **Source Folder** or click **Choose…**, and select **Include All Subdirectories** to include its subfolders. For **Data Sets**, the dialog shows "Uses every data set of the open document." in their place.
+5. Choose one of the **Destination** options. For **Folder**, type a **Destination Folder** or click **Choose…**. With **Data Sets** and **Folder**, choose how the files are named in **File Name**, which appears below **Destination Folder**.
 6. Select or clear the options under **Overrides**, and click **OK**.
 
 ![The Batch dialog for the Badge action over a dusk scene with three star badges, with Play set to Folder, Source Folder C:\Art\badges, Include All Subdirectories cleared, Destination set to Folder, Destination Folder C:\Art\badges-out, and all four Overrides options selected. The Actions panel on the right shows the Badge action, with 3 steps, selected in the Studio set.](/assets/uploads/vectorcraft/action-batch.webp)
@@ -110,12 +134,12 @@ If you click **OK** with no **Source Folder** or no **Destination Folder**, or w
 | **Save and Close** | The file is saved over the source and closed |
 | **Folder** | The file is saved or exported into the **Destination Folder** and closed |
 
-With **Folder**, each file keeps its name and its format. With **Data Sets**, VectorCraft applies each data set in turn to the open document, and the document stays open. When **Destination** is **Folder**, VectorCraft saves one `.vectorcraft` copy for each data set.
+With **Folder**, each file keeps its name and its format. With **Data Sets**, VectorCraft applies each data set in turn to the open document, and the document stays open. When **Destination** is **Folder**, VectorCraft saves one `.vectorcraft` copy for each data set. With **Data Sets**, the dialog shows the warning "Each data set saves over the same file, which keeps only the last data set." when the settings would save every data set to one file.
 
 | Option | Default | What it does |
 |---|---|---|
 | **Include All Subdirectories** | Off | Also plays the action on the files in the source folder's subfolders |
-| **File Name** (Data Sets) | **File + Number** | **File + Number** names each file after the document with 001, 002 and so on; **File + Data Set Name** uses the document's name, an underscore and the data set's name; **Data Set Name** uses the data set's name. A name already used gets `-2`, `-3` and so on. |
+| **File Name** (Data Sets) | **File + Number** | Shows only when **Play** is **Data Sets** and **Destination** is **Folder**. **File + Number** names each file after the document with 001, 002 and so on; **File + Data Set Name** uses the document's name, an underscore and the data set's name; **Data Set Name** uses the data set's name. A name already used gets `-2`, `-3` and so on. |
 | **Override Action "Open" Commands** | On | Skips the Open steps recorded in the action. The other steps run on the file the batch opened. With **Data Sets**, Open steps are always skipped. |
 | **Override Action "Save" Commands** | On | The action's recorded Save steps write their files into the **Destination Folder**, named after the source file |
 | **Override Action "Export" Commands** | On | The action's recorded Export steps write their files into the **Destination Folder**, named after the source file, with the export format's extension |
@@ -151,7 +175,7 @@ VectorCraft saves the playback speed with its preferences, and the speed stays s
 
 ## Check a script before you run it
 
-**Check Script…** reads a script file and reports what it does without running any of it.
+**Check Script…** reads a script file and reports what it does without running any of it. To run scripts, see [Run scripts](/apps/vectorcraft/run-scripts/).
 
 1. Choose **File → Scripts → Check Script…**.
 2. Choose a `.jsx`, `.jsxinc` or `.jsxbin` file. Opening one of these files with **File → Open…** shows the same report.
@@ -188,6 +212,9 @@ VectorCraft also checks the files that `#include` lines name, and reads them onl
 | `vectorcraft-cli run --in in.svg --cmd select.all --cmd paint.setFill --params '{"color":"#ff0000"}' --export out.svg` | Opens a file, selects everything, fills it red and exports the result |
 | `vectorcraft-cli run --cmd file.new --params '{"width":800,"height":600}' --cmd shape.star --params '{"cx":400,"cy":300,"radius1":200,"radius2":90}' --export star.vectorcraft` | Builds a new document from commands and saves it |
 | `vectorcraft-cli run --in sheet.vectorcraft --commands steps.json --export out.pdf` | Runs the steps listed in a JSON file |
+| `vectorcraft-cli convert poster.ai poster.pdf` | Opens a file and exports it in the format that the second file's extension names |
+| `vectorcraft-cli perf --native-io` | Measures how long VectorCraft's own save and open commands take |
+| `vectorcraft-cli --safe-mode convert poster.vectorcraft poster.pdf` | Runs the subcommand with no plug-in loaded |
 
 Each `--params` applies to the `--cmd` just before it. `run` prints one line of JSON for each step and stops with an error at the first step that fails, naming that step by its number, counted from 0. `--export` can be given more than once, and the file extension sets the format. For PNG and other image exports, `--scale` sets the pixels per point and `--ppi` sets the pixels per inch. When both are given, `--ppi` is used. Without either, image exports use the document's raster effects resolution.
 
@@ -207,6 +234,28 @@ A steps file for `--commands` holds a JSON array of steps, or one step per line.
 :::tip
 Put long parameters in a steps file and pass it with `--commands`. `--commands -` reads the steps from standard input.
 :::
+
+### Convert a file
+
+`vectorcraft-cli convert IN OUT` opens `IN` and exports `OUT`. These options change how `.ai`, EPS and PDF files are read and written:
+
+| Option | What it does |
+|---|---|
+| `--editing-data` | Reads a `.ai` or EPS file from its editing data instead of its PDF part or page, when VectorCraft can read the editing data. The two can draw differently, and the PDF part or page can be older. |
+| `--legacy-name-encoding <encoding>` | Reads the names in a `.ai` or EPS file's editing data that are not UTF-8 in `windows-1252` (the default), `macintosh`, `windows-949`, `shift_jis`, `gbk` or `big5`. The names include layers, objects, artboards, colors, gradients, patterns, graphic styles, swatches, brushes, symbols, variables, data sets, and the text values of data sets. |
+| `--preserve-editing` | Embeds the native VectorCraft document in a PDF `OUT`, and the result's warnings say so. Without it, `convert` leaves the native document out of a PDF. With `--artboard`, or a `--range` that does not cover every artboard, the native document is left out with its own warning. |
+
+**Save As** to PDF in the app keeps the native document by default.
+
+### Measure performance
+
+`vectorcraft-cli perf` checks VectorCraft's performance budgets on a generated test document of 50,000 paths, or the number you give with `--paths`. It exits with an error when a budget is exceeded, unless the report says the machine is busy.
+
+With `--native-io`, `perf` instead measures VectorCraft's own save and open commands, with one warmup run and five measured runs and no disk reads or writes. `--artboards` with a number from 1 to 4 repeats the artwork on that many overlapping artboards, and works only with `--native-io`. `--native-io` allows at most 50,000 paths and cannot be combined with `--deep`.
+
+### Run without plug-ins
+
+Put `--safe-mode` before any subcommand to run it with no plug-in loaded. Plug-in commands report that Safe Mode is on, and the plug-ins stay installed. `vectorcraft-cli --safe-mode mcp` runs a headless server and does not take `--connect`. To use a running app without plug-ins, start it with `vectorcraft --safe-mode --control <port>`.
 
 ## Drive VectorCraft from an MCP client
 
@@ -249,10 +298,17 @@ vectorcraft --control 7979 --automation-read-root <folder> --automation-write-ro
 A connected client can change, save and export your open documents. Without either root option, commands can read and write files anywhere your account can. Give read and write roots that cover only the project folder.
 :::
 
+### Read the command reference
+
+The `engine.apiReference` command returns the command API reference as Markdown, in a `markdown` field. The reference has a section for each built-in command that has a parameter schema, with its label, menu, API level, whether it is deprecated, what it writes, its cost, a summary, what it returns and its parameters. Commands without a schema, including plug-in commands, are not in it. The MCP server also lists the reference as the resource `vectorcraft://commands/reference`.
+
+When the server lists commands, it gives the parameter schema of each command that has one in two forms: as `schema`, a JSON Schema 2020-12 schema, and as `inputSchema`, the same schema with an object at its root, in the form an MCP tool's input schema takes. A brief listing leaves both out.
+
 ## Related
 
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
+- [Run scripts](/apps/vectorcraft/run-scripts/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)
 - [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)

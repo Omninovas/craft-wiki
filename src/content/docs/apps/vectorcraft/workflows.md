@@ -44,6 +44,8 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 | [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/) | Fill and stroke, swatches, the Stroke panel, gradients, gradient meshes, patterns and recoloring |
 | [Add and style type](/apps/vectorcraft/add-and-style-type/) | Point type, area type, type on a path, threading, the Character and Paragraph panels and the Type menu |
 | [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/) | Paragraph and character styles, OpenType features and glyphs, tabs, text wrap and Find and Replace |
+| [Check spelling](/apps/vectorcraft/check-spelling/) | Auto Spell Check, fixing an underlined word from the context menu, and the custom dictionary |
+| [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/) | The language of type, the East Asian options, composite fonts and typing a character by its code on Windows |
 
 ### Organize and combine
 
@@ -59,6 +61,7 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 |---|---|
 | [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/) | Pattern swatches and the Pattern Options panel, Repeat, Intertwine, objects on a path and blends |
 | [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/) | The Appearance panel, live effects, blends, Repeat, Envelope Distort, 3D and graphic styles |
+| [Make 3D artwork](/apps/vectorcraft/make-3d-artwork/) | The 3D and Materials panel, giving shapes, groups and type depth, revolving, lighting, Extrude & Bevel (Classic), and changing or removing a 3D effect |
 
 ### Graphs and data
 
@@ -83,8 +86,10 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 | [Customize the workspace](/apps/vectorcraft/customize-the-workspace/) | Workspaces, panels, your own toolbars, extra windows, the Navigator, Presentation Mode and the History panel |
 | [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/) | Arrange Tools, Artwork Cleanup, Color Effects, Document Tools and the 3D Box tool |
 | [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/) | Command search, keyboard shortcuts, the Actions panel, running an action on a folder of files, checking a script, the command-line tool and the Model Context Protocol (MCP) server |
+| [Run scripts](/apps/vectorcraft/run-scripts/) | The Scripts menu, running any script file, answering a script's questions, stopping a script and the Script Console |
 | [AI agents](/apps/vectorcraft/ai-agents/) | Connecting an MCP client to VectorCraft and limiting it to one folder |
 | [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/) | Changing shortcuts, and every default shortcut by menu and tool |
+| [Panels](/apps/vectorcraft/panels/) | Every panel, library and bar in the **Window** menu, with its default shortcut where it has one and the guide that covers it |
 | [Preferences](/apps/vectorcraft/preferences/) | Every page of the Preferences dialog and how to reset it |
 
 ## Find a tool

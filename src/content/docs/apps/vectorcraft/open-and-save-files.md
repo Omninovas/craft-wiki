@@ -57,9 +57,15 @@ Save As writes these formats: VectorCraft, VectorCraft Template, PDF, SVG, SVG C
 | DXF (ASCII) | Yes, each DXF layer as a layer | No | Yes | |
 | EMF and WMF | Yes, on one artboard | No | Yes | |
 | PNG, JPEG, GIF, WebP, TIFF, BMP | Yes, as an image document | No | Yes | |
-| PSD | Yes, as its merged image | No | Yes, with layers | |
+| PSD (`.psd`, `.pdd`) | Yes, each layer as a layer | No | Yes, with layers | See [Open a PSD file with its layers](#open-a-psd-file-with-its-layers) |
+| PSB | Yes, each layer as a layer | No | No | |
 | Targa (`.tga`) | Yes | No | Yes | |
 | Affinity (`.af`, `.afdesign`, `.afpub`) | Yes | No | No | Keeps layers, artboards, shapes and text; a warning lists anything VectorCraft could not bring in |
+| PostScript (`.ps`) | Yes, read as an EPS file | No | No | |
+| PCX and Pixar (`.pxr`) | Yes, as an image document | No | No | |
+| JPEG 2000 (`.jp2`, `.jpf`, `.jpx`, `.j2k`, `.j2c`, `.jpc`) | Yes, as an image document | No | No | |
+| HEIC and HEIF | Yes, as an image document | No | No | Opens the first still image. Image sequences are not read. |
+| JPEG XL (`.jxl`) | Yes, as an image document | No | No | Opens the first frame |
 
 :::tip
 A `.ai` file that VectorCraft wrote, and a PDF or SVG file saved with its preserve editing option on, reopens in VectorCraft as the full VectorCraft document it carries. If the file was changed in another program since, VectorCraft opens its artwork instead, and the first warning gives the reason.
@@ -136,7 +142,45 @@ What you get depends on the file:
 - A PDF opens with one artboard per page.
 - A raster image opens as a document the size of the image, at the resolution the file declares, or at 72 ppi when it declares none.
 - A template (`.vctemplate` or `.ait`) opens as a new untitled document.
-- An EPS file from another program is read as PostScript. When its PostScript cannot be read, it opens as its preview image with a warning.
+- An EPS file from another program is read as PostScript. When its PostScript cannot be read, it opens as its preview image with a warning. When its type uses fonts that are not installed, the type shows in a fallback font, and a warning names each of those fonts once.
+- A PSD or PSB file opens with each of its layers as a layer of the document. See [Open a PSD file with its layers](#open-a-psd-file-with-its-layers).
+- A file that no built-in format reads opens with an installed importer plug-in that lists the file's extension.
+
+When a file opens with warnings, the status bar shows how many there are and the first one.
+
+### Follow a file that takes a while to open
+
+VectorCraft reads a file in the background when you open it with **File → Open…**, **File → Open Recent Files** or the Home screen. While it reads the file, the status bar shows **Opening** and the file name. When reading takes longer than 0.4 seconds, a progress window opens with the file's name and a moving bar. When more files are waiting to open, the window shows how many.
+
+![The progress window for city-at-dusk.pdf over the Harbor at Dusk poster, with Reading the file… above a moving bar and the Continue in Background and Cancel buttons](/assets/uploads/vectorcraft/open-progress.webp)
+
+- Press **Continue in Background** to close the window and keep working. The status bar keeps showing the file name, and the file opens in a new tab when it is ready.
+- Press **Cancel** or **Esc** to stop. The file does not open.
+
+### Open a PSD file with its layers
+
+**File → Open…** reads a PSD file (`.psd` or `.pdd`) or a PSB file layer by layer:
+
+- Each layer becomes a layer of the document. It holds the layer's pixels as an image, and it keeps the layer's name, visibility, opacity and blend mode.
+- A layer group becomes a layer with the group's layers as sublayers.
+- A layer mask becomes the layer's opacity mask.
+- Layers clipped to the layer below them are merged into that layer as one image.
+- A layer in a blend mode that VectorCraft does not have, such as Dissolve, Linear Burn or Hard Mix, is merged with the layers below it.
+- Hidden layers are left out.
+
+Adjustment layers, layer effects, knockouts and vector masks are not applied. The warnings after the file opens count them, together with the hidden layers that were left out.
+
+![The harbor-collage.psd document with a sunset harbor, three sailboats and the title Harbor Nights. The Layers panel lists the Title, Boats, Water and Sky layers, each holding an image of the same name, and the Boats image is selected on the canvas.](/assets/uploads/vectorcraft/open-psd-layers.webp)
+
+PSD is not one of the formats Save writes, so the first **File → Save** asks for a name and a format.
+
+### Open a file with an importer plug-in
+
+Importer plug-ins add file formats that VectorCraft can open. **File → Open…** uses an installed importer for any file that no built-in format reads. You can also choose the importer yourself, even for a file that a built-in format reads:
+
+1. Choose **File → Open With**, then the importer's name. With no importer installed, the submenu shows **No importer plug-ins installed**.
+2. Pick the file.
+3. If the importer has settings, a dialog shows them. Change them if you need to, then press **Open**.
 
 :::note
 VectorCraft looks for linked images at the path saved in the document, then at the same relative path from the document's folder. A missing image shows its saved preview until you relink it with **Relink…** in the Links panel (**Window → Links**). See [Work with placed images](/apps/vectorcraft/work-with-placed-images/).

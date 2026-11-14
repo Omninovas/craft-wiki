@@ -21,8 +21,10 @@ VectorCraft is in alpha. Everyday illustration works, but some tools don't yet b
 - Editing paths: Direct Selection, anchor point tools, Join, Simplify, Offset Path and Outline Stroke.
 - Combining shapes: Pathfinder and the Shape Builder tool.
 - Paint: swatches, gradients, gradient meshes, patterns, Live Paint and Recolor Artwork.
-- Live effects: blends, Repeat (radial, grid and mirror), Envelope Distort, drop shadows and glows, and 3D effects such as Revolve and Extrude & Bevel. They stay editable until you expand them.
+- Color Wheel: the **Color Wheel** panel (**Window → Color Wheel**) shows a hue ring around a square of saturation and brightness. A click or a drag sets the color of the fill or the stroke, whichever is active, and a drag is one undo step. [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/) covers it.
+- Live effects: blends, Repeat (radial, grid and mirror), Envelope Distort, drop shadows and glows, and 3D effects such as Revolve and Extrude & Bevel. They stay editable until you expand them. [Make 3D artwork](/apps/vectorcraft/make-3d-artwork/) covers the **3D and Materials** panel.
 - Type: point, area and path type, threaded text frames, character and paragraph styles, OpenType features and vertical type.
+- Spelling: **Edit → Spelling → Auto Spell Check** underlines words that are not in the dictionary. Right-click an underlined word to choose a suggestion, **Ignore All** or **Add to Dictionary**, and use **Edit → Edit Custom Dictionary…** to change the words you added. [Check spelling](/apps/vectorcraft/check-spelling/) covers both.
 - Layout and drawing aids: several artboards in one document, guides, grids and the Dimension tool.
 - Perspective drawing: **View → Perspective Grid → Show Grid** shows the grid, and the **One Point Perspective**, **Two Point Perspective** and **Three Point Perspective** submenus under **View → Perspective Grid** choose its type. The Perspective Grid Tool (**Shift+P**) adjusts the grid, and the Perspective Selection Tool (**Shift+V**) moves art along its planes.
 - Symbols: the **Symbols** panel stores art that you place many times, and every placed copy changes when you edit the symbol. The Symbol Sprayer Tool (**Shift+S**) and the Shifter, Scruncher, Sizer, Spinner, Stainer, Screener and Styler tools spray and adjust many copies at once.
@@ -33,6 +35,7 @@ VectorCraft is in alpha. Everyday illustration works, but some tools don't yet b
 - Output: Export for Screens, PDF with print presets, printing (including posters tiled across several sheets) and Package.
 - **Contextual Task Bar**: a bar under the selection shows buttons for the likely next steps, such as **Ungroup**, **Isolate** and **Duplicate** for a group. Turn it on or off with **Window → Contextual Task Bar**.
 - **Search Commands**: **Help → Search Commands…** (**Ctrl+Shift+/**, or **Cmd+Shift+/** on macOS) finds any command or tool by name.
+- Scripts: **File → Scripts** lists the `.js` and `.jsx` scripts in your Scripts folder and runs the one you choose. A script you add to the folder appears in the menu without a restart. **File → Scripts → Other Script…** runs a script file from anywhere after a warning, and **Window → Script Console** shows what each run printed. [Run scripts](/apps/vectorcraft/run-scripts/) covers the folder, the warning and the console.
 - Command-line tool: `vectorcraft-cli` converts files between formats, runs commands on a document without opening a window, and runs the Model Context Protocol (MCP) server that AI agents connect to.
 - Interface: dark and light themes, workspaces and 28 languages.
 
@@ -91,6 +94,7 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 - [Customize the workspace](/apps/vectorcraft/customize-the-workspace/): workspaces, panels, your own toolbars, extra windows, the Navigator, Presentation Mode and the History panel.
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/): changing shortcuts, and every default shortcut by menu and tool.
 - [Preferences](/apps/vectorcraft/preferences/): every page of the Preferences dialog and how to reset it.
+- [Panels](/apps/vectorcraft/panels/): every panel, library and bar in the **Window** menu, with its default shortcut where it has one and the guide that covers it.
 - [Troubleshooting](/apps/vectorcraft/troubleshooting/): fix common problems.
 
 ### Draw
@@ -113,6 +117,8 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 - [Manage color and proof for print](/apps/vectorcraft/manage-color-and-proof/): color settings, proofing, overprint and separations previews, spot colors and flattening transparency.
 - [Add and style type](/apps/vectorcraft/add-and-style-type/): point type, area type, type on a path, threading and the Character and Paragraph panels.
 - [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/): paragraph and character styles, OpenType features and glyphs, tabs, text wrap and Find and Replace.
+- [Check spelling](/apps/vectorcraft/check-spelling/): Auto Spell Check, fixing an underlined word from the context menu, and the custom dictionary.
+- [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/): the language of type, the East Asian options, composite fonts and typing a character by its code on Windows.
 
 ### Organize
 
@@ -123,6 +129,7 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 ### Effects
 
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/): the Appearance panel, live effects, blends, Repeat, Envelope Distort, 3D and graphic styles.
+- [Make 3D artwork](/apps/vectorcraft/make-3d-artwork/): the 3D and Materials panel, giving shapes, groups and type depth, revolving, lighting, Extrude & Bevel (Classic), and changing or removing a 3D effect.
 - [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/): pattern swatches and the Pattern Options panel, Repeat, Intertwine, objects on a path and blends.
 
 ### Output
@@ -136,6 +143,7 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 ### Automate
 
 - [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/): command search, keyboard shortcuts, the Actions panel, running an action on a folder of files, checking a script, the command-line tool and the Model Context Protocol (MCP) server.
+- [Run scripts](/apps/vectorcraft/run-scripts/): the Scripts menu, running any script file, answering a script's questions, stopping a script and the Script Console.
 - [AI agents](/apps/vectorcraft/ai-agents/): let an AI assistant draw and edit in VectorCraft.
 - [Make graphs and data-driven art](/apps/vectorcraft/make-graphs-and-data-driven-art/): draw graphs from a data table and fill a template from a CSV file.
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/): find the extra tools and commands under **Object → Plug-ins**.

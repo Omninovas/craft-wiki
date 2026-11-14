@@ -6,7 +6,7 @@ sidebar:
 parent: workflows
 ---
 
-This page shows how to start a new document from a preset or your own size, then add, name and arrange its artboards. It also covers the document's units, bleed and color mode, and the tools and shortcuts you use to move around the canvas.
+This page shows how to start a new document from a preset or your own size, then add, name and arrange its artboards. It also covers the document's units, bleed and color mode, the tools and shortcuts you use to move around the canvas, and rulers, guides and grids.
 
 ## Create a document
 
@@ -18,9 +18,16 @@ This page shows how to start a new document from a preset or your own size, then
 
 ![The New Document dialog over a set of sunset postcards, with the Art & Illustration category open and its blank document preset cards, Postcard first. Preset Details on the right shows the name Dusk Postcard, 432 pt by 288 pt, landscape orientation, 6 artboards and a 9 pt bleed on every side](/assets/uploads/vectorcraft/new-document-dialog.webp)
 
-**Recent** lists the sizes you used last. To keep a size of your own, click **Save Preset** beside the name, type a **Preset Name** and click **Save**. The preset then appears under **Saved**.
+**Recent** lists the sizes you used last. To keep a size of your own as a preset:
 
-**Advanced Options** holds **Color Mode**, **Raster Effects** and **Preview Mode**. **More Settings** opens the same fields in a longer form, where you also choose how several artboards are laid out.
+1. Set the size and the other fields under **PRESET DETAILS**.
+2. Click **Save Preset** beside the **Document Name** field. The top of the column changes to **Save Document Preset**, with a **Preset Name** field, **Cancel** and **Save**. **Close** and **Create** are hidden until you save or cancel.
+3. Type a **Preset Name** over the suggested one (Preset 1, Preset 2 and so on). The fields under the name stay editable, and the preset stores their values.
+4. Click **Save**, or press Enter in the name field. The preset then appears under **Saved**, and the dialog switches to that category with the new preset chosen. Click **Cancel** or press Escape to leave without saving.
+
+![The New Document dialog over the harbor postcards, with the Art & Illustration category open and the Postcard card chosen. The Preset Details column is saving a preset: the Save Document Preset heading, Dusk Postcard in the name field and the Cancel and Save buttons, with 432 pt by 288 pt, landscape orientation and 1 artboard below them](/assets/uploads/vectorcraft/new-document-save-preset.webp)
+
+**Advanced Options** holds **Color Mode**, **Raster Effects** and **Preview Mode**. **More Settings** opens a pop-up over the dialog with **Number of Artboards** and the layout of several artboards: the four layout buttons, **Change to Right-to-Left Layout**, **Spacing** and **Columns**. The layout controls are unavailable while the number of artboards is 1, and **Columns** is unavailable with Arrange by Row and Arrange by Column. Click **Done** or press Enter to close the pop-up. A click outside it or Escape also closes it, and the fields keep the values you set in it.
 
 | Setting | Choices | Default |
 |---|---|---|
@@ -171,11 +178,13 @@ The conversion changes the stored color values of the artwork. If the result is 
 - The **Hand** tool (H) pans the view when you drag. With any tool, hold Space and drag, or drag with the middle mouse button.
 - The **Zoom** tool (Z) zooms in with a click. Hold **Alt** (**Option** on macOS) and click to zoom out. With any tool, hold **Ctrl+Space** (**Cmd+Space** on macOS) and click to zoom in.
 - Double-click the Hand tool to fit the artboard in the window. Double-click the Zoom tool to show the document at 100%.
-- The mouse wheel scrolls the view. Hold **Ctrl** (**Cmd** on macOS) or **Alt** (**Option** on macOS) while you turn the wheel to zoom in or out at the pointer.
-- On a trackpad, pinch to zoom and drag with two fingers to scroll. On a touch screen, pinch to zoom and drag with two fingers to pan.
+- The mouse wheel scrolls the view. Hold **Alt** (**Option** on macOS) while you turn the wheel to zoom in or out at the pointer. Hold **Ctrl** (**Cmd** on macOS) to scroll sideways, or **Ctrl+Alt** (**Cmd+Option** on macOS) to zoom.
+- On a trackpad, pinch to zoom and drag with two fingers to scroll. A two-finger scroll with **Ctrl** (**Cmd** on macOS) held zooms at the pointer. On a touch screen, pinch to zoom and drag with two fingers to pan.
 - On a Mac trackpad, turn two fingers to rotate the view. **Preferences → General → Trackpad Gesture to Rotate View** turns this on and off. It is on by default.
 
-To make the plain wheel zoom, turn on **Zoom with Mouse Wheel** in **Preferences → General**. The wheel and Alt-wheel then zoom, Shift-wheel scrolls up and down, and Ctrl-wheel (Cmd-wheel on macOS) scrolls sideways.
+To make Ctrl-wheel (Cmd-wheel on macOS) zoom at the pointer, turn off **Scroll Sideways with Cmd/Ctrl + Wheel** in **Preferences → General**. It is on by default. The setting applies to a mouse wheel only. A trackpad scroll with **Ctrl** (**Cmd** on macOS) held zooms whether the setting is on or off.
+
+To make the plain wheel zoom, turn on **Zoom with Mouse Wheel** in **Preferences → General**. The wheel and Alt-wheel then zoom, Shift-wheel scrolls up and down, and Ctrl-wheel (Cmd-wheel on macOS) scrolls sideways. **Scroll Sideways with Cmd/Ctrl + Wheel** is unavailable while **Zoom with Mouse Wheel** is on. See [General](/apps/vectorcraft/preferences/#general) in Preferences.
 
 You can also move the view from the status bar at the bottom of the window:
 
@@ -217,6 +226,10 @@ While you drag a guide out of a ruler, hold Shift to snap it to the ruler's tick
 
 With the Selection tool, click a guide to select it and drag it to move it. Hold **Alt** (**Option** on macOS) while you drag to move a copy. Drop a guide on its ruler to delete it.
 
+Each ruler guide is an object on a layer. A new guide goes on the current layer, above the art in that layer, and the Layers panel lists it in that layer as **\<Horizontal Guide\>** or **\<Vertical Guide\>**. When you hide, lock or delete the layer, its guides are hidden, locked or deleted with it, and a guide on a hidden or locked layer can't be selected. To move guides to another layer, drag their rows onto that layer's row in the Layers panel. For the Layers panel, see [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/#work-in-the-layers-panel).
+
+![A magazine cover named DUSK with a violet sky, a coral title, a setting sun and teal hills, crossed by ruler guides. A horizontal guide is being dragged down with a Y: 248.31 pt readout beside it, the Layers panel lists two Vertical Guide rows and three Horizontal Guide rows in the Guides layer above the Type, Hills and Background layers, and the Snapping menu on the Control bar is open with Snap to Glyph off and Alignment Guides on](/assets/uploads/vectorcraft/guides-on-layers.webp)
+
 **View → Rulers** has three commands:
 
 - **Show Rulers** shows the rulers. The command reads **Hide Rulers** while they show.
@@ -235,6 +248,11 @@ With the Selection tool, click a guide to select it and drag it to move it. Hold
 
 **Make Guides** is also in the menu that opens when you right-click selected objects. When you right-click an empty part of the canvas, the menu has **Show Rulers**, **Show Grid**, **Hide Guides** and **Lock Guides**.
 
+Two settings in **Preferences → Guides & Grid** change how guides behave. Both are off by default.
+
+- **Lock Guides by Default** starts VectorCraft with **View → Guides → Lock Guides** on. Changing the setting locks or unlocks the guides at once. **Lock Guides** in the View menu changes the lock for the current session only and does not change the setting. A guide you drag out of a ruler while guides are locked is locked too.
+- With **Artboard Guides with Cmd/Ctrl + Ruler Drag** on, hold **Ctrl** (**Cmd** on macOS) as you start to drag out of a ruler to make the other kind of guide. With any tool except the Artboard tool, the new guide belongs to the active artboard and runs across that artboard only. With the Artboard tool, the new guide runs across the whole canvas.
+
 The grid and the snapping commands are in the **View** menu:
 
 | Command | Windows and Linux | macOS | What it does | Default |
@@ -246,7 +264,7 @@ The grid and the snapping commands are in the **View** menu:
 | **Snap to Glyph** | None | None | Snaps art you draw to the bounds of live type, and on a single line of type to its baseline, x-height, character widths and glyph anchor points | Off |
 | **Smart Guides** | Ctrl+U | Cmd+U | Shows temporary guides and snaps to the edges, centers and anchor points of art and artboards | On |
 
-The **Snapping** menu at the left of the Control bar has **Smart Guides**, **Snap to Point**, **Snap to Grid** and **Snap to Pixel**, plus **Snap to Tangent** and **Snap to Perpendicular**. In a narrow window, the Control bar leaves this menu out while the Artboard tool is active.
+The **Snapping** menu at the left of the Control bar has **Smart Guides**, **Snap to Point**, **Snap to Grid**, **Snap to Pixel** and **Snap to Glyph**, then **Alignment Guides**, **Snap to Tangent** and **Snap to Perpendicular**. **Alignment Guides** is the same setting as **Preferences → Smart Guides → Alignment Guides**, and it is on by default. To show the Control bar, choose **Window → Control**. In a narrow window, the Control bar leaves the Snapping menu out while the Artboard tool is active.
 
 The grid spacing, the grid and guide colors and the Smart Guides options are in [Preferences](/apps/vectorcraft/preferences/): see [Guides & Grid](/apps/vectorcraft/preferences/#guides--grid), [Smart Guides](/apps/vectorcraft/preferences/#smart-guides) and [Units](/apps/vectorcraft/preferences/#units).
 

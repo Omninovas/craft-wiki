@@ -159,6 +159,32 @@ The web version uses the graphics card through WebGPU, which browsers only allow
 
 The next time it starts, VectorCraft names the plug-in and offers **Safe Mode**. You can disable the plug-in and continue, start normally, or start in Safe Mode, where no plug-ins load or run. **Help → Safe Mode…** lists the disabled plug-ins, and **Enable on Re-launch** turns one back on.
 
+The **Safe Mode** dialog also notes that the plug-in may not be what stopped VectorCraft. Click one of these buttons:
+
+| Button | What happens |
+|---|---|
+| **Disable and Continue** | Safe Mode ends and the other plug-ins load. That plug-in stays off at later launches until you turn it back on. |
+| **Start Normally** | Safe Mode ends and every plug-in loads, that one included. |
+| **Start in Safe Mode** | No plug-ins load or run until you quit VectorCraft. It asks again at the next launch. |
+
+To turn a disabled plug-in back on:
+
+1. Choose **Help → Safe Mode…**.
+2. Select **Enable on Re-launch** beside the plug-in.
+3. Click **OK**. The plug-in loads again the next time VectorCraft starts.
+
+## A script stops or undoes its work
+
+VectorCraft keeps a script's changes only when the script runs to its end. If the script stops at an error, reaches one of its limits, or you click **Stop**, VectorCraft puts every document back as it was before the run.
+
+- To see why a run ended, choose **Window → Script Console**. The line that starts with **■** gives each run's ending, such as **Ended with an error** or **Out of fuel**. An error that the script did not handle shows in red.
+- When you click **Stop** in the status bar, or in a dialog the script opened, the status bar shows "The script was stopped and its changes were undone."
+- A script that adds a great many objects pauses with **A Script Is Running**. Click **Continue** to let it go on, or **Stop** to end it and undo its work.
+- Files that the script saved or exported before it ended stay on disk. The message that ends the run names them.
+- A script that runs to its end adds one undo step, **Run Script**. Choose **Edit → Undo Run Script** (**Ctrl+Z**, or **Cmd+Z** on macOS) to undo the whole run.
+
+[Stop a script](/apps/vectorcraft/run-scripts/#stop-a-script) describes each way to stop a run, and [Read a script's output in the Script Console](/apps/vectorcraft/run-scripts/#read-a-scripts-output-in-the-script-console) lists every ending.
+
 ## Start with default settings
 
 If VectorCraft behaves oddly after you changed settings, put the preferences back to their defaults:
@@ -231,3 +257,4 @@ The folder above `logs` is VectorCraft's settings folder.
 - [Work with placed images](/apps/vectorcraft/work-with-placed-images/)
 - [Install and update](/apps/vectorcraft/install-update/)
 - [Customize the workspace](/apps/vectorcraft/customize-the-workspace/)
+- [Run scripts](/apps/vectorcraft/run-scripts/)

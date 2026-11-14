@@ -113,14 +113,23 @@ The **Select → Object** submenu selects every object of one kind in the docume
 | **Slices** | Every slice |
 | **Stray Points** | Every path that has only one anchor point |
 | **Open Paths** | Every path that is not closed |
+| **Not Aligned to Pixel Grid** | Every path and compound path that has **Align to Pixel Grid** turned off in the Transform panel |
 | **All Text Objects** | Every type object |
 | **Point Text Objects** | Every point type object |
 | **Area Text Objects** | Every area type object |
 
 All on Same Layers and Direction Handles need a selection to start from.
 
+An object with Align to Pixel Grid turned on keeps its horizontal and vertical segments on the pixel grid. Not Aligned to Pixel Grid selects paths inside groups, and counts a compound path as one object. Guides and type objects are not selected. The command replaces the current selection and does not change the art.
+
+**Object → Make Pixel Perfect** snaps objects to the pixel grid once. It does not turn on Align to Pixel Grid, so Not Aligned to Pixel Grid still selects those objects afterward. [Keep small art sharp on screen](/apps/vectorcraft/export-for-screens-and-the-web/#keep-small-art-sharp-on-screen) describes Make Pixel Perfect and the other pixel tools.
+
 :::tip
 To remove every stray point in the document, choose **Select → Object → Stray Points** and press Delete.
+:::
+
+:::tip
+To align the visible, unlocked paths that are not aligned yet, choose **Select → Object → Not Aligned to Pixel Grid**, then turn on **Align to Pixel Grid** in the Transform panel.
 :::
 
 ## Edit every copy at once with Global Edit
@@ -198,6 +207,7 @@ Double-click a row to make that artboard active and fit it in the window. The di
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)
 - [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/)
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
+- [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
 - [All workflows](/apps/vectorcraft/workflows/)
