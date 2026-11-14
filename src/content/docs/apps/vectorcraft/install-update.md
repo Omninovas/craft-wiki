@@ -63,7 +63,7 @@ In the web version, saving and exporting download the file, and printing goes th
 
 Open VectorCraft. When no document is open, VectorCraft shows the Home screen, titled **Welcome to VectorCraft**.
 
-![The VectorCraft Home screen with no document open. Under Welcome to VectorCraft are the New file and Open buttons, a Recent Files list of harbor-at-dusk.vectorcraft, night-market-flyer.vectorcraft and postcard-set.vectorcraft with their folder, the Quickly start a new file cards Letter, A4, Web 1920×1080, Phone 390×844, Postcard and Social Square Post 1080×1080 with the pointer over Postcard, and the Community section with Join our Discord, ArtCraft website, VectorCraft on getartcraft.com and Source code on GitHub](/assets/uploads/vectorcraft/install-first-start.webp)
+![The VectorCraft Home screen with no document open. Welcome to VectorCraft sits centered above the New file and Open buttons, Recent Files lists harbor-at-dusk.vectorcraft, night-market-flyer.vectorcraft and postcard-set.vectorcraft with their folder, the Quickly start a new file cards run from Letter to Social Square Post 1080×1080 with the pointer over Postcard, and the centered Community section holds Join our Discord and three links](/assets/uploads/vectorcraft/install-first-start.webp)
 
 1. Press **New file** to open the New Document window, or **Open** to open a file you already have.
 2. To start from a preset size, click one of the cards under **Quickly start a new file**: **Letter**, **A4**, **Web 1920×1080**, **Phone 390×844**, **Postcard** or **Social Square Post 1080×1080**. Each card shows its size.
@@ -82,7 +82,7 @@ For a first project, follow [Getting started](/apps/vectorcraft/getting-started/
 3. To see the credits, click the **Contributors** or **Models** tab.
 4. Close the window with its close button.
 
-![The About VectorCraft window over the Harbor at Dusk poster, on its About tab, showing Version 0.22.0, the Discord, ArtCraft website, getartcraft.com and GitHub links, the license and fonts line, and the graphics processor in use](/assets/uploads/vectorcraft/about-vectorcraft.webp)
+![The About VectorCraft window over a dusk harbor poster titled Harbor Lights, on its About tab, showing Version 0.24.1, the Join our Discord button, the ArtCraft website, getartcraft.com and GitHub links, the license and fonts line, and the graphics processor in use](/assets/uploads/vectorcraft/about-vectorcraft.webp)
 
 The last line of the About tab names the graphics processor VectorCraft draws with. [Find your version for a bug report](/apps/vectorcraft/troubleshooting/#find-your-version-for-a-bug-report) says what to put in a bug report.
 
@@ -114,7 +114,7 @@ When you set ArtCraft Launcher to keep VectorCraft on a chosen version or on nig
    - If a newer version is out, the update prompt opens instead, with the choices in the table under [When an update is out](#when-an-update-is-out).
    - If the check fails, the window shows **Could not check for updates.**, the reason, and the address of the releases page. Click **CHECK AGAIN** to try again, or **OK** to close the window.
 
-![The update check window over the Harbor at Dusk poster, which is dimmed behind it. Beside the VectorCraft icon it reads VectorCraft by ArtCraft and v0.22.0, then VectorCraft 0.22.0 is the newest version available, with an OK button](/assets/uploads/vectorcraft/install-check-updates.webp)
+![The update check window over the Harbor at Dusk poster, which is dimmed behind it. Beside the VectorCraft icon it reads VectorCraft by ArtCraft and v0.24.1, then VectorCraft 0.24.1 is the newest version available, with an OK button](/assets/uploads/vectorcraft/install-check-updates.webp)
 
 In the web version, **Help → Check for Updates…** opens a **VectorCraft Updates** window that says the update check is not supported in the web browser. Click **OK** to close it.
 

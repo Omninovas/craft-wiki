@@ -218,7 +218,7 @@ The Blob Brush paints filled shapes instead of stroked paths. A shape that you p
 2. Press Shift+B to choose the Blob Brush tool.
 3. Drag on the canvas. Press [ to make the tip 1 pt smaller or ] to make it 1 pt larger.
 
-![The Blob Brush part way through a stroke in a cloud study over the dusk sky, painting a curved band out from the side of a lavender cloud. The round tip outline sits under the pointer with an L: 204.28 px readout beside it, and a second lavender cloud floats at the left](/assets/uploads/vectorcraft/blob-brush-painting.webp)
+![The Blob Brush part way through a stroke in a cloud study over the dusk sky. A thin blue outline shows the area being painted as it arcs up and to the left out of the top of a lavender cloud, with the round tip outline under the pointer and an L: 205.75 px readout of the stroke's length](/assets/uploads/vectorcraft/blob-brush-painting.webp)
 
 A new shape merges with the topmost touching path that has the same fill and no stroke, and with the touching paths next to it in the stacking order of the same group or layer. Hold Shift as you drag to keep the stroke on a horizontal or vertical line. Hold **Alt** (**Option** on macOS) as you press to smooth the selected paths instead.
 
@@ -243,7 +243,7 @@ Expanding a brush stroke replaces it with the artwork that the brush draws, as o
 1. Select the paths that have brush strokes.
 2. Click **Expand Brush Strokes** at the bottom of the Brushes panel, or choose it from the panel menu.
 
-![The dusk garden after Expand Brush Strokes on the vine. The vine is now a selected group whose stem, leaves and berries each show their own selection outline, and the Layers panel shows the new group open in Layer 1](/assets/uploads/vectorcraft/expand-brush-strokes.webp)
+![The dusk garden after Expand Brush Strokes on the vine. The vine looks as it did before and is now a selected group with its bounding box, and the Layers panel shows the group open in Layer 1 with a nested group that holds a path for each berry, a path for the stem and a path for each leaf](/assets/uploads/vectorcraft/expand-brush-strokes.webp)
 
 Expand Brush Strokes replaces each path with a group of the brush art. To undo it, press **Ctrl+Z** (**Cmd+Z** on macOS).
 

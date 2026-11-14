@@ -214,7 +214,7 @@ While you edit horizontal text with the Type tool, these keys change the text:
 
 Add Ctrl (Cmd on macOS) to change the value by five steps. On macOS, press Option in place of Alt.
 
-![The title Harbor Lights is open in the Type tool with the word Lights selected and spaced out after Alt+Right Arrow. The Character panel floats beside the sailboat and shows a tracking of 60](/assets/uploads/vectorcraft/keyboard-shortcuts-type-tracking.webp)
+![The title Harbor Lights is open in the Type tool with the word Lights selected. The Character panel floats beside the sailboat and shows a tracking of 60 after Alt+Right Arrow was pressed three times](/assets/uploads/vectorcraft/keyboard-shortcuts-type-tracking.webp)
 
 ## Select
 
@@ -238,7 +238,7 @@ Add Ctrl (Cmd on macOS) to change the value by five steps. On macOS, press Optio
 
 ## View
 
-![The View menu open over a harbor scene with a selected sailboat. Each command shows its shortcut on the right, such as Ctrl+Y for Outline, Ctrl+0 for Fit Artboard in Window and Ctrl+Shift+B for Hide Bounding Box](/assets/uploads/vectorcraft/keyboard-shortcuts-view-menu.webp)
+![The View menu open over a harbor scene with a selected sailboat. Commands that have a shortcut show it on the right, such as Ctrl+Y for Outline, Ctrl+0 for Fit Artboard in Window and Ctrl+Shift+B for Hide Bounding Box](/assets/uploads/vectorcraft/keyboard-shortcuts-view-menu.webp)
 
 | Command | Windows and Linux | macOS |
 |---|---|---|

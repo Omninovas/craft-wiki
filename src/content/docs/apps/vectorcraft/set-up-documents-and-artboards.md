@@ -117,7 +117,7 @@ To lay out the artboards again:
 3. Type the number of **Columns** and the **Spacing** between artboards.
 4. Click **OK**. The artboards move in their panel order, as one step that **Edit → Undo** reverses.
 
-![The Rearrange All Artboards dialog over six postcard artboards in a single row, named Front, Back, Stamp, Inside Left, Inside Right and Envelope. The dialog shows Layout set to Grid by Row, the left-to-right Layout Order, Columns 3, Spacing 0.5 in, Move Artwork with Artboard turned on and Artboards: 6](/assets/uploads/vectorcraft/rearrange-artboards.webp)
+![The Rearrange All Artboards dialog over six postcard artboards set out unevenly in two staggered rows, with the Artboards panel listing Front, Back, Stamp, Inside Left, Inside Right and Envelope and Front highlighted. The dialog shows Layout set to Grid by Row, the left-to-right Layout Order, Columns 3, Spacing 0.5 in, Move Artwork with Artboard turned on and Artboards: 6](/assets/uploads/vectorcraft/rearrange-artboards.webp)
 
 | Option | What it does |
 |---|---|

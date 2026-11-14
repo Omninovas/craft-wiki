@@ -33,7 +33,7 @@ To return to the Home screen while documents are open, click the **Home** button
 
 The window has the same layout on every platform. The following screenshot shows the badge from this guide with the wavy line selected, and numbers the main areas of the window to match the list after it.
 
-![The VectorCraft window editing Badge.vectorcraft, with the white wave selected over the gradient background and ten numbered markers: 1 on the menu bar, 2 on the Control bar, 3 on the document tab, 4 on the Tools panel, 5 on the artboard, 6 on the Contextual Task Bar under the wave, 7 on the column of panel icons, 8 on the panel dock showing the Properties panel, 9 on the hint line and 10 on the status bar](/assets/uploads/vectorcraft/gs-window-tour.webp)
+![The VectorCraft window editing Badge.vectorcraft, with the white wave selected over the gradient background and ten numbered markers: 1 on the menu bar, 2 on the Control bar, 3 on the document tab, 4 beside the Tools panel, 5 on the white top-left corner of the artboard, 6 on the Contextual Task Bar under the wave, 7 on the column of panel icons below its last icon, 8 on the panel dock showing the Properties panel, 9 on the hint line and 10 on the status bar](/assets/uploads/vectorcraft/gs-window-tour.webp)
 
 1. **Menu bar**: holds the File, Edit, Object, Type, Select, Effect, View, Window and Help menus. The search button and the **Essentials** workspace menu are at its right end.
 2. **Control bar**: shows the fill, stroke, stroke weight, opacity and alignment of the selection. The Essentials workspace hides it; choose **Window → Control** to show it.
@@ -116,7 +116,7 @@ New objects get a white fill and a 1 pt black stroke until you change them. The 
 
 The following screenshot shows the shapes and the pen path before any color is added.
 
-![The circle and star drawn with a white fill and a thin black stroke over the gradient background and the faded logo, and the Pen tool part way through the wave below the circle: a corner point, a smooth point at the crest, a smooth point in the trough with its handles, and the preview of the last segment with its distance and angle readout. The hint line reads Click to add a corner point, Drag to add a smooth point, Click the first point to close, Enter to finish](/assets/uploads/vectorcraft/gs-shapes-and-path.webp)
+![The circle and star drawn with a white fill and a thin black stroke over the gradient background and the faded logo, and the Pen tool part way through the wave below the circle. The unfinished wave is filled white by the default fill and has a corner point, a smooth point at the crest, a smooth point in the trough with its handles, and the preview of the last segment with the magenta anchor guide label and its distance and angle readout. The hint line reads Click to add a corner point, Drag to add a smooth point, Click the first point to close, Enter to finish](/assets/uploads/vectorcraft/gs-shapes-and-path.webp)
 
 :::note
 Clicking the first point of a path with the Pen tool closes it. [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/) covers the Pen, Curvature and Pencil tools in detail.

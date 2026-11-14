@@ -44,7 +44,7 @@ Select a graph and choose **Object → Graph → Data…** to open the **Graph D
 - The first column holds the category names, which label the columns or points.
 - The top-left cell stays blank, and every other cell holds a value.
 
-![The lantern-sales scene above the Graph Data window: a violet-to-coral night market sky with a string of lanterns, the title Lanterns Sold, three lit stalls on teal ground, and the selected column graph on a cream card with amber Paper and coral Silk columns for Mon to Sun, a value axis from 0 to 100 and a Paper and Silk legend. In the window, Sat's Paper cell, 88, is picked and the entry box above the sheet holds the new value 92](/assets/uploads/vectorcraft/graph-data.webp)
+![The lantern-sales scene above the Graph Data window, with the selected column graph of amber Paper and coral Silk columns on the cream card. In the window, Sat's Paper cell, 88, is picked, and the entry box above the sheet holds the new value 92](/assets/uploads/vectorcraft/graph-data.webp)
 
 1. Click a cell to pick it. Its value appears in the entry box above the sheet.
 2. Type the new value in the entry box. Press Tab to enter it and move to the next cell in the row, or Enter to move to the next cell in the column. Hold Shift with Tab or Enter to move the other way. The arrow keys also move between cells.

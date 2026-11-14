@@ -80,7 +80,7 @@ The Lock submenu also has **All Artwork Above** and **Other Layers**. The Hide s
 
 To bring everything back, choose **Object → Unlock All** (**Ctrl+Alt+2**, or **Cmd+Option+2** on macOS) or **Object → Show All** (**Ctrl+Alt+3**, or **Cmd+Option+3** on macOS). Afterward, the objects that were locked or hidden are selected.
 
-![The Object menu open beside two market stalls at night, with the left stall's striped awning selected. The Hide submenu lists Selection, All Artwork Above, Other Layers and Unselected Artwork with their shortcuts, and the pointer is on Unselected Artwork](/assets/uploads/vectorcraft/lock-hide-menu.webp)
+![The Object menu open beside two market stalls at night, with the left stall's striped awning selected. The Hide submenu lists Selection, All Artwork Above, Other Layers and Unselected Artwork, with Unselected Artwork highlighted](/assets/uploads/vectorcraft/lock-hide-menu.webp)
 
 | Command | What it does | Windows and Linux | macOS |
 |---|---|---|---|
@@ -134,7 +134,7 @@ In the following image, Vertical Align Center lines the circles up, and Horizont
 
 ![The lantern-festival document with four selected lantern circles in amber, coral, magenta and cyan, lined up on their centers along a thin white string and spaced evenly across a starry night sky above teal hills. The Align panel is docked at the right, with Align to Selection chosen](/assets/uploads/vectorcraft/align-before-after.webp)
 
-![Four selected lantern circles on a night sky next to the Align panel, which shows its Align Objects, Distribute Objects and Distribute Spacing buttons and the Align To choice, with the pointer on Vertical Align Center](/assets/uploads/vectorcraft/align-panel.webp)
+![Four selected lantern circles in amber, coral, magenta and cyan at different heights and uneven spacing in a starry night sky above teal hills, next to the Align panel. The pointer is on Vertical Align Center, its tooltip shows, and Align to Selection is chosen](/assets/uploads/vectorcraft/align-panel.webp)
 
 The panel has four sections:
 

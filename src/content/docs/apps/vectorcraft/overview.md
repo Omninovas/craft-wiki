@@ -75,7 +75,7 @@ The **Help** menu links to the ArtCraft community and to VectorCraft's pages:
 
 **VectorCraft Help…** (**F1**) is in the menu but grayed out, because it is not built yet. The web version does not check for updates.
 
-![The Help menu open over the Harbor at Dusk poster, listing Join Our Discord, ArtCraft Website, VectorCraft on getartcraft.com, VectorCraft on GitHub, Search Commands (highlighted, shortcut Ctrl+Shift+/), a grayed VectorCraft Help with F1, Check for Updates and About VectorCraft](/assets/uploads/vectorcraft/overview-help-menu.webp)
+![The Help menu open over the Harbor at Dusk poster, listing Join Our Discord, ArtCraft Website, VectorCraft on getartcraft.com, VectorCraft on GitHub, Search Commands (highlighted, shortcut Ctrl+Shift+/), a grayed VectorCraft Help with F1, Safe Mode, Check for Updates and About VectorCraft](/assets/uploads/vectorcraft/overview-help-menu.webp)
 
 On macOS, **About VectorCraft** is in the **VectorCraft** menu instead of the **Help** menu, together with **Settings**, **Language**, **Appearance** and **Quit VectorCraft**. **Join Our Discord** stays in the **Help** menu.
 

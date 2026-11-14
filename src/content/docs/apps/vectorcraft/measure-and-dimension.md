@@ -27,7 +27,7 @@ The line and the readout stay on the canvas until your next drag. The Measure to
 
 The readout shows only while **Measurement Labels** is on. Measurement Labels is in **Edit → Preferences… → Smart Guides** (**Ctrl+K**) on Windows and Linux, and in **VectorCraft → Settings → Smart Guides…** (**Cmd+K**) on macOS. It is on by default. With it off, the tool still draws the line.
 
-![A lantern bracket drawing on a night-blue drafting grid, with a teal stone wall, a cream wall plate, arm and brace, and a coral lantern on the hook. A blue Measure line runs from the amber rosette on the wall plate to the hook with the readout D 219.35 mm, Angle 4.3°, dX 218.72 mm and dY -16.58 mm, and the Info panel shows the pointer's X and Y, the selected lantern's W and H, and the pointer's distance D and angle A from the lantern's center](/assets/uploads/vectorcraft/measure-tool.webp)
+![A lantern bracket drawing on a violet drafting grid under a night sky, with a teal stone wall, a cream wall plate, arm and brace, and a coral lantern on the hook. A blue Measure line runs from the amber rosette on the wall plate to the hook with the readout D 219.35 mm, Angle 4.3°, dX 218.72 mm and dY -16.58 mm, and the Info panel shows the pointer's X and Y, the selected lantern's W and H, and the pointer's distance D and angle A from the lantern's center](/assets/uploads/vectorcraft/measure-tool.webp)
 
 ## Read positions and sizes in the Info panel
 
@@ -59,7 +59,7 @@ To measure between any two points instead, click the first point and then the se
 
 The new dimension is selected after you place it. Press Esc to cancel a dimension you have started. VectorCraft removes the unfinished dimension from the canvas.
 
-![The lantern bracket with two lavender dimensions, 218.7 mm along the arm and 98.8 mm down the wall plate, while the Dimension tool drags a third dimension of 148.9 mm out from the brace. The floating Dimension Tool bar has Linear selected, and the Properties panel's Dimension section shows Millimeters and precision 1](/assets/uploads/vectorcraft/dimension-linear.webp)
+![The lantern bracket with two lavender dimensions, 218.7 mm along the arm and 98.8 mm down the wall plate, and a third dimension of 148.9 mm along the brace, just placed and selected, with the brace still highlighted and a 148.9 mm readout beside it. The floating Dimension Tool bar has Linear selected, and the Properties panel shows the new dimension's Dimension section with Millimeters and precision 1](/assets/uploads/vectorcraft/dimension-linear.webp)
 
 Linked dimensions follow the art:
 
@@ -86,7 +86,7 @@ To dimension a circle or an arc:
 
 A click on a circle or an arc places its radius dimension at once.
 
-![The Dimension tool with Radial chosen in the floating Dimension Tool bar, and a new 26.8 mm diameter dimension across the scroll ring between the arm and the brace. A 25.8° angular dimension marks the corner between the brace and the arm, and the Properties panel's Dimension section shows the new dimension's settings with Apply to All and Set as Default](/assets/uploads/vectorcraft/dimension-radial.webp)
+![The Dimension tool with Radial chosen in the floating Dimension Tool bar, and a 26.8 mm diameter dimension just placed and selected across the scroll ring between the arm and the brace, with the ring's center marked. A 25.8° angular dimension marks the corner between the brace and the arm, and the Properties panel's Dimension section shows the new dimension's settings with Apply to All and Set as Default](/assets/uploads/vectorcraft/dimension-radial.webp)
 
 ## Set units, precision and style
 

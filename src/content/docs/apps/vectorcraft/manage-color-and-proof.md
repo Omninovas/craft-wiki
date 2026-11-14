@@ -217,7 +217,7 @@ Trim marks show the printer where to cut the page.
 
 VectorCraft draws one group of marks for each artboard, or one group around the selection, and you can undo them in one step. The marks are 0.3 pt lines in the [Registration] color, which prints on every plate. Roman marks start 9 pt from the edge and are 18 pt long.
 
-![The top-left corner of the harbor festival poster at 400% zoom with the trim mark group selected. A horizontal and a vertical 0.3 pt mark sit outside the artboard corner, set off from its edges, and the Properties panel shows the group with a 0.3 pt stroke](/assets/uploads/vectorcraft/trim-marks-corner.webp)
+![The top-left corner of the harbor festival poster at 800% zoom with the trim mark group selected. A horizontal and a vertical mark sit in the pasteboard outside the artboard corner, set off from its edges, and the Properties panel shows the group with a 0.3 pt stroke](/assets/uploads/vectorcraft/trim-marks-corner.webp)
 
 To draw Japanese marks instead, turn on **Use Japanese Crop Marks** in **Edit → Preferences… → General** (**Ctrl+K**) on Windows and Linux, and in **VectorCraft → Settings → General…** (**Cmd+K**) on macOS. Japanese marks add double lines at the trim and bleed edges, and center marks.
 

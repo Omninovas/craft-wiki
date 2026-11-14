@@ -18,7 +18,7 @@ This guide covers the Print dialog. It shows how to choose which artboards print
 
 VectorCraft saves the print settings with the document, and the dialog opens with the same choices next time.
 
-![The Print dialog on its General section with PDF File as the printer, Media set to Letter, Auto-Rotate turned on, Print Layers set to Visible & Printable Layers, Placement at the center and Scaling set to Do Not Scale. The preview shows a harbor poster at sunset on a letter page](/assets/uploads/vectorcraft/print-general.webp)
+![The Print dialog on its General section with PDF File as the printer, one copy, All artboards, Media set to Letter and Auto-Rotate turned on. The preview shows a harbor poster at sunset on a letter page](/assets/uploads/vectorcraft/print-general.webp)
 
 ## Choose what prints
 

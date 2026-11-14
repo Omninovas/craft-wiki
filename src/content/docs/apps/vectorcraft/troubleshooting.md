@@ -185,7 +185,7 @@ On Linux or macOS, start it with `VECTORCRAFT_NO_PREFS=1 vectorcraft`.
 
 Choose **Help → About VectorCraft** (**VectorCraft → About VectorCraft** on macOS). The **About** tab shows the version number and, on its last line, the graphics processor VectorCraft draws with. Put both in your bug report.
 
-![The About VectorCraft window over the Harbor at Dusk poster, on its About tab, showing Version 0.22.0, the Discord, ArtCraft website, getartcraft.com and GitHub links, the license and fonts line, and the graphics processor in use](/assets/uploads/vectorcraft/about-vectorcraft.webp)
+![The About VectorCraft window over a dusk harbor poster titled Harbor Lights, on its About tab, showing Version 0.24.1, the Join our Discord button, the ArtCraft website, getartcraft.com and GitHub links, the license and fonts line, and the graphics processor in use](/assets/uploads/vectorcraft/about-vectorcraft.webp)
 
 On macOS, Linux and FreeBSD, `vectorcraft --version` prints the version. [Install and update](/apps/vectorcraft/install-update/) shows how to get a newer version.
 

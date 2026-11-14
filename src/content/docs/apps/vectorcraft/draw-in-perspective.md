@@ -60,7 +60,7 @@ Press **Shift+P** for the Perspective Grid tool. If the grid is hidden, the tool
 
 Press **Esc** before you release the mouse button to put the grid back as it was. Art already on the grid stays where it is when you change the grid.
 
-![A tall violet building on a street corner at dusk, its walls lined with lit and dark windows, drawn on a two-point perspective grid with blue, orange and green gridlines. The end of the right wall's base has been dragged to the right, so the orange right-plane grid and the green ground grid now reach past the building toward a street lamp](/assets/uploads/vectorcraft/perspective-grid-tool.webp)
+![A tall violet building on a street corner at dusk, its walls lined with lit and dark windows, drawn on a two-point perspective grid with blue, orange and green gridlines. The end of the right wall's base has been dragged to the right, so the orange right-plane grid now reaches past the building toward a street lamp](/assets/uploads/vectorcraft/perspective-grid-tool.webp)
 
 Double-click the tool's button in the toolbar to open **Perspective Grid Options**. **Show Active Plane Widget** turns the plane switching widget on or off, and **Widget Position** puts it in the **Top Left** (the default), **Top Right**, **Bottom Left** or **Bottom Right** corner of the document window.
 
@@ -129,7 +129,7 @@ Press **Shift+V** for the Perspective Selection tool, then drag art that is on t
 
 Press **Esc** before you release the mouse button to cancel a move or a scale. While you drag, a label shows how far the art moved along the plane (**dX** and **dY**), or **dZ** when it moves at right angles to the plane. **Object → Perspective → Move Plane to Match Object** moves the selected object's plane to where the object is and makes it the active plane.
 
-![A coral banner with amber bands being Alt-dragged along the building's right wall with the Perspective Selection tool. The original banner stays near the corner, the copy gets narrower as it moves toward the vanishing point, and a label reads dX: 346.48 px and dY: 0.00 px](/assets/uploads/vectorcraft/perspective-alt-copy.webp)
+![A tall coral banner with an amber panel being Alt-dragged along the building's right wall with the Perspective Selection tool. The original banner stays near the corner, the copy gets narrower as it moves toward the vanishing point, and a label reads dX: 346.48 px and dY: 0.00 px](/assets/uploads/vectorcraft/perspective-alt-copy.webp)
 
 ## Put flat art and type on a plane
 
@@ -140,7 +140,7 @@ You can draw art and type flat and then put them on the grid.
    - With the Perspective Selection tool, drag the flat art. It goes onto the active plane as soon as the drag starts and then moves along it.
    - Select the art and choose **Object → Perspective → Attach to Active Plane**. The art takes the plane's perspective, with the corners of its bounding box where they were.
 
-![The street corner with an amber LANTERNS sign being dragged down the left wall with the Perspective Selection tool. The sign leans with the wall and shows its perspective bounding box, a label reads dX 0.00 px and dY -154.24 px, and the status bar lists the tool's keys for moving, copying, moving at right angles and scaling](/assets/uploads/vectorcraft/perspective-attach.webp)
+![The street corner with an amber LANTERNS sign being dragged on the left plane, at the top of the building's left wall, with the Perspective Selection tool. The sign leans with the wall and shows its perspective bounding box, a label reads dX 0.00 px and dY -154.24 px, and the status bar lists the tool's keys for moving, copying, moving at right angles and scaling](/assets/uploads/vectorcraft/perspective-attach.webp)
 
 Type and symbols on a plane stay type and symbols. To change the words of type on a plane:
 

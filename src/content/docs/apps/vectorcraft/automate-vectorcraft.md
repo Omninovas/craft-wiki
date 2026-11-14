@@ -69,7 +69,7 @@ In **New Action** and **Action Options…**, the **Function Key** list assigns a
 With the default **Accelerated** speed, the whole action plays as one step in the undo history, so one Undo reverses it. **Playback Options…** also offers **Step by Step** and **Pause For**, which play one step at a time and record each step as its own undo step.
 :::
 
-![The Actions panel menu open beside a strip of the night market scene, listing New Action, New Set, Duplicate, Delete, Set Options, Batch, Play Current Selection, Action Options, Playback Options, Save Actions, Load Actions and Float Panel](/assets/uploads/vectorcraft/actions-panel-menu.webp)
+![The Actions panel menu open beside a strip of the night market scene, listing New Action, New Set, Duplicate, Delete, Set Options, Batch, Play Current Selection, Insert Stop, Action Options, Playback Options, Save Actions, Load Actions and Float Panel](/assets/uploads/vectorcraft/actions-panel-menu.webp)
 
 The panel menu holds these commands:
 
