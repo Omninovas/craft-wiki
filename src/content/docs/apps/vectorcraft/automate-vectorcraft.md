@@ -201,6 +201,8 @@ The report lists what the script needs, then these sections. A section appears o
 
 VectorCraft also checks the files that `#include` lines name, and reads them only from inside the script's folder. It checks up to 8 MiB in each file, 32 MiB in all and 64 included files. For a script file larger than 8 MiB, the report shows "Too large to check." An included file that VectorCraft skips because a limit was reached is listed under **Includes** as "Not read: a limit was reached." VectorCraft cannot read a compiled `.jsxbin` file. For one, the report shows "Compiled script: ask its author for the .jsx file."
 
+To write your own script that runs VectorCraft's commands on the open documents, see [Write a script](/apps/vectorcraft/write-a-script/).
+
 ## Run commands from the command line
 
 `vectorcraft-cli` runs VectorCraft's commands without opening a window. It reads a file or starts a new document, runs the commands you list in order, and exports the result.
@@ -251,6 +253,8 @@ Put long parameters in a steps file and pass it with `--commands`. `--commands -
 | `--preserve-editing` | Embeds the native VectorCraft document in a PDF `OUT`, and the result's warnings say so. Without it, `convert` leaves the native document out of a PDF. With `--artboard`, or a `--range` that does not cover every artboard, the native document is left out with its own warning. |
 
 **Save As** to PDF in the app keeps the native document by default.
+
+To choose the artboards and the image resolution, set SVG options, read the warnings and convert a whole folder of files, see [Convert files from the command line](/apps/vectorcraft/convert-files-from-the-command-line/).
 
 ### Measure performance
 
@@ -314,6 +318,8 @@ When the server lists commands, it gives the parameter schema of each command th
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Run scripts](/apps/vectorcraft/run-scripts/)
+- [Write a script](/apps/vectorcraft/write-a-script/)
+- [Convert files from the command line](/apps/vectorcraft/convert-files-from-the-command-line/)
 - [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)

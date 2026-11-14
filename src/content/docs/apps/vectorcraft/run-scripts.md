@@ -11,7 +11,7 @@ summary: Run JavaScript files from the Scripts menu and read their output.
 parent: workflows
 ---
 
-This guide shows you how to run JavaScript files (`.js` and `.jsx`) from **File → Scripts**, answer and stop them, and read what they print in the Script Console.
+This guide shows you how to run JavaScript files (`.js` and `.jsx`) from **File → Scripts**, answer and stop them, and read what they print in the Script Console. To write your own script, see [Write a script](/apps/vectorcraft/write-a-script/).
 
 ## Add scripts to the Scripts menu
 
@@ -140,7 +140,9 @@ The console keeps up to 2,048 lines and 1 MiB of text, and drops its oldest line
 
 ## Related
 
+- [Write a script](/apps/vectorcraft/write-a-script/)
 - [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/)
+- [Convert files from the command line](/apps/vectorcraft/convert-files-from-the-command-line/)
 - [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Preferences](/apps/vectorcraft/preferences/)
