@@ -8,9 +8,11 @@ interface Props {
   app: string;
   // Lists only this category when set.
   category?: string;
+  // Lists only the pages whose `parent` is this slug when set.
+  parent?: string;
 }
 
-const { app, category } = Astro.props;
+const { app, category, parent } = Astro.props;
 const visual = appVisuals[app];
 if (!visual) throw new Error(`WikiCategoryGrid: "${app}" has no entry in src/data/appVisuals.mjs.`);
 const icon = `/assets/apps/${app}.${visual.icon ?? 'webp'}`;
@@ -24,6 +26,7 @@ const pages = (await getCollection('docs'))
   .filter((entry) => entry.id.startsWith(prefix) && !entry.id.slice(prefix.length).includes('/'))
   .filter((entry) => !entry.data.sidebar.hidden && !(entry.data.draft && production))
   .filter((entry) => entry.data.category && (!category || entry.data.category === category))
+  .filter((entry) => !parent || entry.data.parent === parent)
   .map((entry) => {
     const slug = entry.id.slice(prefix.length);
     return {

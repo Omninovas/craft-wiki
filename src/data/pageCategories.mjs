@@ -10,6 +10,7 @@ export const pageTypes = {
 // this list comes after the listed ones, ordered by the lowest sidebar.order among its pages.
 export const categoryOrder = [
   'Get started',
+  'Documents and artboards',
   'Draw and edit',
   'Color, paint and effects',
   'Type',

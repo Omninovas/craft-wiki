@@ -4,8 +4,7 @@ description: Start a document at the size you need, add and arrange its artboard
 sidebar:
   order: 10
 type: guide
-category: Get started
-subcategory: Documents and artboards
+category: Documents and artboards
 cover: /assets/uploads/vectorcraft/new-document-dialog.webp
 summary: Start a document at the size you need, with its units, bleed and color mode.
 parent: workflows
