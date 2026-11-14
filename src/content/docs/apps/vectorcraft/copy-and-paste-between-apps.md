@@ -132,6 +132,7 @@ On Linux and the BSDs, the app that copied sends its data when VectorCraft asks 
 - [Manage artboards](/apps/vectorcraft/manage-artboards/)
 - [Preferences](/apps/vectorcraft/preferences/)
 - [Work with placed images](/apps/vectorcraft/work-with-placed-images/)
+- [Drag files into VectorCraft](/apps/vectorcraft/drop-files-into-vectorcraft/)
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
 - [Make graphs and data-driven art](/apps/vectorcraft/make-graphs-and-data-driven-art/)
 - [Troubleshooting](/apps/vectorcraft/troubleshooting/)

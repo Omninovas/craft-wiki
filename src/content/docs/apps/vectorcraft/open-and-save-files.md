@@ -153,6 +153,8 @@ What you get depends on the file:
 
 When a file opens with warnings, the status bar shows how many there are and the first one.
 
+You can also drop files from your file manager on the VectorCraft window to open drawings in new tabs or place pictures in the open document, as [Drag files into VectorCraft](/apps/vectorcraft/drop-files-into-vectorcraft/) describes.
+
 ### Follow a file that takes a while to open
 
 VectorCraft reads a file in the background when you open it with **File → Open…**, **File → Open Recent Files** or the Home screen. While it reads the file, the status bar shows **Opening** and the file name. When reading takes longer than 0.4 seconds, a progress window opens with the file's name and a moving bar. When more files are waiting to open, the window shows how many.
@@ -257,6 +259,8 @@ Place reads raster images, SVG, PDF and `.ai` pages, EPS, DXF, EMF, WMF and othe
 
 ![The Place PDF dialog over the night market drawing, with a preview of page 1 of 3 showing the harbor drawing, the page number box with its arrows, and Crop To set to Crop](/assets/uploads/vectorcraft/place-pdf-dialog.webp)
 
+For the choices you make when you place a PDF or `.ai` page, a DXF drawing or a text file, see [Open and place PDF and .ai pages](/apps/vectorcraft/open-pdf-and-ai-pages/), [Open and place DXF drawings](/apps/vectorcraft/open-and-place-dxf-drawings/) and [Place text from text and word processor files](/apps/vectorcraft/place-text-from-documents/).
+
 ## Package a document for someone else
 
 **File → Package…** (**Ctrl+Alt+Shift+P**, or **Cmd+Option+Shift+P** on macOS) collects a saved document with its linked files and fonts in one folder.
@@ -300,6 +304,10 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**.
 ## Related
 
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)
+- [Drag files into VectorCraft](/apps/vectorcraft/drop-files-into-vectorcraft/)
+- [Open and place PDF and .ai pages](/apps/vectorcraft/open-pdf-and-ai-pages/)
+- [Open and place DXF drawings](/apps/vectorcraft/open-and-place-dxf-drawings/)
+- [Place text from text and word processor files](/apps/vectorcraft/place-text-from-documents/)
 - [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)
 - [Work with placed images](/apps/vectorcraft/work-with-placed-images/)
 - [Trace an image](/apps/vectorcraft/trace-an-image/)

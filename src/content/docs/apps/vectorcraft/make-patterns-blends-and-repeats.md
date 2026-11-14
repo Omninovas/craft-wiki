@@ -213,4 +213,5 @@ The Blend panel (**Window → Blend**) has buttons for all of these commands and
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/)
+- [Warp and distort with effects](/apps/vectorcraft/warp-and-distort-with-effects/)
 - [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/)

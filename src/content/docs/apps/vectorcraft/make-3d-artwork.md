@@ -162,6 +162,7 @@ After **Object → Expand Appearance**, the effect is no longer live, and you ca
 
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/)
+- [Manage graphic styles](/apps/vectorcraft/manage-graphic-styles/)
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)
