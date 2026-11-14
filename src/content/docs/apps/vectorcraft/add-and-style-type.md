@@ -330,6 +330,8 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**. [Keyboard 
 - [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/)
 - [Check spelling](/apps/vectorcraft/check-spelling/)
 - [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/)
+- [Set Japanese type](/apps/vectorcraft/set-japanese-type/)
+- [Split and join type objects](/apps/vectorcraft/split-and-join-type/)
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)
 - [Preferences](/apps/vectorcraft/preferences/)

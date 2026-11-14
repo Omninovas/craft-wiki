@@ -140,4 +140,5 @@ Fit Headline works on area type only, and it skips point type and type on a path
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
 - [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/)
 - [Check spelling](/apps/vectorcraft/check-spelling/)
+- [Split and join type objects](/apps/vectorcraft/split-and-join-type/)
 - [Preferences](/apps/vectorcraft/preferences/)
