@@ -4,7 +4,7 @@ description: Export artboards and collected assets at several sizes and formats 
 sidebar:
   order: 20
 type: guide
-category: Files, export and print
+category: Export
 subcategory: Export
 cover: /assets/uploads/vectorcraft/export-for-screens.webp
 summary: Export artboards and assets at several sizes and formats in one pass.

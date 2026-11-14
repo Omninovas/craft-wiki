@@ -4,7 +4,7 @@ description: Print artboards at the right size, add printer's marks and bleed, s
 sidebar:
   order: 22
 type: guide
-category: Files, export and print
+category: Print and color management
 subcategory: Print
 cover: /assets/uploads/vectorcraft/print-general.webp
 summary: Print artboards with marks and bleed, and save your settings as presets.

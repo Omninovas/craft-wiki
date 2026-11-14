@@ -11,12 +11,19 @@ export const pageTypes = {
 export const categoryOrder = [
   'Get started',
   'Documents and artboards',
+  'View and navigate',
+  'Select and transform',
   'Draw and edit',
-  'Color, paint and effects',
+  'Images and data',
+  'Color and paint',
+  'Effects and appearance',
   'Type',
   'Organize',
-  'Files, export and print',
-  'Automate and extend',
+  'Files and formats',
+  'Export',
+  'Print and color management',
+  'Automate',
+  'Customize and extend',
   'Reference',
 ];
 

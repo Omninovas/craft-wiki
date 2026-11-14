@@ -4,8 +4,8 @@ description: Switch between the built-in workspaces, arrange and save panel layo
 sidebar:
   order: 22.8
 type: guide
-category: Automate and extend
-subcategory: Plug-ins and workspace
+category: Customize and extend
+subcategory: Workspace
 cover: /assets/uploads/vectorcraft/workspace-switcher.webp
 summary: Arrange panels, save workspaces and build your own toolbars.
 parent: workflows

@@ -5,6 +5,7 @@ sidebar:
   order: 10.5
 type: guide
 category: Documents and artboards
+subcategory: Artboards
 cover: /assets/uploads/vectorcraft/artboards-canvas-menu.webp
 summary: Copy, rename, lock and turn artboards, and paste art onto several at once.
 parent: workflows

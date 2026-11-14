@@ -4,7 +4,7 @@ description: Add JavaScript files to the Scripts menu, run them or any other scr
 sidebar:
   order: 23.3
 type: guide
-category: Automate and extend
+category: Automate
 subcategory: Automation
 cover: /assets/uploads/vectorcraft/scripts-menu.webp
 summary: Run JavaScript files from the Scripts menu and read their output.

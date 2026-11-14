@@ -3,12 +3,14 @@ import { allApps } from './data/apps.mjs';
 import { appSidebar } from './lib/appSidebar.mjs';
 
 // Points an app page's previous and next links at its neighbors in the custom sidebar: each app in
-// turn, each page followed by the pages listed under it, in the order the sidebar's groups show them.
+// turn, each page followed by the pages listed under it, in the order the sidebar's groups show them,
+// with each category's landing page before the category's pages.
 // A page that sets `prev` or `next` in its frontmatter keeps Starlight's link, and so does the first
 // app's first page for its previous link.
 export const onRequest = defineRouteMiddleware(async (context) => {
   const route = context.locals.starlightRoute;
-  const match = /^apps\/([^/]+)\/([^/]+)$/.exec(route.id);
+  // The second group is the page's slug, which includes the folder for a category landing page.
+  const match = /^apps\/([^/]+)\/((?:[^/]+\/)?[^/]+)$/.exec(route.id);
   if (!match) return;
 
   const pages = [];

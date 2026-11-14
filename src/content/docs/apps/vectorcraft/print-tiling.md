@@ -4,7 +4,7 @@ description: Print a poster, sign or sewing pattern across several sheets of pap
 sidebar:
   order: 31
 type: guide
-category: Files, export and print
+category: Print and color management
 subcategory: Print
 cover: /assets/uploads/vectorcraft/print-tiling.webp
 summary: Print a poster or a sign across several sheets of paper.

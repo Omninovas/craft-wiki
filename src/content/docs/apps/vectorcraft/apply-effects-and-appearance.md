@@ -4,7 +4,7 @@ description: Stack fills, strokes and live effects on one object, change them la
 sidebar:
   order: 17
 type: guide
-category: Color, paint and effects
+category: Effects and appearance
 subcategory: Effects
 cover: /assets/uploads/vectorcraft/appearance-panel.webp
 summary: Stack fills, strokes and live effects, and save the look as a graphic style.

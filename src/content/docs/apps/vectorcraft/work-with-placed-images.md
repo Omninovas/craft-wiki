@@ -4,8 +4,8 @@ description: Track linked and embedded images in the Links panel, relink, update
 sidebar:
   order: 19.5
 type: guide
-category: Draw and edit
-subcategory: Images and data
+category: Images and data
+subcategory: Images
 cover: /assets/uploads/vectorcraft/links-panel.webp
 summary: Track, relink, embed and crop placed images in the Links panel.
 parent: workflows

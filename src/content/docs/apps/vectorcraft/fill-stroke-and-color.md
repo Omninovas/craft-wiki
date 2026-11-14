@@ -4,8 +4,8 @@ description: Paint fills and strokes, find and save colors, style strokes, build
 sidebar:
   order: 13
 type: guide
-category: Color, paint and effects
-subcategory: Color and paint
+category: Color and paint
+subcategory: Color
 cover: /assets/uploads/vectorcraft/fill-stroke-boxes.webp
 summary: Paint fills and strokes with swatches, gradients, meshes and patterns.
 parent: workflows

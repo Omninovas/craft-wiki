@@ -4,7 +4,7 @@ description: Find and run any command by name, change keyboard shortcuts, record
 sidebar:
   order: 23
 type: guide
-category: Automate and extend
+category: Automate
 subcategory: Automation
 cover: /assets/uploads/vectorcraft/search-commands.webp
 summary: Run commands by name, record actions and drive VectorCraft from the command line.

@@ -5,7 +5,7 @@ sidebar:
   order: 14.6
 type: guide
 category: Type
-subcategory: Setting type
+subcategory: Type layout
 cover: /assets/uploads/vectorcraft/lists-numbered.webp
 summary: Make bulleted and numbered lists, and fit headlines to their frames.
 parent: workflows

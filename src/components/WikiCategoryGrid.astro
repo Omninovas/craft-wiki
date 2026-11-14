@@ -6,7 +6,7 @@ import { categoryId, compareCategories, pageTypes } from '../data/pageCategories
 interface Props {
   // The app folder under src/content/docs/apps/.
   app: string;
-  // Lists only this category when set.
+  // Lists only this category when set, and shows a short note when the category has no pages yet.
   category?: string;
   // Lists only the pages whose `parent` is this slug when set.
   parent?: string;
@@ -20,11 +20,26 @@ const style = `--app-color:${visual.color};--app-ink-light:${visual.inkLight ?? 
 const prefix = `apps/${app}/`;
 const production = import.meta.env.MODE === 'production';
 
-// Every page of the app with a category, except drafts in production, hidden pages and the page
-// that shows the grid.
-const pages = (await getCollection('docs'))
-  .filter((entry) => entry.id.startsWith(prefix) && !entry.id.slice(prefix.length).includes('/'))
-  .filter((entry) => !entry.data.sidebar.hidden && !(entry.data.draft && production))
+const entries = (await getCollection('docs'))
+  .filter((entry) => entry.id.startsWith(prefix) && !entry.data.sidebar.hidden && !(entry.data.draft && production));
+
+// The landing page of each category: a page in a folder under the app, such as workflows/<name>.
+const landings = new Map(entries
+  .filter((entry) => entry.id.slice(prefix.length).split('/').length === 2 && entry.data.category)
+  .map((entry) => {
+    const [folder] = entry.id.slice(prefix.length).split('/');
+    return [entry.data.category, { href: `/apps/${app}/${entry.id.slice(prefix.length)}/`, folder }];
+  }));
+
+// The categories that hold at least one page of the app, landing pages aside.
+const filled = new Set(entries
+  .filter((entry) => !entry.id.slice(prefix.length).includes('/') && entry.data.category)
+  .map((entry) => entry.data.category));
+
+// Every page of the app with a category, except drafts in production, hidden pages, landing pages
+// and the page that shows the grid.
+const pages = entries
+  .filter((entry) => !entry.id.slice(prefix.length).includes('/'))
   .filter((entry) => entry.data.category && (!category || entry.data.category === category))
   .filter((entry) => !parent || entry.data.parent === parent)
   .map((entry) => {
@@ -45,23 +60,45 @@ const pages = (await getCollection('docs'))
 const byOrder = (a, b) => a.order - b.order || a.title.localeCompare(b.title);
 const lowest = (list) => Math.min(...list.map((page) => page.order));
 
-const sections = [...Map.groupBy(pages, (page) => page.category)]
+const byCategory = Map.groupBy(pages, (page) => page.category);
+// With `parent`, every category whose landing page sits in the parent's folder gets a section, even
+// when none of its pages are listed under the parent.
+if (parent) {
+  for (const [label, landing] of landings) {
+    if (landing.folder === parent && !byCategory.has(label) && (!category || label === category)) byCategory.set(label, []);
+  }
+}
+
+const sections = [...byCategory]
   .map(([label, members]) => {
     const groups = [...Map.groupBy(members, (page) => page.subcategory)]
       .map(([name, list]) => ({ name, pages: list.sort(byOrder), order: lowest(list) }))
       // Pages without a subcategory come first, then each subcategory by its first page.
       .sort((a, b) => (a.name !== '') - (b.name !== '') || a.order - b.order);
-    return { label, id: categoryId(label), count: members.length, groups, order: lowest(members) };
+    const landing = landings.get(label)?.href;
+    return {
+      label,
+      id: categoryId(label),
+      href: landing === Astro.url.pathname ? undefined : landing,
+      count: members.length,
+      filled: filled.has(label),
+      groups,
+      order: lowest(members),
+    };
   })
   .sort(compareCategories);
 ---
 <div class="wiki-cat not-content" style={style}>
-  {sections.map(({ label, id, count, groups }) => (
+  {!sections.length && category && <p class="wiki-cat-empty">Guides for this area are on the way.</p>}
+  {sections.map(({ label, id, href, count, filled: hasPages, groups }) => (
     <section class="wiki-cat-section" aria-labelledby={`cat-${id}`}>
       <div class="wiki-cat-heading">
-        <h3 id={`cat-${id}`}>{label}</h3>
+        <h3 id={`cat-${id}`}>{href ? <a href={href}>{label}</a> : label}</h3>
         <span class="wiki-cat-count">{count} {count === 1 ? 'page' : 'pages'}</span>
       </div>
+      {!count && (hasPages && href
+        ? <p class="wiki-cat-empty"><a href={href}>{label}</a> lists the pages for this area.</p>
+        : <p class="wiki-cat-empty">Guides for this area are on the way.</p>)}
       {groups.map(({ name, pages: list }) => (
         <div class="wiki-cat-group">
           {name && <h4 class="wiki-cat-subheading">{name}</h4>}

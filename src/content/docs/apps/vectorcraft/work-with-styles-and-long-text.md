@@ -5,7 +5,7 @@ sidebar:
   order: 14.5
 type: guide
 category: Type
-subcategory: Setting type
+subcategory: Type layout
 cover: /assets/uploads/vectorcraft/paragraph-styles.webp
 summary: Use paragraph and character styles, OpenType features, tabs and text wrap.
 parent: workflows

@@ -4,8 +4,8 @@ description: Choose color settings and profiles, soft-proof colors on screen, ch
 sidebar:
   order: 22.5
 type: guide
-category: Files, export and print
-subcategory: Print
+category: Print and color management
+subcategory: Color management
 cover: /assets/uploads/vectorcraft/color-settings-intent.webp
 summary: Choose color settings, soft-proof on screen and check separations before printing.
 parent: workflows

@@ -5,6 +5,7 @@ sidebar:
   order: 16
 type: guide
 category: Organize
+subcategory: Arrange and align
 cover: /assets/uploads/vectorcraft/pathfinder-grid.webp
 summary: Build shapes with Pathfinder and Shape Builder, and use masks and Live Paint.
 parent: workflows

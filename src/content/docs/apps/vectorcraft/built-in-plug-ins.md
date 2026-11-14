@@ -4,8 +4,8 @@ description: Find the plug-ins under Object → Plug-ins, and use Arrange Tools,
 sidebar:
   order: 22.9
 type: guide
-category: Automate and extend
-subcategory: Plug-ins and workspace
+category: Customize and extend
+subcategory: Plug-ins
 cover: /assets/uploads/vectorcraft/health-check.webp
 summary: Arrange, clean up and recolor art with the plug-ins that come with VectorCraft.
 parent: workflows

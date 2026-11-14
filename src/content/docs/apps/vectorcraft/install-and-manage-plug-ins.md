@@ -4,8 +4,8 @@ description: Install plug-ins from .wasm files, approve what they ask for, load 
 sidebar:
   order: 22.95
 type: guide
-category: Automate and extend
-subcategory: Plug-ins and workspace
+category: Customize and extend
+subcategory: Plug-ins
 cover: /assets/uploads/vectorcraft/safe-mode-dialog.webp
 summary: Install plug-ins, approve what they ask for and start in Safe Mode.
 parent: workflows

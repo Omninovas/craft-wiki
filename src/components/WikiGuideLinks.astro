@@ -18,11 +18,24 @@ const pages = await appSidebar(slug);
         <details class="wiki-guide-group" open={open}>
           <summary aria-label={`${label} pages`}><span class="wiki-chevron" aria-hidden="true"></span></summary>
           <div class="wiki-guide-children">
-            {items.map((item) => item.page
-              ? <a href={`/apps/${slug}/${item.page.slug}/`} aria-current={current(item.page.slug)}><span>{item.page.label}</span></a>
-              : (
-                <details class="wiki-guide-category" data-category={categoryId(item.label)} open={holdsCurrent(item.items)}>
-                  <summary><span class="wiki-guide-category-label">{item.label}</span><span class="wiki-guide-category-count">{itemPages(item.items).length}</span><span class="wiki-chevron" aria-hidden="true"></span></summary>
+            {items.map((item) => {
+              if (item.page) {
+                return <a href={`/apps/${slug}/${item.page.slug}/`} aria-current={current(item.page.slug)}><span>{item.page.label}</span></a>;
+              }
+              // A category's heading links to its landing page when it has one.
+              const heading = item.landing
+                ? <a class="wiki-guide-category-label" href={`/apps/${slug}/${item.landing.slug}/`} aria-current={current(item.landing.slug)}><span>{item.label}</span></a>
+                : <span class="wiki-guide-category-label">{item.label}</span>;
+              if (!item.items.length) {
+                return (
+                  <div class="wiki-guide-category wiki-guide-category-empty" data-category={categoryId(item.label)}>
+                    <div class="wiki-guide-category-row">{heading}</div>
+                  </div>
+                );
+              }
+              return (
+                <details class="wiki-guide-category" data-category={categoryId(item.label)} open={holdsCurrent([item])}>
+                  <summary>{heading}<span class="wiki-guide-category-count">{itemPages(item.items).length}</span><span class="wiki-chevron" aria-hidden="true"></span></summary>
                   <div class="wiki-guide-category-pages">
                     {item.items.map((inner) => inner.page
                       ? <a href={`/apps/${slug}/${inner.page.slug}/`} aria-current={current(inner.page.slug)}><span>{inner.page.label}</span></a>
@@ -36,7 +49,8 @@ const pages = await appSidebar(slug);
                       ))}
                   </div>
                 </details>
-              ))}
+              );
+            })}
           </div>
         </details>
       </div>

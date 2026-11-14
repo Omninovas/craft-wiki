@@ -4,8 +4,8 @@ description: Place a raster image in a document and turn it into editable vector
 sidebar:
   order: 19
 type: guide
-category: Draw and edit
-subcategory: Images and data
+category: Images and data
+subcategory: Images
 cover: /assets/uploads/vectorcraft/trace-source.webp
 summary: Turn a placed picture into editable paths with Image Trace.
 parent: workflows

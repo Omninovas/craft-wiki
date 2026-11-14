@@ -5,6 +5,7 @@ sidebar:
   order: 18
 type: guide
 category: Organize
+subcategory: Layers and symbols
 cover: /assets/uploads/vectorcraft/layers-panel.webp
 summary: Keep artwork in layers and sublayers, and reuse it as symbols.
 parent: workflows

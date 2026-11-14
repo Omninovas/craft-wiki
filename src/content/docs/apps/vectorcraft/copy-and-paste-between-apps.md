@@ -2,10 +2,10 @@
 title: Copy and paste between apps
 description: Choose the right paste command, copy art into other apps, paste art, pictures, text, spreadsheet tables and copied files into VectorCraft, and fix a paste that does nothing on Linux.
 sidebar:
-  order: 11.2
+  order: 21.2
 type: guide
-category: Files, export and print
-subcategory: Files
+category: Files and formats
+subcategory: Open and save
 cover: /assets/uploads/vectorcraft/paste-in-place-artboards.webp
 summary: Paste art, pictures, text and tables between VectorCraft and other apps.
 parent: workflows

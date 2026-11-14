@@ -4,7 +4,7 @@ description: Let Claude or another AI assistant draw, edit and export in VectorC
 sidebar:
   order: 30
 type: guide
-category: Automate and extend
+category: Automate
 subcategory: Automation
 cover: /assets/uploads/vectorcraft/agent-drawing.webp
 summary: Let an AI assistant draw, edit and export through the MCP server.

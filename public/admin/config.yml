@@ -51,7 +51,7 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: string, required: false }
       - { label: Page type, name: type, widget: select, options: [{ label: Overview, value: overview }, { label: Guide, value: guide }, { label: Reference, value: reference }, { label: Troubleshooting, value: troubleshooting }], required: false }
-      - { label: Category, name: category, widget: select, options: ["Get started", "Documents and artboards", "Draw and edit", "Color, paint and effects", "Type", "Organize", "Files, export and print", "Automate and extend", "Reference"], required: false, hint: "The sidebar and the guide cards group pages by category." }
+      - { label: Category, name: category, widget: select, options: ["Get started", "Documents and artboards", "View and navigate", "Select and transform", "Draw and edit", "Images and data", "Color and paint", "Effects and appearance", "Type", "Organize", "Files and formats", "Export", "Print and color management", "Automate", "Customize and extend", "Reference"], required: false, hint: "The sidebar and the guide cards group pages by category." }
       - { label: Subcategory, name: subcategory, widget: string, required: false, hint: "A smaller group inside the category on the guide cards." }
       - { label: Card picture, name: cover, widget: image, required: false, hint: "A screenshot from this page. Cards crop it to 16:10 from the top." }
       - { label: Card summary, name: summary, widget: string, required: false, hint: "One line for the guide card. The card shows the description when this is empty." }

@@ -4,8 +4,8 @@ description: Select objects inside groups, draw a loop around anchor points, pic
 sidebar:
   order: 11.5
 type: guide
-category: Draw and edit
-subcategory: Shapes and selection
+category: Select and transform
+subcategory: Selecting
 cover: /assets/uploads/vectorcraft/group-selection.webp
 summary: Select inside groups, by color or with a lasso, and save selections for later.
 parent: workflows

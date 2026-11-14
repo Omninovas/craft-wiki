@@ -5,6 +5,7 @@ sidebar:
   order: 15
 type: guide
 category: Organize
+subcategory: Arrange and align
 cover: /assets/uploads/vectorcraft/stacking-order.webp
 summary: Change the stacking order, and group, lock, hide and align objects.
 parent: workflows
