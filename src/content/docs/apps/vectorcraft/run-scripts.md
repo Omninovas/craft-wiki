@@ -136,6 +136,7 @@ The console keeps up to 2,048 lines and 1 MiB of text, and drops its oldest line
 ## Related
 
 - [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/)
+- [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Preferences](/apps/vectorcraft/preferences/)
 - [AI agents](/apps/vectorcraft/ai-agents/)

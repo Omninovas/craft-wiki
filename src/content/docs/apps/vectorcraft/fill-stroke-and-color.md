@@ -6,7 +6,7 @@ sidebar:
 parent: workflows
 ---
 
-On this page you paint the inside and the outline of your art, save the colors you use as swatches, and change how strokes look. You also find colors that go together, build linear, radial, freeform and mesh gradients, mask and blend art, and adjust the colors of finished artwork.
+On this page you paint the inside and the outline of your art, save the colors you use as swatches, and change how strokes look. You also find colors that go together, build linear, radial, conic, freeform and mesh gradients, mask and blend art, and adjust the colors of finished artwork.
 
 ## Choose the fill or the stroke
 
@@ -48,6 +48,24 @@ Alt-click (Option-click on macOS) the spectrum or a chip to paint the box that i
 :::
 
 When the selected art uses a global or spot swatch, the Color panel shows that swatch's tint slider instead. Picking a mode from the panel menu turns the color into a plain process color.
+
+## Pick a color on the Color Wheel
+
+The Color Wheel panel sets the same color as the Color panel's sliders: the color of the active Fill or Stroke box, or of the selected gradient stop or freeform gradient point. It shows a hue ring around a square. In the square, saturation increases from left to right and brightness increases from bottom to top. Choose **Window → Color Wheel** to open it.
+
+1. Select the objects you want to paint, and bring the Fill box or the Stroke box to the front.
+2. Drag on the ring to pick the hue. Hold Shift to move the hue in 45° steps.
+3. Drag in the square to pick the saturation and the brightness.
+
+![A sailboat at sunset with a coral main sail, an amber jib and a teal hull, under a violet sky. The main sail is selected, the Color Wheel panel shows the Fill box in front with the hue marker at coral and the square's marker near the top, right of center, and the Color panel below shows the same color as R 238, G 95 and B 77 (EE5F4D).](/assets/uploads/vectorcraft/color-wheel.webp)
+
+Each drag is one undo step. A drag changes only the part of the wheel where it started: a drag that starts on the ring changes only the hue, even when the pointer moves into the square. A press between the square and the ring picks the closest point of the square.
+
+Alt-click (Option-click on macOS) the wheel to paint the box that is not in front. The active box stays in front.
+
+When the ring or the square has the keyboard focus, the arrow keys change the color. On the ring, Right and Up raise the hue by 1°, and Left and Down lower it. In the square, Right and Left change the saturation by 1%, and Up and Down change the brightness by 1%.
+
+An RGB, CMYK or Lab color stays in its color model. A Gray color or a tint of a global swatch becomes a process color in the document's color mode. When the active box holds None or a pattern, the wheel shows the last solid color without markers, and a click paints the color you pick.
 
 ## Copy colors with the Eyedropper
 
@@ -166,20 +184,22 @@ A dash length of 0 with a round cap draws a row of dots.
 Choose **Window → Gradient** (**Ctrl+F9**, or **Cmd+F9** on macOS) to open the Gradient panel. Clicking the ramp or a type button applies a gradient to the active box. A new gradient runs from white to black.
 
 1. Select an object and bring the Fill or Stroke box to the front.
-2. Under **Type**, click **Linear Gradient**, **Radial Gradient** or **Freeform Gradient**.
-3. For a linear or radial gradient, set the **Angle**. For a radial gradient, also set the **Aspect Ratio**.
+2. Under **Type**, click **Linear Gradient**, **Radial Gradient**, **Conic Gradient** or **Freeform Gradient**.
+3. For a linear, radial or conic gradient, set the **Angle**. For a radial or conic gradient, also set the **Aspect Ratio**.
 4. Click a color stop under the ramp and set its color, **Location** and **Opacity**. Click below the ramp to add a stop.
 5. Click **Reverse Gradient** to flip the order of the stops.
 
 | Setting | What it does |
 |---|---|
 | **Angle** | Rotates the gradient. |
-| **Aspect Ratio** | Stretches a radial gradient into an ellipse. |
+| **Aspect Ratio** | Stretches a radial or conic gradient into an ellipse. |
 | **Location** | Moves the selected stop along the gradient. |
 | **Opacity** | Sets the selected stop's opacity. |
-| **Dither** | Adds fine noise to a linear or radial fill to hide banding. |
+| **Dither** | Adds fine noise to a linear, radial or conic fill to hide banding. |
 | **Method** | **Classic** or **Perceptual** color blending between stops. |
 | **Stroke** | With the Stroke box in front: **Gradient within stroke**, **Gradient along stroke** or **Gradient across stroke**. |
+
+A conic gradient sweeps its stops once around its center, clockwise from the gradient's angle. Where the last stop meets the first, the colors change at a sharp seam.
 
 To save the gradient as a swatch, choose **Add to Swatches** from the Gradient panel menu.
 
@@ -196,7 +216,7 @@ Press G to choose the Gradient Tool. Drag across the selected objects to set whe
 5. Drag a stop off the bar to delete it.
 6. Double-click a stop to change its color.
 
-Hold Shift while you drag a handle to keep the gradient at 45° steps. On a radial gradient, a dashed ellipse shows its extent, and you drag the dot on it to change the aspect ratio.
+Hold Shift while you drag a handle to keep the gradient at 45° steps. On a radial gradient, a ring marks the center, a dashed ellipse shows its extent, and you drag the dot on it to change the aspect ratio. A conic gradient shows the same ring, ellipse and dot. Its bar runs from the center to the point where the sweep starts.
 
 ![A rounded rectangle with a violet-to-coral-to-yellow gradient behind a teal hill and the words Golden Hour. The Gradient tool's annotator bar runs down it from the start handle at the top to the end handle at the bottom, and the Gradient panel shows the three color stops with the middle coral stop selected at 55%](/assets/uploads/vectorcraft/gradient-tool.webp)
 
@@ -339,6 +359,7 @@ For overprinting, spot colors, color settings and soft proofing, see [Manage col
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
 - [Apply effects and appearance](/apps/vectorcraft/apply-effects-and-appearance/)
+- [Make 3D artwork](/apps/vectorcraft/make-3d-artwork/)
 - [Paint with brushes](/apps/vectorcraft/paint-with-brushes/)
 - [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/)
 - [Manage color and proof](/apps/vectorcraft/manage-color-and-proof/)

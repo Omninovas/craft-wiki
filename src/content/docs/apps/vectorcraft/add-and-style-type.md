@@ -225,8 +225,8 @@ To set the options of one paragraph:
 | Control | What it sets |
 |---|---|
 | Alignment buttons | How the lines of each paragraph line up |
-| **Bullets** | Starts each paragraph with a bullet. The arrow beside the button lists **None**, **Filled Dot**, **Dash**, **Hollow Circle** and **Filled Square**. |
-| **Numbered List** | Starts each paragraph with a number. The arrow beside the button lists **None**, **1, 2, 3**, **A, B, C**, **a, b, c**, **I, II, III**, **i, ii, iii**, **01, 02, 03** and **001, 002, 003**. **More Options** at the end of either list opens the Bullets and Numbering dialog. |
+| **Bullets** | Starts each paragraph with a bullet. The arrow beside the button lists **None**, **Filled Dot**, **Dash**, **Hollow Circle** and **Filled Square**. [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/#start-a-bulleted-or-numbered-list) describes how to make and edit lists. |
+| **Numbered List** | Starts each paragraph with a number. The arrow beside the button lists **None**, **1, 2, 3**, **A, B, C**, **a, b, c**, **I, II, III**, **i, ii, iii**, **01, 02, 03** and **001, 002, 003**. **More Options** at the end of either list opens the Bullets and Numbering dialog, as described in [Set list options](/apps/vectorcraft/make-lists-and-fit-type/#set-list-options). |
 | **Left Indent** and **Right Indent** | The space between the frame's sides and the paragraph, from -1296 to 1296 pt |
 | **First-line Left Indent** | The extra indent of the paragraph's first line, from -1296 to 1296 pt. A negative value makes a hanging indent. |
 | **Space Before Paragraph** and **Space After Paragraph** | The space above and below the paragraph, from 0 to 1296 pt |
@@ -261,14 +261,14 @@ With **Show East Asian Options** on, the menu also holds **Top-to-Top Leading**,
 | **Convert To Area Type** and **Convert To Point Type** | Switch the selected type between point type and area type |
 | **Area Type Options…** | Set rows, columns, gutters, inset, first baseline, alignment and fit, as described in [Add area type](#add-area-type) |
 | **Type on a Path** | Apply **Rainbow**, **Skew**, **3D Ribbon**, **Stair Step** or **Gravity**, or open **Type on a Path Options…**, as described in [Put type on a path](#put-type-on-a-path) |
-| **Dynamic Text** | Turn Dynamic Text on or off for the selected area type or type on a path. Each line of area type changes its font size to fill the width of the frame, and type on a path scales to fill the span between its brackets. Point type in the selection keeps its size. |
+| **Dynamic Text** | Turn Dynamic Text on or off for the selected area type or type on a path. Each line of area type changes its font size to fill the width of the frame, and type on a path scales to fill the span between its brackets. Point type in the selection keeps its size. [Fill a frame with Dynamic Text](/apps/vectorcraft/make-lists-and-fit-type/#fill-a-frame-with-dynamic-text) describes the settings. |
 | **Threaded Text** | **Create**, **Release Selection** or **Remove Threading**, as described in [Flow text between frames](#flow-text-between-frames) |
-| **Fit Headline** | Track the first line of area type so it fills the width of the frame |
+| **Fit Headline** | Track the first line of area type so it fills the width of the frame, as described in [Fit a headline to its frame](/apps/vectorcraft/make-lists-and-fit-type/#fit-a-headline-to-its-frame) |
 | **Find Font…** | List the fonts the document uses, mark missing ones, and replace a font with another |
 | **Composite Fonts…** | Build the document's composite fonts, which set kanji, kana, punctuation, symbols, Roman letters and numerals each in a font of its own. The command shows only while **Show East Asian Options** is on in Preferences, as described in [Build a composite font](/apps/vectorcraft/set-type-for-other-languages/#build-a-composite-font). |
 | **Change Case** | Change the selected text to **UPPERCASE**, **lowercase**, **Title Case** or **Sentence case** |
 | **Smart Punctuation…** | Replace straight quotes with the quotation marks set in Document Setup, `--` and `---` with en and em dashes, and `...` with an ellipsis character, in the selection or the whole document |
-| **Bullets and Numbering** | **Apply Bullets**, **Apply Numbers**, or **Convert to Text** to turn list markers into ordinary text |
+| **Bullets and Numbering** | **Apply Bullets**, **Apply Numbers**, or **Convert to Text** to turn list markers into ordinary text, as described in [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/#turn-a-list-into-ordinary-text) |
 | **Create Outlines** | Convert the selected type into paths, as described in [Turn type into shapes](#turn-type-into-shapes) |
 | **Scale Text Attributes** | Move the scale of a scaled type object into its font size, leading, baseline shift and horizontal scale. Rotation and position stay as they are. The command is available only when the selected type has been scaled. |
 | **Optical Margin Alignment** | Hang punctuation and some letters outside the margins of the selected type and its threaded frames, as described in [Fine-tune justification and hyphenation](/apps/vectorcraft/work-with-styles-and-long-text/#fine-tune-justification-and-hyphenation) |
@@ -322,6 +322,7 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**. [Keyboard 
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)
 - [Draw in perspective](/apps/vectorcraft/draw-in-perspective/)
 - [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/)
+- [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/)
 - [Check spelling](/apps/vectorcraft/check-spelling/)
 - [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/)
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)

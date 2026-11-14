@@ -77,5 +77,6 @@ Auto Spell Check then checks those characters against the dictionary for that la
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
 - [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/)
 - [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/)
+- [Make lists and fit type](/apps/vectorcraft/make-lists-and-fit-type/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Preferences](/apps/vectorcraft/preferences/)

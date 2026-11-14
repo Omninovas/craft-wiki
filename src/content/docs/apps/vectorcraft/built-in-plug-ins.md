@@ -33,10 +33,10 @@ The plug-in tools (3D Box, Contour, Enclosing Lasso, Smart Pen and the Path Prec
 
 Below the built-in submenus, **Object → Plug-ins** lists the filter plug-ins you have installed, or **No filter plug-ins installed** when there are none, then two commands:
 
-- **Install Plug-in…** installs a plug-in from a `.wasm` file.
-- **Reload Plug-ins** installs every `.wasm` file in the **Additional Plug-ins Folder** again.
+- **Install Plug-in…** installs a plug-in from a `.wasm` file. See [Install a plug-in](/apps/vectorcraft/install-and-manage-plug-ins/#install-a-plug-in).
+- **Reload Plug-ins** installs every `.wasm` file in the **Additional Plug-ins Folder** again. See [Install every plug-in in a folder](/apps/vectorcraft/install-and-manage-plug-ins/#install-every-plug-in-in-a-folder).
 
-To install all the plug-ins that a folder holds, set **Additional Plug-ins Folder** under **Plug-ins & Scratch Disks** in **Edit → Preferences…** (**VectorCraft → Settings → Plug-ins & Scratch Disks…** on macOS). When you install a plug-in that adds a live effect, VectorCraft adds **Effect → Plug-ins** and lists the effect there. To run commands from scripts and other programs instead, see [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/).
+To install all the plug-ins that a folder holds, set **Additional Plug-ins Folder** under **Plug-ins & Scratch Disks** in **Edit → Preferences…** (**VectorCraft → Settings → Plug-ins & Scratch Disks…** on macOS). When you install a plug-in that adds a live effect, VectorCraft adds **Effect → Plug-ins** and lists the effect there. [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/) covers the plug-ins you install yourself: what each one adds, how to run it, and how to start VectorCraft without them in Safe Mode. To run commands from scripts and other programs instead, see [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/).
 
 ## Arrange objects
 
@@ -276,6 +276,7 @@ With a box selected, the Control bar shows that box's values, and changing them 
 ## Related
 
 - [Workflows](/apps/vectorcraft/workflows/)
+- [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
 - [Cut, join and refine paths](/apps/vectorcraft/cut-join-and-refine-paths/)
 - [Select artwork](/apps/vectorcraft/select-artwork/)
 - [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/)

@@ -248,9 +248,9 @@ The **Edit** menu holds the clipboard commands:
 
 For example, art you copy from the top-left corner of artboard 1 and paste while artboard 2 is active goes to the top-left corner of artboard 2. Art you copied from outside every artboard keeps its place.
 
-To paste on some artboards but not all of them, first select the art with the **Selection** tool and copy it. Copy the art before you pick the Artboard tool, because with the Artboard tool **Edit → Copy** copies the selected artboards. Then pick the Artboard tool, click the first artboard and Shift-click the others. You can also select the artboards in the Artboards panel: click the first one, then Shift-click or Ctrl-click (Cmd-click on macOS) the others, and VectorCraft switches to the Artboard tool. **Paste in Place**, **Paste in Front** and **Paste in Back** then put a copy on each selected artboard, where the art was on the artboard you copied it from. **Edit → Undo** removes all of the copies in one step. Art you copied from outside every artboard keeps its place on the first selected artboard and the same offset on the others.
+To paste on some artboards but not all of them, first select the art with the **Selection** tool and copy it. Copy the art before you pick the Artboard tool, because with the Artboard tool **Edit → Copy** copies the selected artboards. Then pick the Artboard tool, click the first artboard and Shift-click the others. You can also select the artboards in the Artboards panel: click the first one, then Shift-click or Ctrl-click (Cmd-click on macOS) the others, and VectorCraft switches to the Artboard tool. **Paste in Place**, **Paste in Front** and **Paste in Back** then put a copy on each selected artboard, where the art was on the artboard you copied it from. **Edit → Undo** removes all of the copies in one step. Art you copied from outside every artboard keeps its place on the first selected artboard and the same offset on the others. [Manage artboards](/apps/vectorcraft/manage-artboards/#put-a-copy-of-art-on-several-artboards) has the steps.
 
-The [Clipboard Handling](/apps/vectorcraft/preferences/#clipboard-handling) preferences set the formats VectorCraft copies and how pasted text keeps its formatting. The **Paste Offset** preference on the [General](/apps/vectorcraft/preferences/#general) page sets how far pasted and duplicated objects are offset.
+The [Clipboard Handling](/apps/vectorcraft/preferences/#clipboard-handling) preferences set the formats VectorCraft copies and how pasted text keeps its formatting. The **Paste Offset** preference on the [General](/apps/vectorcraft/preferences/#general) page sets how far pasted and duplicated objects are offset. [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/) covers pasting art, pictures, text and spreadsheet tables from other apps, and what other apps receive when you copy.
 
 ## Set position and size in the Transform panel
 
@@ -375,12 +375,14 @@ Transform Again repeats the last transform on whatever is selected now. If you c
 
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)
+- [Manage artboards](/apps/vectorcraft/manage-artboards/)
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
 - [Reshape with the warp tools](/apps/vectorcraft/reshape-with-warp-tools/)
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Arrange, group and align](/apps/vectorcraft/arrange-group-and-align/)
 - [Draw in perspective](/apps/vectorcraft/draw-in-perspective/)
 - [Select artwork](/apps/vectorcraft/select-artwork/)
+- [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/)
 - [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/)
 - [Organize with layers and symbols](/apps/vectorcraft/organize-with-layers-and-symbols/)
 - [Preferences](/apps/vectorcraft/preferences/)

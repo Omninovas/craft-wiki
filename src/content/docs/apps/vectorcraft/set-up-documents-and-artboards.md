@@ -60,6 +60,8 @@ An artboard is a page inside the document. A document can hold many artboards of
 
 While the Artboard tool is active, the Control bar shows **Move Artwork with Artboard** (on by default) and **Scale Artwork with Artboard** (off by default). Hold **Alt** (**Option** on macOS) while you drag an artboard to move a copy of it.
 
+To copy, paste, rename, lock or delete artboards from the Artboard tool's right-click menu, see [Manage artboards](/apps/vectorcraft/manage-artboards/).
+
 ![Six postcard artboards in a three-by-two grid, each holding a small sunset or night scene. The Artboard tool is resizing the Lanterns artboard, the Control bar shows Move Artwork with Artboard turned on, and the Artboards panel lists the six artboards by name with Lanterns highlighted](/assets/uploads/vectorcraft/artboards-grid.webp)
 
 ### Use the Artboards panel
@@ -271,6 +273,8 @@ The grid spacing, the grid and guide colors and the Smart Guides options are in 
 ## Related
 
 - [Workflows](/apps/vectorcraft/workflows/)
+- [Manage artboards](/apps/vectorcraft/manage-artboards/)
+- [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/)
 - [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/)
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)
 - [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)

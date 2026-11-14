@@ -129,7 +129,7 @@ Under **Artboard Options**, the last heading on the page:
 - While **Single Corner Radius** is on, one Corner Radius field sets every corner of a live rectangle. While it is off, each corner has its own field.
 - **Transform** sets what the Transform panel transforms: the object, its pattern, or both. **Default** follows **Transform Pattern Tiles**.
 - **Use Registration Point for Symbol** makes the Transform panel measure and transform a single selected symbol instance from its symbol's registration point instead of the reference point.
-- While **Fade Region Outside Artboard** is on and the Artboard tool is active, the canvas draws everything outside the artboards darker, the pasteboard and the art on it included.
+- While **Fade Region Outside Artboard** is on and the Artboard tool is active, the canvas draws everything outside the artboards darker, the pasteboard and the art on it included. See [Manage artboards](/apps/vectorcraft/manage-artboards/).
 - While **Update While Dragging** is on, the area outside the artboards stays darker while the Artboard tool moves or resizes an artboard. While it is off, that area is drawn as usual until you release the mouse button.
 - The Artboard Options dialog also sets **Fade Region Outside Artboard** and **Update While Dragging**, under **Global**.
 
@@ -198,7 +198,7 @@ Under **Artboard Options**, the last heading on the page:
 - While **Type Object Selection by Path Only** is on, you select type only on its type path: the baseline of point type, the frame of area type, or the path of type on a path.
 - While **Highlight Substituted Fonts** is on, text drawn in a substitute for a missing font is highlighted on screen, in every document.
 - While **Fill New Type Objects With Placeholder Text** is on, new type starts with placeholder text, selected.
-- While **Start Lists From Typed Markers** is on, a list marker and a space typed at the start of a paragraph start a list. While it is off, the marker and the space stay as typed text.
+- While **Start Lists From Typed Markers** is on, a list marker and a space typed at the start of a paragraph start a list. While it is off, the marker and the space stay as typed text. See [Make lists and fit type](/apps/vectorcraft/make-lists-and-fit-type/).
 - VectorCraft lists and uses the fonts in the **Additional Fonts Folder** and its subfolders as if they were installed. When you change the folder, the font menus update.
 - While **Override Character Color** is on, a graphic style applied to type replaces the fill and stroke of its characters with the style's fills and strokes.
 - The **Align to Glyph Bounds** settings make Align and Distribute measure point type, or area type, by the ink of its glyphs. Otherwise they measure point type by its em box and area type by its frame.
@@ -446,4 +446,6 @@ To keep your settings before a reset, export them first with **Export Preference
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Troubleshooting](/apps/vectorcraft/troubleshooting/)
 - [Run scripts](/apps/vectorcraft/run-scripts/)
+- [Manage artboards](/apps/vectorcraft/manage-artboards/)
+- [Make lists and fit type](/apps/vectorcraft/make-lists-and-fit-type/)
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/)

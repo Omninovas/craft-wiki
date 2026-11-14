@@ -255,7 +255,7 @@ With `--native-io`, `perf` instead measures VectorCraft's own save and open comm
 
 ### Run without plug-ins
 
-Put `--safe-mode` before any subcommand to run it with no plug-in loaded. Plug-in commands report that Safe Mode is on, and the plug-ins stay installed. `vectorcraft-cli --safe-mode mcp` runs a headless server and does not take `--connect`. To use a running app without plug-ins, start it with `vectorcraft --safe-mode --control <port>`.
+Put `--safe-mode` before any subcommand to run it with no plug-in loaded. Plug-in commands report that Safe Mode is on, and the plug-ins stay installed. `vectorcraft-cli --safe-mode mcp` runs a headless server and does not take `--connect`. To use a running app without plug-ins, start it with `vectorcraft --safe-mode --control <port>`. See [Use plug-ins from the command line](/apps/vectorcraft/install-and-manage-plug-ins/#use-plug-ins-from-the-command-line).
 
 ## Drive VectorCraft from an MCP client
 
@@ -309,6 +309,7 @@ When the server lists commands, it gives the parameter schema of each command th
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Keyboard shortcuts](/apps/vectorcraft/keyboard-shortcuts/)
 - [Run scripts](/apps/vectorcraft/run-scripts/)
+- [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)
 - [Open and save files](/apps/vectorcraft/open-and-save-files/)
 - [Export for screens and the web](/apps/vectorcraft/export-for-screens-and-the-web/)

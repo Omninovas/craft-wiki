@@ -173,6 +173,8 @@ To turn a disabled plug-in back on:
 2. Select **Enable on Re-launch** beside the plug-in.
 3. Click **OK**. The plug-in loads again the next time VectorCraft starts.
 
+[Start without plug-ins in Safe Mode](/apps/vectorcraft/install-and-manage-plug-ins/#start-without-plug-ins-in-safe-mode) has the details.
+
 ## A script stops or undoes its work
 
 VectorCraft keeps a script's changes only when the script runs to its end. If the script stops at an error, reaches one of its limits, or you click **Stop**, VectorCraft puts every document back as it was before the run.
@@ -257,4 +259,5 @@ The folder above `logs` is VectorCraft's settings folder.
 - [Work with placed images](/apps/vectorcraft/work-with-placed-images/)
 - [Install and update](/apps/vectorcraft/install-update/)
 - [Customize the workspace](/apps/vectorcraft/customize-the-workspace/)
+- [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
 - [Run scripts](/apps/vectorcraft/run-scripts/)

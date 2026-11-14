@@ -100,7 +100,9 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 ### Draw
 
 - [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/): New Document presets, artboards, units, bleed, color mode and moving around the canvas.
+- [Manage artboards](/apps/vectorcraft/manage-artboards/): the Artboard tool's canvas menu for copying, pasting, renaming, locking, deleting and turning artboards, fading the canvas outside them, and pasting art onto several artboards.
 - [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/): shape tools, live corners, selecting, moving, rotating, scaling and repeating a transform.
+- [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/): the paste commands, what other apps receive when you copy, and pasting art, pictures, text, spreadsheet tables and copied files.
 - [Select artwork](/apps/vectorcraft/select-artwork/): the Group Selection, Lasso and Magic Wand tools, the **Select** menu, Global Edit and saved selections.
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/): the Pen, Curvature, Pencil, Paintbrush and Blob Brush tools, anchor editing and the **Object → Path** commands.
 - [Paint with brushes and variable widths](/apps/vectorcraft/paint-with-brushes/): paint with the five brush kinds and shape strokes with the Width tool.
@@ -117,6 +119,7 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 - [Manage color and proof for print](/apps/vectorcraft/manage-color-and-proof/): color settings, proofing, overprint and separations previews, spot colors and flattening transparency.
 - [Add and style type](/apps/vectorcraft/add-and-style-type/): point type, area type, type on a path, threading and the Character and Paragraph panels.
 - [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/): paragraph and character styles, OpenType features and glyphs, tabs, text wrap and Find and Replace.
+- [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/): bulleted and numbered lists, the Bullets and Numbering dialog, Dynamic Text and Fit Headline.
 - [Check spelling](/apps/vectorcraft/check-spelling/): Auto Spell Check, fixing an underlined word from the context menu, and the custom dictionary.
 - [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/): the language of type, the East Asian options, composite fonts and typing a character by its code on Windows.
 
@@ -147,5 +150,6 @@ The **Discord** button at the top of the window opens the Discord server too. Wi
 - [AI agents](/apps/vectorcraft/ai-agents/): let an AI assistant draw and edit in VectorCraft.
 - [Make graphs and data-driven art](/apps/vectorcraft/make-graphs-and-data-driven-art/): draw graphs from a data table and fill a template from a CSV file.
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/): find the extra tools and commands under **Object → Plug-ins**.
+- [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/): installing plug-ins, approving what they ask for, running their filters, effects, exporters and importers, and starting in Safe Mode.
 
 [VectorCraft on GitHub](https://github.com/storytold/vectorcraft) · [Product page](https://getartcraft.com/apps/vectorcraft)

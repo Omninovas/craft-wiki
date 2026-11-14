@@ -129,7 +129,7 @@ On macOS, Exit is **VectorCraft → Quit VectorCraft**.
 | Keyboard Shortcuts… | Ctrl+Alt+Shift+K | Cmd+Option+Shift+K |
 | Preferences… | Ctrl+K | Cmd+K |
 
-On Windows and Linux, F2, F3 and F4 also cut, copy and paste. If you give one of those keys to another command in **Edit → Keyboard Shortcuts…**, Cut, Copy or Paste keeps only its Ctrl shortcut.
+On Windows and Linux, F2, F3 and F4 also cut, copy and paste. If you give one of those keys to another command in **Edit → Keyboard Shortcuts…**, Cut, Copy or Paste keeps only its Ctrl shortcut. [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/) describes each paste command and what the clipboard holds.
 
 Backspace also deletes the selected objects. On macOS, Preferences is **VectorCraft → Settings**, and **Cmd+,** opens it too. See [Preferences](/apps/vectorcraft/preferences/) for every setting.
 
@@ -411,6 +411,7 @@ This works while **Hold a Tool Shortcut to Use the Tool Temporarily** is on, und
 
 - [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/)
 - [Run scripts](/apps/vectorcraft/run-scripts/)
+- [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/)
 - [Panels](/apps/vectorcraft/panels/)
 - [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/)
 - [Preferences](/apps/vectorcraft/preferences/)

@@ -6,7 +6,7 @@ sidebar:
 parent: workflows
 ---
 
-This guide covers the tools for menus, brochures and other documents with a lot of text: paragraph and character styles, OpenType features and glyphs, tab stops, text wrap, find and replace, special spaces and breaks, vertical type, hyphenation and justification, and the Type Tools plug-in. [Add and style type](/apps/vectorcraft/add-and-style-type/) covers making type and setting its font, size and alignment. [Check spelling](/apps/vectorcraft/check-spelling/) and [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/) cover spelling and type in other languages.
+This guide covers the tools for menus, brochures and other documents with a lot of text: paragraph and character styles, OpenType features and glyphs, tab stops, text wrap, find and replace, special spaces and breaks, vertical type, hyphenation and justification, and the Type Tools plug-in. [Add and style type](/apps/vectorcraft/add-and-style-type/) covers making type and setting its font, size and alignment. [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/), [Check spelling](/apps/vectorcraft/check-spelling/) and [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/) cover lists, spelling and type in other languages.
 
 ## Save formatting as paragraph and character styles
 
@@ -313,6 +313,7 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**.
 
 - [Workflows](/apps/vectorcraft/workflows/)
 - [Add and style type](/apps/vectorcraft/add-and-style-type/)
+- [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/)
 - [Check spelling](/apps/vectorcraft/check-spelling/)
 - [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/)
 - [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/)

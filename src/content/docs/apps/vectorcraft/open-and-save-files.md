@@ -182,6 +182,8 @@ Importer plug-ins add file formats that VectorCraft can open. **File → Open…
 2. Pick the file.
 3. If the importer has settings, a dialog shows them. Change them if you need to, then press **Open**.
 
+To add an importer, see [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/).
+
 :::note
 VectorCraft looks for linked images at the path saved in the document, then at the same relative path from the document's folder. A missing image shows its saved preview until you relink it with **Relink…** in the Links panel (**Window → Links**). See [Work with placed images](/apps/vectorcraft/work-with-placed-images/).
 :::
@@ -297,4 +299,6 @@ To change these shortcuts, choose **Edit → Keyboard Shortcuts…**.
 - [Work with placed images](/apps/vectorcraft/work-with-placed-images/)
 - [Trace an image](/apps/vectorcraft/trace-an-image/)
 - [Print your artwork](/apps/vectorcraft/print-your-artwork/)
+- [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/)
+- [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/)
 - [All VectorCraft workflows](/apps/vectorcraft/workflows/)

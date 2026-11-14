@@ -52,7 +52,9 @@ Effects in VectorCraft stay live. The object keeps its original path, and Vector
 3. Change the settings in the dialog. **Preview** is on when the dialog opens, so the canvas shows the result while you change the values.
 4. Press **OK**.
 
-![A teal FERRY sign selected over a lighthouse harbor at dusk, with a drop shadow previewed below and to the right of it. The Drop Shadow dialog shows Multiply mode, opacity 75, X and Y 14 px, blur 10 px, the color #000000 and Preview turned on](/assets/uploads/vectorcraft/drop-shadow-dialog.webp)
+![A teal FERRY sign selected over a lighthouse harbor at dusk, with a drop shadow previewed below and to the right of it. The Drop Shadow dialog shows Multiply mode, opacity 75, X and Y 14 px, blur 10 px, the color #000000 with a black swatch beside the field, and Preview turned on](/assets/uploads/vectorcraft/drop-shadow-dialog.webp)
+
+In the Drop Shadow dialog, choose **Color** or **Darkness** for the shadow. With **Color**, the shadow is the color in the field beside it, black by default. Double-click the swatch next to the field to open the Color Picker over the dialog; its **OK** puts the picked color in the field. With **Darkness**, the shadow uses the object's own colors darkened by the percentage you set, from 0% to 100%, and the swatch is dimmed. Outer Glow and the other effects with a color field have the same swatch.
 
 To change an effect later, select the object and double-click the effect's row in the Appearance panel, or click its name. The dialog opens with the current values.
 
@@ -72,17 +74,18 @@ The following image shows the same star with six different live effects. Each st
 
 ### The Effect menu
 
-The top of the Effect menu has three commands:
+The top of the Effect menu has four commands:
 
 - **Apply Last Effect** applies the last effect again with the same settings.
-- **Last Effect…** opens the dialog of the last effect, where you can change the settings before you apply it.
+- **Last Effect…** opens the dialog of the last effect, where you can change the settings before you apply it. Both commands are dimmed while nothing is selected, and until you have applied an effect from its dialog since VectorCraft started. Editing an effect that is already applied does not change the last effect.
 - **Document Raster Effects Settings…** sets the resolution and other options for raster effects.
+- **Refresh Deferred Effects** redraws the effects from [plug-ins](/apps/vectorcraft/built-in-plug-ins/) that VectorCraft left undrawn. While a document is on screen, its plug-in effects share 2,000 ms of drawing time, and each plug-in run has a 5,000 ms limit. When an effect does not finish in time or fails, VectorCraft draws the object without it until you choose Refresh Deferred Effects, change the effect or its object, or export. The command is dimmed when no effect is waiting, and it is not an undo step. An export runs every plug-in effect.
 
 Under the **Vector Effects** heading, the menu lists 3D and Materials, Color Adjustments, Color Effects, Convert to Shape, Crop Marks, Distort & Transform, Path, Path Effects, Pathfinder, Rasterize…, Stylize, SVG Filters and Warp. Under the **Raster Effects** heading, it lists the Effect Gallery… and pixel-based groups such as Artistic, Blur and Sketch.
 
 The **Stylize** group under Vector Effects holds **Round Corners…**, **Scribble…**, **Drop Shadow…**, **Inner Glow…**, **Outer Glow…** and **Feather…**.
 
-![The Effect menu open over a harbor scene with a teal FERRY sign selected. Under Vector Effects, Stylize is highlighted and its submenu lists Round Corners, Scribble, Drop Shadow, Inner Glow, Outer Glow and Feather, with Drop Shadow highlighted](/assets/uploads/vectorcraft/effect-menu.webp)
+![The Effect menu open over a harbor scene with a teal FERRY sign selected. At the top are the dimmed Apply Last Effect and Last Effect…, then Document Raster Effects Settings… and the dimmed Refresh Deferred Effects. Under Vector Effects, Stylize is highlighted and its submenu lists Round Corners, Scribble, Drop Shadow, Inner Glow, Outer Glow and Feather, with Drop Shadow highlighted](/assets/uploads/vectorcraft/effect-menu.webp)
 
 ### Vector effects at a glance
 
@@ -90,7 +93,7 @@ The following table lists every group under the **Vector Effects** heading and t
 
 | Group | Effects |
 |---|---|
-| **3D and Materials** | Extrude & Bevel…, Revolve…, Inflate…, Rotate…; **Materials…** is listed but dimmed |
+| **3D and Materials** | Extrude & Bevel…, Revolve…, Inflate…, Rotate…; **Materials…** is listed but dimmed; the **3D (Classic)** submenu holds Extrude & Bevel (Classic)… |
 | **Color Adjustments** | Brightness/Contrast…, Curves…, Hue/Saturation…, Levels…, Shift to Color…, Temperature/Tint… |
 | **Color Effects** | Desaturate, Duotone…, Exposure…, Invert Colors, Vector Halftone… |
 | **Convert to Shape** | Rectangle…, Rounded Rectangle…, Ellipse… |
@@ -101,7 +104,7 @@ The following table lists every group under the **Vector Effects** heading and t
 | **Pathfinder** | Add, Intersect, Exclude, Subtract, Minus Back, Divide, Trim, Merge, Crop, Outline, Hard Mix, Soft Mix, Trap… |
 | **Rasterize…** | A single command that draws the object as an image, with its own resolution and background settings |
 | **Stylize** | Round Corners…, Scribble…, Drop Shadow…, Inner Glow…, Outer Glow…, Feather… |
-| **SVG Filters** | **Apply SVG Filter…** is listed but dimmed |
+| **SVG Filters** | Apply SVG Filter…, Import SVG Filter…, then the document's own SVG filters by name; see [Apply an SVG filter](#apply-an-svg-filter) |
 | **Warp** | Arc…, Arc Lower…, Arc Upper…, Arch…, Bulge…, Shell Lower…, Shell Upper…, Flag…, Wave…, Fish…, Rise…, Fisheye…, Inflate…, Squeeze…, Twist… |
 
 ### Common effects
@@ -147,7 +150,7 @@ You can choose any of these from its group in the menu. To try several filters t
 
 1. Select the artwork. With nothing selected, VectorCraft shows "Select artwork to apply effects" and the gallery does not open.
 2. Choose **Effect → Effect Gallery…**.
-3. Click a group under **Categories**, then click a filter under **Filters**. The filters in each group are listed in alphabetical order.
+3. Click a group under **Categories**, then click a filter under **Filters**. The filters in each group are listed in alphabetical order, each with a thumbnail.
 4. Click **Add to Stack**, or double-click the filter. It appears under **Applied Filters**, and its values appear under **Settings** at the top of the dialog.
 5. Change the values under **Settings**. To change another filter in the stack, click its name under **Applied Filters**.
 6. Add more filters in the same way. In each **Applied Filters** row, click the eye to hide the filter, the arrows to move it up or down, or **Remove** to take it out.
@@ -155,11 +158,52 @@ You can choose any of these from its group in the menu. To try several filters t
 
 **OK** adds each filter in the stack to the object as a separate effect, in the stack's order, and you can undo the whole stack in one step. A filter that you hid in the stack is added hidden. After that, each filter has its own row in the Appearance panel, where you can change it like any other effect.
 
+Each thumbnail in the **Filters** list shows the filter with its default settings on a small sample landscape. The **Preview** area at the top of the dialog shows the same landscape at a larger size, with the filters in the stack that are not hidden. While the stack is empty, it shows the filter you clicked in the list. The names of the filters it shows are listed under it.
+
+![The Effect Gallery open over a harbor with a white and coral sailboat and a pier under a violet sky, the art's edges rippled by the preview. The Preview area shows a small sample landscape with Ocean Ripple, Settings shows Ripple Size 9 and Ripple Magnitude 9, and the Distort filters Diffuse Glow, Glass and Ocean Ripple are listed with a thumbnail each, with Ocean Ripple selected and the one row under Applied Filters](/assets/uploads/vectorcraft/effect-gallery-thumbs.webp)
+
 The following screenshot shows the Effect Gallery beside a harbor illustration, with Watercolor added to the stack and previewed on the art.
 
-![A harbor at dusk with a striped lighthouse, a light beam, a setting sun, teal hills and blue water, softened and grainy from the Watercolor preview. The Effect Gallery at the right shows the Artistic category with Watercolor selected, Brush Detail 3, Shadow Intensity 4 and Texture 3 under Settings, Watercolor as the one row under Applied Filters, and Preview turned on at the bottom](/assets/uploads/vectorcraft/effect-gallery.webp)
+![A harbor at dusk with a striped lighthouse, a light beam, a setting sun, teal hills and blue water, softened and grainy from the Watercolor preview. The Effect Gallery at the right shows the sample landscape in its Preview area with Watercolor named under it, Brush Detail 3, Shadow Intensity 4 and Texture 3 under Settings, the Artistic filters with a thumbnail each and Watercolor selected, Watercolor as the one row under Applied Filters, and Preview turned on at the bottom](/assets/uploads/vectorcraft/effect-gallery.webp)
 
 To paint strokes with brushes instead of a filter, see [Paint with brushes](/apps/vectorcraft/paint-with-brushes/).
+
+## Apply an SVG filter
+
+An SVG filter is an SVG `<filter>` element that VectorCraft applies as a live effect. It works on the object's pixels at the resolution that **Document Raster Effects Settings…** sets. Each document has its own list of SVG filters. **Effect → SVG Filters** has **Apply SVG Filter…** and **Import SVG Filter…**, followed by the document's filters by name. Click a filter's name in that submenu to apply it to the selection at once.
+
+To apply a filter from the dialog:
+
+1. Select the object.
+2. Choose **Effect → SVG Filters → Apply SVG Filter…**.
+3. Click a filter in the list. If the document has no filters yet, click **New** to write one, or **Import…** to add the filters of an SVG file.
+4. Press **OK**. The filter becomes a live effect on the object, with its own row in the Appearance panel.
+
+To write or change a filter:
+
+1. In the Apply SVG Filter dialog, click **New**, or select a filter and click **Edit**. Double-clicking a filter's name also opens it. A code box opens under the list.
+2. Type or change the `<filter>` element. Its `id` attribute is the name that the list and the menu show.
+3. Click **Save** to add the filter, or to replace the filter you are editing. Click **Cancel** under the code box to close it without saving.
+
+While the code box is open, **New**, **Edit**, **Delete**, **Import…** and **OK** are dimmed.
+
+![The Apply SVG Filter dialog spans the window over a night poster titled NIGHT STAR, listing Night Haze, Paper Grain, Ripple, Shadow Lift and Soft Glow with Soft Glow selected and its filter code open above Save and Cancel, while New, Edit, Delete, Import… and OK are dimmed. Below the dialog, the large coral star is selected between an amber star with a shadow and a glowing magenta star over teal hills](/assets/uploads/vectorcraft/svg-filter-dialog.webp)
+
+| Button | What it does |
+|---|---|
+| **New** | Opens an empty code box for a new filter; dimmed when the document has 64 filters |
+| **Edit** | Opens the selected filter's code; dimmed until a filter is selected |
+| **Delete** | Removes the selected filter from the document at once; dimmed until a filter is selected |
+| **Import…** | Adds the filters of an SVG file and selects the first one added |
+| **Save** | Adds the filter in the code box, or replaces the filter you are editing; dimmed while the code box is empty |
+| **Cancel** (under the code box) | Closes the code box without saving |
+| **OK** | Applies the selected filter; dimmed until a filter is selected |
+
+A filter holds 1 to 64 filter primitives and at most 64 KB of code, and no two filters in a document can have the same name. **Import…** and **Effect → SVG Filters → Import SVG Filter…** read SVG files of up to 16 MB, but not compressed `.svgz` files, and take at most the first 256 filters of a file. A filter whose name the document already has is left out.
+
+When you save a change to a filter, every object that uses it changes. When you delete a filter, those objects keep the effect, but it draws nothing until you save or import a filter of the same name again.
+
+To swap the filter on one object, select the object and double-click the SVG filter's row in the Appearance panel, or click its name. The dialog opens with that object's filter selected. Click another filter and press **OK** to put it in place of the applied one. If the filter was deleted from the document, its name appears dimmed above the list. If the effect names a filter that the document does not hold but carries the filter's code, for example in a file you opened, the dialog opens with that code in the code box as a new filter, and **Save** adds it to the document.
 
 ## Blend, repeat and distort objects
 
@@ -227,6 +271,8 @@ Extrude & Bevel and Inflate have three tabs: **Object**, **Rotation** and **Ligh
 
 **Width**, **Height**, **Repeat**, **Space**, **Bevel Inside** and **Bevel both sides** are dimmed while **Bevel Shape** is **None**. The **Depth**, **Width** and **Height** fields show their values in the document's unit, so a document set to pixels shows the default depth as 50.0 px.
 
+[Make 3D artwork](/apps/vectorcraft/make-3d-artwork/) covers the 3D and Materials panel, 3D on groups and type, and **Effect → 3D and Materials → 3D (Classic) → Extrude & Bevel (Classic)…**.
+
 ## Make the appearance permanent
 
 **Object → Expand Appearance** turns the selected object's appearance into ordinary objects:
@@ -280,6 +326,7 @@ If you click a style while nothing is selected, VectorCraft uses that style for 
 
 ## Related
 
+- [Make 3D artwork](/apps/vectorcraft/make-3d-artwork/)
 - [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/)
 - [Combine and cut shapes](/apps/vectorcraft/combine-and-cut-shapes/)
 - [Make patterns, blends and repeats](/apps/vectorcraft/make-patterns-blends-and-repeats/)

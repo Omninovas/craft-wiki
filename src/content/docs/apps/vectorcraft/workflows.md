@@ -20,6 +20,7 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 | Guide | What it covers |
 |---|---|
 | [Set up a document and artboards](/apps/vectorcraft/set-up-documents-and-artboards/) | New Document presets, artboards and their options, units, bleed, color mode, moving around the canvas, and rulers, guides and grids |
+| [Manage artboards](/apps/vectorcraft/manage-artboards/) | The Artboard tool's canvas menu for copying, pasting, renaming, locking, deleting and turning artboards, fading the canvas outside them, and pasting art onto several artboards |
 | [Open and save files](/apps/vectorcraft/open-and-save-files/) | The VectorCraft format, Save As formats, opening other files and placing them |
 
 ### Draw and edit
@@ -27,6 +28,7 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 | Guide | What it covers |
 |---|---|
 | [Draw and transform shapes](/apps/vectorcraft/draw-and-transform-shapes/) | Shape, line, arc, spiral, grid and flare tools, live corners, the Transform panel, and moving, rotating, reflecting, scaling, shearing and repeating a transform |
+| [Copy and paste between apps](/apps/vectorcraft/copy-and-paste-between-apps/) | The paste commands, what other apps receive when you copy, and pasting art, pictures, text, spreadsheet tables and copied files |
 | [Select artwork](/apps/vectorcraft/select-artwork/) | The Group Selection, Lasso and Magic Wand tools, the **Select** menu, Global Edit and saved selections |
 | [Draw and edit paths](/apps/vectorcraft/draw-and-edit-paths/) | The Pen, Curvature, Pencil, Paintbrush and Blob Brush tools, anchor editing and the **Object → Path** commands |
 | [Paint with brushes and variable widths](/apps/vectorcraft/paint-with-brushes/) | Brush kinds, the Brushes panel, brush libraries, your own brushes, the Width tool and the Blob Brush |
@@ -44,6 +46,7 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 | [Fill, stroke and color](/apps/vectorcraft/fill-stroke-and-color/) | Fill and stroke, swatches, the Stroke panel, gradients, gradient meshes, patterns and recoloring |
 | [Add and style type](/apps/vectorcraft/add-and-style-type/) | Point type, area type, type on a path, threading, the Character and Paragraph panels and the Type menu |
 | [Work with styles and long text](/apps/vectorcraft/work-with-styles-and-long-text/) | Paragraph and character styles, OpenType features and glyphs, tabs, text wrap and Find and Replace |
+| [Make lists and fit type to its frame](/apps/vectorcraft/make-lists-and-fit-type/) | Bulleted and numbered lists, the Bullets and Numbering dialog, Dynamic Text and Fit Headline |
 | [Check spelling](/apps/vectorcraft/check-spelling/) | Auto Spell Check, fixing an underlined word from the context menu, and the custom dictionary |
 | [Set type in other languages](/apps/vectorcraft/set-type-for-other-languages/) | The language of type, the East Asian options, composite fonts and typing a character by its code on Windows |
 
@@ -85,6 +88,7 @@ Some menu items are grayed out. Those features are not built yet; they are liste
 |---|---|
 | [Customize the workspace](/apps/vectorcraft/customize-the-workspace/) | Workspaces, panels, your own toolbars, extra windows, the Navigator, Presentation Mode and the History panel |
 | [Use the built-in plug-ins](/apps/vectorcraft/built-in-plug-ins/) | Arrange Tools, Artwork Cleanup, Color Effects, Document Tools and the 3D Box tool |
+| [Install and manage plug-ins](/apps/vectorcraft/install-and-manage-plug-ins/) | Installing plug-ins, approving what they ask for, running their filters, effects, exporters and importers, and starting in Safe Mode |
 | [Automate VectorCraft](/apps/vectorcraft/automate-vectorcraft/) | Command search, keyboard shortcuts, the Actions panel, running an action on a folder of files, checking a script, the command-line tool and the Model Context Protocol (MCP) server |
 | [Run scripts](/apps/vectorcraft/run-scripts/) | The Scripts menu, running any script file, answering a script's questions, stopping a script and the Script Console |
 | [AI agents](/apps/vectorcraft/ai-agents/) | Connecting an MCP client to VectorCraft and limiting it to one folder |
